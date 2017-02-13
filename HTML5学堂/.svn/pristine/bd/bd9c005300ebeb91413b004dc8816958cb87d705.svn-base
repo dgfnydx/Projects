@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>了解HTML5技术 </title>
+	<link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css">
+	<link rel="stylesheet" href="../css/common.css" type="text/css">
+	<link rel="stylesheet" href="../css/article.css" type="text/css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header skin">
+			<div class="web-title">
+				<h1>
+					<a href="../index.html">
+						<img src="../images/logo.png">
+						<strong>HTML5学堂</strong>
+					</a>
+				</h1>
+				<div class="nav">
+					<a href="journey.html">初步征程</a>
+					<a href="step.html">步步为营</a>
+					<a href="kingo.html">金戈铁马</a>
+					<a href="ten_years.html">十年一剑</a>
+					<a href="battlefield.html">沙场点兵</a>
+					<a href="strategist.html">运筹帷幄</a>
+				</div>
+				<form>
+					<div class="search-btn">搜索</div>
+					<div class="search-input">
+						<input type="text">
+						<span></span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="main">
+			<div class="top-nav">
+				<span>您当前位于：<a href="strategist.html">项目开发经验积累</a>——→ HTML5项目开发备忘录</span>
+			</div>
+			<div class="article-con">
+				<div class="article-change">
+					<span class="pre">上一篇：<a href="">移动端 模拟手机联系人触摸A~Z导航</a></span>
+					<span class="next">下一篇：<a href="">FUC浏览器皮肤的那个坑</a></span>
+				</div>
+				<h2 class="title">HTML5项目开发备忘录</h2>
+				<div class="article-info">
+					<strong>2015/04/28 13:25:46</strong>
+					<b>|</b>
+					<strong>作者：HTML5学堂</strong>
+					<b>|</b>
+					<strong>分类<a href="">项目开发经验积累</a></strong>
+					<b>|</b>
+					<strong>关键词：HTML5,项目,开发,经验,备忘</strong>
+				</div>
+				<div class="arc-con">
+					<h2>HTML5项目开发备忘录</h2>
+					<p><a href="">HTML5学堂</a>：良好的项目开发，从缜密的分析与计划开始，充分的项目开发准备能够让之后的问题降低到最少，让我们的整体开发效率提升不少。精心准备了关于项目开发的相关备忘，分享给大家啦~！</p>
+					<h3>1 书写基本的需求分析报告</h3>
+					<P>1.1 哪些“任务”是基于需求分析报告的？</P>
+					<P>1.1.1 reset文件的基本调整</P>
+					<P>1.1.2 标签的基本选用</P>
+					<P>1.1.3 典型的布局选用和基本的布局操作</P>
+					<P>1.1.4 切图工作</P>
+					<p>&nbsp</p>
+					<p>1.2 因此我们能够想到，在进行需求分析的时候</p>
+					<p>1.2.1 美工图大小和具体内容区域大小的区别（HTML5学堂提示：一定要考虑内容区域外的样式如何处理）</p>
+					<p>1.2.2 会不会有fixed定位</p>
+					<p>1.2.3 有没有返回顶部的功能需求</p>
+					<p>1.2.4 哪些地方需要注意超出隐藏</p>
+					<p>1.2.5 哪些地方需要内容撑开高度</p>
+					<p>1.2.6 哪些地方需要有链接跳转</p>
+					<p>1.2.7 hover（HTML5学堂提示：有些美工图会提供三态，初始、移入和按下）效果是什么样子</p>
+					<p>1.2.8 哪些地方需要加鼠标的小手状态</p>
+					<p>1.2.9 哪些有JS特效，需要考虑效果~</p>
+					<p>1.2.10 基本字体字号、颜色和背景颜色的选用</p>
+					<p>1.2.11 分清楚背景图和数据图</p>
+					<p>1.2.12 公共模块拆分出来</p>
+					<p>1.2.13 哪些地方是需要提交数据的 form</p>
+					<p>&nbsp</p>
+					<h3>2 基本的前期准备</h3>
+					<p>2.1 文件夹结构搭建</p>
+					<p>2.2 准备reset重置文件以及基本的几个JS文件，根据情况引入</p>
+					<p>2.3 合理修改reset文件[基于网站分析结果] 需要修改的内容如下：</p>
+					<p>2.3.1 基本的背景颜色和文字颜色</p>
+					<p>2.3.2 a标签的两种状态</p>
+					<p>2.3.3 基本的字体大小和样式设置</p>
+					<p>2.3.4 删除掉没有使用到的样式设置</p>
+					<p>2.3.5 保证after伪元素清浮动的方法在reset当中</p>
+					<p>&nbsp</p>
+					<h3>3 移动端与PC端的特殊性</h3>
+					<p>3.1 移动端</p>
+					<p>3.1.1 全新的选择器以及大部分的CSS3属性都得到了很好的支持</p>
+					<p>3.1.2 视口的设置</p>
+					<p>3.1.3 基本rem的处理</p>
+					<p>3.1.4 user-select；tap-highlight-color；-webkit-transform-style等样式的处理</p>
+					<p>3.1.5 需要额外注意“指触区”</p>
+					<p>3.1.6 模拟测试之外，需要进行真机调试</p>
+					<p>3.1.7 320屏幕像素下，字体大小最小为12px</p>
+					<p>3.1.8 a标签的title和img标签的title可以删除 嵌套原则可以适当的调整</p>
+					<p>3.1.9 最大最小宽的考虑</p>
+					<p>3.1.10 针对背景图进行background-size的处理</p>
+					<p>欢迎沟通交流~<a href="">HTML5学堂</a></p>
+					<p>3.2 PC端</p>
+					<p>3.2.1 使用新标签后，对新标签的兼容处理</p>
+					<p>3.2.2 需要测试各个浏览器（HTML5学堂提示：保证在IE6~7的低端浏览器中，布局与功能正常）</p>
+					<p>3.2.3 对于子代选择器、CSS3新增选择器等能否使用取决于具体开发兼容要求</p>
+					<p>3.2.4 IE下的测试，需要启动服务器，即在wamp下运行</p>
+					<p>&nbsp</p>
+					<h3>4 整体开发的基本顺序提醒</h3>
+					<p>4.1 注意模块的最小宽度或者最大宽度</p>
+					<p>4.2 先完成一级布局与二级布局</p>
+					<p>4.3 针对公共模块进行开发</p>
+					<p>4.4 制作具体的模块</p>
+					<p>&nbsp</p>
+					<h3>5 具体开发规范</h3>
+					<p>5.1 文件名禁止使用中文命名</p>
+					<p>5.2 编写代码的时候，需要合理的缩进（不要出现空格与Tab格混用）与注释</p>
+					<p>5.3 遵循基本的嵌套规则</p>
+					<p>5.4 不要忘记a标签的href和title、img标签的alt、title、src，a标签的target（从何处打开链接）</p>
+					<p>5.5 CSS后代选择器，尽量不要超过3层，不要超过4层</p>
+					<p>5.6 类名采用单词（语义）命名，多个单词采用中划线连接</p>
+					<p>5.7 不设置不必要的属性和属性值，如针对占满父级整行的块元素设置width:100%</p>
+					<p>5.8 CSS样式按照顺序书写：显示属性——>自身属性——>文本——>其他——>CSS3属性</p>
+					<p>5.9 HTML与CSS中的引号需要保持一致，禁止出现单引号与双引号混用</p>
+					<p>5.10 类名和id名通常不重复的</p>
+					<p>5.11 每段语句结束后的分号（英文）必不可少</p>
+					<p>&nbsp</p>
+					<h3>6 开发细节</h3>
+					<p>6.1 注意保持盒模型大小的一致性（如：增加左右padding，原有width需要变小）</p>
+					<p>6.2 及时清除浮动，并采用合理的清除方式</p>
+					<p>6.3 针对定位元素，处理z-index值</p>
+					<p>6.4 数据图需要限制宽高</p>
+					<p>6.5 背景图需要进行合并</p>
+					<p>6.6 对于需要超出隐藏的需求，单行文本隐藏或显示为省略号（……），比如在模块标题需要进行设置，多行文本如果显示区域高度固定，需要设置超出隐藏。</p>
+					<p>6.7 img标签需要浮动或设置display:block，以防止img元素下的3像素空隙</p>
+					<p>6.8 a标签的指触区需要注意</p>
+					<p>6.9 合理使用群组和后代选择器</p>
+					<p>&nbsp</p>
+					<h3>7 最后不可缺少的相关工作</h3>
+					<p>7.1 CSS压缩</p>
+					<p>7.2 JS压缩</p>
+					<p>7.3 图片压缩</p>
+					<p>7.4 ico文件的制作</p>
+					<p>7.5 404页面</p>
+					<p>&nbsp</p>
+					<h3>8 other but so important</h3>
+					<p>HTML5学堂在此温馨提示：书写代码的时候，需要综合考虑SEO、扩展性、代码量以及代码可读性，尽可能寻找最佳解决办法。主动思考很重要~</p>
+					<p>欢迎沟通交流~<a href="">HTML5学堂</a></p>
+					<div class="share clearfix">
+						<a href=""></a>
+						<span>阅读：4406</span>
+					</div>
+				</div>
+				<div class="article-change">
+					<span class="pre">上一篇：<a href="">CSS实现元素水平垂直居中-网易NEC方法</a></span>
+					<span class="next">下一篇：<a href="">FOUC-文档样式短暂失效</a></span>
+				</div>
+			</div>
+			<div class="main-side">
+				<div class="contact-us skin">
+					<h3>联系我们</h3>
+					<ul>
+						<li>
+							<a class="weibo" href="">TML5学堂</a>
+						</li>
+						<li>
+							<a class="tieba" href="">HTML5学堂</a>
+						</li>
+						<li>
+							<a class="qq" href="">H5人才群</a>
+						</li>
+						<li>
+							<a class="qq" href="">咨询培训H5</a>
+						</li>
+					</ul>
+					<div class="two-dimension-code">
+						<img src="../images/HTML5.jpg" alt="HTML5微信二维码" title="HTML5微信">
+					</div>
+				</div>
+				<div class="expand skin">
+					<h3>前端之外</h3>
+					<a href="">行业动态</a>
+					<a href="">后台开发</a>
+				</div>
+				<div class="time skin">
+					<h3>时光</h3>
+					<div class="date">
+						<div class="date-text">
+							<div class="nowtime">01:50</div>
+							<div class="week">
+								<span>07.31</span>
+								<span>星期日</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="we skin">
+					<h3>爱HTML5的人们<a href="">More</a></h3>
+					<div class="html-man clearfix">
+						<a href="" titel="">刘国利</a>
+						<a href="" title="">陈能堡</a>
+						<a href="" title="">雷炎芳</a>
+						<a href="" title="">熊其</a>
+						<a href="" title="">祝毛茅</a>
+						<a href="" title="">张俊杰</a>
+						<a href="" title="">林河钦</a>
+						<a href="" title="">吴祥辉</a>
+						<a href="" title="">韦东华</a>
+						<a href="" title="">凌钰粟</a>
+						<a href="" title="">党凤梅</a>
+						<a href="" title="">潘妮</a>
+						<a href="" title="">陈亚光</a>
+						<a href="" title="">林跃伟</a>
+						<a href="" title="">黄茂阳</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer skin">
+			<span>Copyright © 2015 
+				<a href="">HTML5学堂</a>
+				<a href="">闽ICP备15005630号-1</a> 
+				&nbsp&nbsp&nbsp&nbsp黑白任你选：
+			</span>
+			<b class="web-white"></b>
+			<b class="web-black"></b>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

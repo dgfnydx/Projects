@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"/>
+    <title>中信建投</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="icon" href="" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/web-hyq.css" type="text/css">
+    <script charset="utf-8" src="../js/zepto.min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="wrap-infm-hyq">
+            <header class="head clearfix">
+                <a class="back" href="javascript:history.go(-1)"></a>
+                <h1>
+                    <strong>方达资管</strong>
+                    <br />
+                    <span>900013</span>
+                </h1>
+                <a class="buy-hyq" href="">购买</a>
+            </header>
+        <section class="main-infm">
+            <ul class="proinf">
+                <li class="clearfix">
+                    <span>产品名称</span>
+                    <strong>方达资管</strong>
+                </li>
+                <li class="clearfix">
+                    <span>产品类型</span>
+                    <strong>一对一资管产品</strong>
+                </li>
+                <li class="clearfix">
+                    <span>成立时间</span>
+                    <strong>2014-03-10</strong>
+                </li>
+                <li class="clearfix">
+                    <span>单位净值</span>
+                    <em>1.2733</em>
+                </li>
+            </ul>
+            <div class="prointro">
+                <h1>产品简介</h1>
+                <p>
+                    <span>公司于1996年成立，注册资本61623.5万，实际控制人为云南省人民政府国有资产监督管理委员会，主营化工及化纤材料、纯碱、氯化铵、水泥、氧气产品生产和销售，机械，机电，五金，金属材料的批发、零售代购代销；汽车客货运输、汽车维修；经营企业自产产品及技术的出口业务，进口本企业所需的原辅材料、仪器仪表、机械设备及技术。</span>
+                    <span>公司于1996年7月在上海交易所上市，A股代码600725。</span>
+                </p>
+            </div>
+            <div class="chart-tab-inf clearfix">
+                <span>分时</span>
+                <span>五日</span>
+                <span>日K</span>
+                <span>周K</span>
+                <span>月K</span>
+            </div>
+            <div class="fund-chart-inf">
+                <div class="chartthree" id="chartthree"></div>
+                <div class="chartfour" id="chartfour" ></div>
+            </div>
+            <div class="chart-inf">
+                <div class="chart-title clearfix">
+                    <span>日期</span>
+                    <span>单位净值</span>
+                    <span>累计净值</span>
+                </div>
+                <ul class="inf-con">
+                    <li class="clearfix">
+                        <span>2014.10.10</span>
+                        <span>1.005</span>
+                        <span>
+                            <em>0.54</em>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span>2014.10.10</span>
+                        <span>1.005</span>
+                        <span>
+                            <em>0.54</em>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span>2014.10.10</span>
+                        <span>1.005</span>
+                        <span>
+                            <em>0.54</em>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span>2014.10.10</span>
+                        <span>1.005</span>
+                        <span>
+                            <em>0.54</em>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="foot clearfix">
+            <a href="../index.php" title="">首 页</a>
+            <a href="fund.html" title="">基 金</a>
+            <a href="date_manage.html" title="">资 管</a>
+            <a href="searchInfor.html" title="">研发资讯</a>
+            <a href="online_server.html" title="">在线客服</a>
+        </footer>
+        </div>
+        <script type="text/javascript" src="../src/touch.js"></script>
+        <script type="text/javascript" src="../js/highcharts.js"></script>
+        <script type="text/javascript" src="../js/infmg-hyq.js"></script>
+        <script type="text/javascript">
+            chartsInf();
+            chartstInf();
+        </script>
+    </body>
+</html>

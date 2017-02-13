@@ -1,0 +1,55 @@
+@charset "UTF-8";
+html {
+	background: url("../images/bac.jpg");
+}
+.skin {
+	color: #f0f0f0;
+	background: rgba(127, 127, 127, 0.2);
+}
+.header,.footer {
+	color: #f0f0f0;
+	background: #393939;
+}
+.header a,
+.header a strong,
+.footer a,
+.course-list h2 a,
+.course-box h2 a,
+.course a,
+.contact-us ul li a,
+.main h3 a,
+.article-con a,
+.top-nav {
+	color: #f0f0f0;
+}
+.top-recommend dl dt a {
+	background: url("../images/icons.png");
+}
+.contact-us li a {
+	background: url("../images/friendlink.png") no-repeat;
+}
+.date,
+.other-side ul a,
+.pages {
+	color: white;
+}
+.date-text {
+	background: #393939;
+}
+.web-black {
+	box-shadow: 0 0 0 1px white;
+}
+.other-side ul,
+.select-layout,
+.other-body .course-list,
+.course-box,
+.article-con {
+	color: #f0f0f0;
+	background: rgba(127, 127, 127, 0.4);
+}
+.arc-con .code li {
+	background: rgba(255, 255, 255, 0.1);
+}
+.arc-con .code li:nth-child(2n) {
+	background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,171 @@
+﻿.s-report {
+    padding-top: 4.25rem;
+    margin-bottom: 0.75rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e9e9e9;
+}
+.s-report h2 {
+    line-height: 2.42rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #595959;
+}
+.s-report h3 {
+    margin-bottom: 0.79rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #797979;
+}
+.s-report img {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.17rem;
+}
+.s-report p {
+    padding: 0 2.81% 1.17rem;
+    line-height: 1.5rem;
+    text-indent: 2em;
+    font-size: 1rem;
+    color: #595959;
+}
+.s-report span {
+    display: block;
+    width: 100%;
+    height: 2.88rem;
+    line-height: 2.88rem;
+    text-align: center;
+    background-color: white;
+}
+.s-report span em {
+    font-size: 0.75rem;
+    color: #797979;
+}
+.s-report span a {
+    font-size: 0.58rem;
+    color: #ffa751;
+}
+/*reserve*/
+.s-main {
+    width: 100%;
+    // padding-top: 3.25rem;
+    background-color: #f8f8f8;
+}
+.s-sort {
+    height: 14.42rem;
+    background: url("../images/demo/serve.jpg") no-repeat; 
+    background-size: 100% 100%;
+}
+.s-sort h2 {
+    padding: 3.21rem 0 0 7.5%;
+    font-size: 1rem;
+    color: white;
+}
+.s-sort h2 em {
+    margin-right: 0.3rem;
+    font-size: 3.08rem;
+    font-style: italic;
+}
+.s-sort p {
+    padding-left: 7.5%;
+    font-size: 1.83rem;
+    color: white;
+    text-shadow: -2px -2px #ffa851, 2px 2px #ffa851;
+    -webkit-text-shadow: -2px -2px #ffa851, 2px 2px #ffa851;
+}
+.s-prophase {
+    display: block;
+    overflow: hidden;
+    height: 8.33rem;
+    background: url("../images/s_right.png") 50% 2.75rem no-repeat;
+    background-size: 70.47% 7.63rem;
+}
+.s-prophase h2 {
+    float: left;
+    width: 16.41%;
+    height: 3.38rem;
+    margin: 0 1rem 0 7.19%;
+    padding-top: 1rem;
+    border-radius: 50%;
+    background-color: #ff5858;
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+}
+.s-prophase h2 em, .s-submit h2 em {
+    font-size: 1.5rem;
+}
+.s-prophase p:nth-of-type(1) {
+    padding-left: 5.21rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #ff5858;
+}
+.s-prophase p:nth-of-type(2) {
+    padding-left: 5.21rem;
+    font-size: 0.75rem;
+    color: #707070;
+}
+.s-submit {
+    display: block;
+    overflow: hidden;
+    height: 8.33rem;
+    background: url("../images/s_left.png") 50% 2.75rem no-repeat;
+    background-size: 70.47% 7.63rem;
+
+}
+.s-submit h2 {
+    float: right;
+    width: 16.41%;
+    height: 3.38rem;
+    margin: 0 7.19% 0 1rem;
+    padding-top: 1rem;
+    border-radius: 50%;
+    background-color: #ff7a46;
+    text-align: center;
+    font-size: 0.75rem;
+    color: white;
+}
+.s-submit p:nth-of-type(1) {
+    float: right;
+    margin: 1rem 0 0 20%;
+    font-size: 1.25rem;
+    color: #ff7a46;
+}
+.s-submit p:nth-of-type(2) {
+    float: right;
+    font-size: 0.75rem;
+    color: #707070;
+}
+.s-main a:nth-of-type(3) h2 {
+    background-color: #ffae2e;
+}
+.s-main a:nth-of-type(3) p:nth-of-type(1) {
+    color: #ffae2e;
+}
+.s-main a:nth-of-type(4) h2 {
+    background-color: #b6ca4c;
+}
+.s-main a:nth-of-type(4) p:nth-of-type(1) {
+    color: #b6ca4c;
+}
+.s-main a:nth-of-type(5) h2 {
+    background-color: #6fc242;
+}
+.s-main a:nth-of-type(5) p:nth-of-type(1) {
+    color: #6fc242;
+}
+.s-main a:nth-of-type(6) h2 {
+    background-color: #1cab73;
+}
+.s-main a:nth-of-type(6) p:nth-of-type(1) {
+    color: #1cab73;
+}
+.s-main a:nth-of-type(6) {
+    background: none;
+}
+.underlay {
+    height: 11.5rem;
+    background: url("../images/serve_2.png") no-repeat;
+    background-size: 100% 100%;
+}

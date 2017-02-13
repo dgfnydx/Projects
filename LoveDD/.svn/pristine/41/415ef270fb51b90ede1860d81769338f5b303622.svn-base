@@ -1,0 +1,45 @@
+<div class="htl-myfansS-message clearfix">
+    <dl class="clearfix">
+        <!-- 个人头像信息 -->
+        <dt>
+            <a href="" title="">
+                <img src="../images/demo/55.png" alt="">
+            </a>
+        </dt>
+        <dd class="clearfix">
+        <!-- 操作按钮（私信、设置备注、取消关注） -->
+            <div class="htl-myfansS-cz-par clearfix">
+                <div class="htl-myfansS-cz-btn"></div>
+                <ul class="htl-myfansS-cz-con">
+                    <li>加入关注</li>
+                    <li>移除粉丝</li>
+                    <li>私信</li>
+                    <li>举报</li>
+                </ul>
+            </div>
+           
+        <!-- 个人文字信息 -->
+            <div class="htl-myfansS-usermessage">
+                <div class="htl-myfansS-user">爱吃牛肉的兔子</div>
+                <div class="htl-myfansS-place">
+                    <strong>女</strong>
+                    <em>/&nbsp;深圳&nbsp;/</em>
+                    <span>中国</span> 
+                </div>           
+            </div>
+        <!-- 操作按钮的操作内容 -->
+            <div class="htl-myfansS-cz">
+                <div>私信</div>
+                <div>设置备注</div>
+                <div>取消关注</div>
+            </div>
+        </dd>
+    </dl>
+    <!-- 个人简介 -->
+    <p class="htl-myfansS-jj">
+        <span>简介：</span>
+        <em>这个人很懒，什么都没有留下！</em>
+    </p>
+    <!-- 打勾的图片 -->
+    <div class="htl-myfansS-true"></div>
+</div>

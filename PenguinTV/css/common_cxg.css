@@ -1,0 +1,210 @@
+@charset 'utf-8';
+@font-face {
+   font-family: "cxg";
+   src: local("cxg"), url("../font/cxg.ttf") format("truetype");
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.wrap-cxg {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: url("../images/enjoy_bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.card-cxg {
+    position: absolute;
+    left: 0;
+    top: 3.05rem;
+    width: 94.4%;
+    height: 26rem;
+    padding: 0 2.8%;
+    background: url("../images/card_bgc.png") center no-repeat;
+    background-size: 94.4% 100%;
+}
+.tv-cxg {
+    position: absolute;
+    left: 22.72%;
+    top: 10.73rem;
+    z-index: 222;
+    width: 57.19%;
+    height: 11.08rem;
+    background: url("../images/tvbg_cxg.png") center no-repeat;
+    background-size: cover;
+} 
+.ft-cxg {
+    position: absolute;
+    left: 0;
+    bottom: 1.5rem;
+    width: 92.2%;
+    height: 5.25rem;
+    padding-left: 7.8%;
+}
+.ft-cxg .wechat-cxg {
+    float: left;
+    width: 36.86%;
+    height: 5.25rem;
+    background: url("../images/wechat_cxg.png") no-repeat;
+    background-size: 51.46% 100%;
+}
+.wechat-cxg p {
+    overflow: hidden;
+    position: absolute;
+    left: 25.46%;
+    top: 2.33rem;
+    width: 22.54%;
+    height: 3rem;
+    color: #FFF;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+.red-cxg {
+    position: absolute;
+    right: 6%;
+    top: 2.58rem;
+    display: block;
+    width: 38.44%;
+    height: 2.42rem;
+    background-color: #ffea00;
+    color: #142342;
+    font-size: 1rem;
+    line-height: 2.42rem;
+    text-align: center;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+}
+@media screen and (max-height: 480px) {
+    .card-cxg {
+        top: 2.55rem;
+        height: 21rem;
+    }
+    .tv-cxg {
+        top: 9rem;
+        height: 8.58rem;
+        background-size: 100% 100%;
+    }
+    .ft-cxg {
+        bottom: 0.7rem;
+    }
+}
+
+@media screen and (min-height: 568px) and (max-height: 736px) {
+    .card-cxg {
+        top: 3.55rem;
+        height: 28rem;
+    }
+    .tv-cxg {
+        top: 12.5rem;
+    }
+    .ft-cxg {
+        bottom: 2rem;
+    }
+}
+
+/*红包*/
+.dgf-red-packet {
+    overflow: hidden;
+    display: none;
+    position: relative;
+    z-index: 333;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+}
+.dgf-red-packet .three {
+    position: absolute;
+    bottom: 5.5rem;
+    left: 3.05%;
+    width: 93.91%; 
+    height: 4.38rem;
+    margin: 0 auto;
+    background: url("../images/three.png");
+    background-size: 100% 100%;
+}
+.dgf-red-packet .two {
+    position: absolute;
+    bottom: 7.67rem;
+    left: 8.83%;
+    width: 82.34%; 
+    height: 3.92rem;
+    margin: 0 auto;
+    background: url("../images/two.png");
+    background-size: 100% 100%;
+
+}
+.dgf-red-packet .one {
+    position: absolute;
+    bottom: 8.83rem;
+    left: 13.13%;
+    width: 73.75%;
+    height: 3.58rem;
+    background: url("../images/one.png");
+    background-size: 100% 100%;
+}
+.dgf-red-packet .cicle {
+    opacity: 0;
+}
+.redpacket {
+    position: absolute;
+    bottom: 10.92rem;
+    left: 18.91%;
+    width: 62.18%;
+    height: 19.75rem;
+    padding-top: 4.58rem;
+    background: url("../images/red_packet.png") no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+@-webkit-keyframes redpacket {
+    from {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: rotateY(720deg);
+        transform: rotateY(720deg);
+        opacity: 1;
+    }
+}
+.redpacket .logo-ye {
+    width: 22.61%;
+    height: 3.83rem;
+    margin: 0 auto;
+}
+.logo-ye img {
+    width: 100%;
+}
+.redpacket a {
+    position: absolute;
+    bottom: 7rem;
+    left: 38.06%;
+    width: 23.87%;
+    height: 3.96rem;
+    background: #ffab28;
+    line-height: 3.96rem;
+    color: #c1180f;
+    font-family: "fzqkbysjw";
+    font-size: 2.32rem;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.29rem #ffc161;
+}
+@media screen and (max-height: 480px) {
+    .dgf-red-packet .three {
+        bottom: 1.5rem;
+    }
+    .dgf-red-packet .two {
+        bottom: 3.67rem;
+    }
+    .dgf-red-packet .one {
+        bottom: 4.83rem;
+    }
+    .redpacket {
+        height: 18.75rem;
+        bottom: 6.92rem;
+    }
+}

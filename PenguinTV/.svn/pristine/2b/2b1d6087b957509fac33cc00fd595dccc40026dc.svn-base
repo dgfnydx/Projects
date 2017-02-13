@@ -1,0 +1,470 @@
+/* 
+* @Author: anchen
+* @Date:   2016-07-29 15:01:26
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-08-03 21:11:11
+*/
+@charset 'utf-8';
+/*@font-face {
+    font-family: "fzqkbysjw";
+    src: local("fzqkbysjw"), url("../font/cxg.TTF") format("truetype");
+}*/
+/*html, body {
+    min-width: 320px;
+    height: 100%;
+}*/
+.wrap-wlf {
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+/*.bro-sis-wrap-wlf {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}*/
+.before-bro-sis-wlf, .now-bro-sis-wlf {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;   
+}
+.before-bro-sis-wlf, .family-wlf, .now-bro-sis-wlf {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.now-bro-sis-wlf {
+    display: none;
+}
+.before-bro-sis-wlf img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 64.38%;
+    height: 21.04rem;
+    margin: auto;
+}
+@-webkit-keyframes Beforebrosis {
+    from { 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    to { 
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+}
+@-moz-keyframes Beforebrosis {
+    from { 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    to { 
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+}
+@-ms-keyframes Beforebrosis {
+    from { 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    to { 
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+}
+@-o-keyframes Beforebrosis {
+    from { 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    to { 
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+}
+@keyframes Beforebrosis {
+    from { 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    to { 
+        -webkit-transform: scale(3);
+        transform: scale(3);
+    }
+}
+.now-bro-sis-con {
+    /*overflow: hidden;*/
+    width: 81%;
+    /*height: 100%;*/
+    height: 22.96rem;
+    margin: 0 auto;    
+}
+.bro-sis-now-pic {
+    display: block;
+    width: 100%;
+    height: 25.67rem;
+}
+@-webkit-keyframes Nowbrosis {
+    0% {
+     -webkit-transform-origin: 23.95% 7.47%;
+     -webkit-transform : scale(3);
+     transform-origin: 23.95% 7.47%;
+     transform : scale(3);
+
+    }
+    100% { 
+        -webkit-transform : scale(1);
+         transform : scale(1);
+    }
+}
+@-moz-keyframes Nowbrosis {
+    0% {
+     -webkit-transform-origin: 23.95% 7.47%;
+     -webkit-transform : scale(3);
+     transform-origin: 23.95% 7.47%;
+     transform : scale(3);
+
+    }
+    100% { 
+        -webkit-transform : scale(1);
+         transform : scale(1);
+    }
+}
+@-ms-keyframes Nowbrosis {
+    0% {
+     -webkit-transform-origin: 23.95% 7.47%;
+     -webkit-transform : scale(3);
+     transform-origin: 23.95% 7.47%;
+     transform : scale(3);
+
+    }
+    100% { 
+        -webkit-transform : scale(1);
+         transform : scale(1);
+    }
+}
+@-o-keyframes Nowbrosis {
+   0% {
+     -webkit-transform-origin: 23.95% 7.47%;
+     -webkit-transform : scale(3);
+     transform-origin: 23.95% 7.47%;
+     transform : scale(3);
+
+    }
+    100% { 
+        -webkit-transform : scale(1);
+         transform : scale(1);
+    }
+}
+@keyframes Nowbrosis {
+    0% {
+     -webkit-transform-origin: 23.95% 7.47%;
+     -webkit-transform : scale(3);
+     transform-origin: 23.95% 7.47%;
+     transform : scale(3);
+
+    }
+    100% { 
+        -webkit-transform : scale(1);
+         transform : scale(1);
+    }
+}
+.now-bro-sis-wlf .now-bro-sis-word, .now-family-word {
+    width: 100%;
+    height: 6.75rem;
+    padding-top: 2rem;
+}
+.now-bro-sis-wlf .now-bro-sis-word p {
+    display: none;
+  /*  font-family: "fzqkbysjw";*/
+    color: #fff;
+    font-size: 1.13rem;
+    text-align: center;
+    line-height: 1.63rem;
+}
+.next-wlf {
+    display: none;
+    float: right;
+    margin-right: 9.38%;
+    width: 2.67rem;
+    height: 2.67rem;
+    -webkit-animation: nextPage 3s infinite;
+       -moz-animation: nextPage 3s infinite;
+        -ms-animation: nextPage 3s infinite;
+         -o-animation: nextPage 3s infinite;
+            animation: nextPage 3s infinite;
+}
+@-webkit-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@-moz-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@-ms-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@-o-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+.family-wlf {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.family-wlf .pic-group {
+    position: absolute;
+    left: 13%;
+    top: 0;
+    width: 69.06%;/*442*/
+    height: 30.46rem;
+}
+.pic-group .tele-bg {
+    position: absolute;
+    left: 18%;
+    top: 0;
+    display: block;
+    width: 57.69%;
+    height: 24.04rem;
+}
+.before-person { 
+    position: absolute;
+    left: 10%;
+    bottom: 6.2rem;
+    width: 76.24%;
+    height: 6.5rem;
+}
+.before-person .before-dad {
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    display: block;
+    width: 31.47%;
+    height: 6.33rem;
+    z-index: 5;
+
+}
+.before-person .before-boy {
+    position: absolute;
+    bottom: 0;
+    left: 34.27%;
+    display: block;
+    width: 26.72%;
+    height: 3.71rem;
+    z-index: 1;
+}
+.before-person .before-mom {
+    position: absolute;
+    bottom: 0;
+    left: 55.34%;
+    display: block;
+    width: 31.02%;
+    height: 4.79rem;
+    z-index: 5;
+
+}
+.pic-group .before-sofa {
+    position: absolute;
+    left: 9%;
+    bottom: 0;
+    display: block;
+    width: 76.24%;
+    height: 6.5rem;
+    z-index: 20;
+}
+.pic-group .before-table {
+    position: absolute;
+    bottom: 2.5rem;
+    right: -7%;
+    display: block;
+    width: 33.48%;
+    height: 7.79rem;
+}
+/*阖家-现在*/
+/*background-color: #ca5f43;*/
+
+.now-pic-group  {
+    position: absolute;
+    left: 7%;
+    width: 84.38%;
+    height: 23.88rem;
+}
+.now-pic-group .now-tele-bg {
+    display: none;
+    width: 100%;
+    height: 13.13rem;
+}
+.now-pic-group .now-person {
+    position: absolute;
+    bottom: 7rem;
+    left: 1%;
+    width: 94.07%;
+    height: 8.04rem;
+}
+.now-person .now-dad {
+    display: none;
+    position: absolute;
+    left: 11%;
+    bottom: -2.2rem;
+    width: 15.16%;
+    height: 7.58rem;
+    z-index: 7;
+}
+.now-person .now-grama {
+    display: none;
+    position: absolute;
+    left: 30%;
+    bottom: -1rem;
+    width: 18.11%;
+    height: 4.92rem;
+}
+.now-person .now-boy {
+    display: none;
+    position: absolute;
+    left: 47%;
+    bottom: -0.4rem;
+    width: 11.42%;
+    height: 2.46rem;
+}
+.now-person .now-grapa {
+    display: none;
+    position: absolute;
+    left: 60%;
+    bottom: -1rem;
+    width: 16.93%;
+    height: 4.21rem;
+}
+.now-person .now-mom {
+    display: none;
+    position: absolute;
+    left: 77%;
+    bottom: -1.8rem;
+    width: 15.75%;
+    height: 6.88rem;
+    z-index: 7;
+}
+.now-pic-group .now-sofa {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 94.07%;
+    height: 9.83rem;
+}
+.now-sofa .now-sofa-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 29.33%;
+    height: 9.04rem;
+    z-index: 5;
+}
+.now-sofa .now-sofa-big {
+    position: absolute;
+    left: 10%;
+    top: 3rem;
+    width: 76.18%;
+    height: 6.96rem;
+    z-index: 10;
+}
+.now-sofa .now-sofa-right {
+    position: absolute;
+    left: 68%;
+    top: 0;
+    width: 29.92%;
+    height: 8.83rem;
+    z-index: 5;
+}
+.now-family-word {
+    position: absolute;
+    left: 0;
+    bottom: 6rem;
+}
+.now-family-word p {
+    display: none;
+    /*font-family: "fzqkbysjw";*/
+    color: #fff;
+    font-size: 1.13rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+.family-next-wlf {
+    display: none;
+    float: right;
+    margin-right: 9.38%;
+    width: 2.67rem;
+    height: 2.67rem;
+    -webkit-animation: nextPage 3s infinite;
+       -moz-animation: nextPage 3s infinite;
+        -ms-animation: nextPage 3s infinite;
+         -o-animation: nextPage 3s infinite;
+            animation: nextPage 3s infinite;
+}
+@-webkit-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@-moz-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@-ms-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@-o-keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+@keyframes nextPage {
+    0% { opacity : 1; }
+    50% { opacity: 0.2;}
+    100% { opacity : 1; }
+}
+
+@media screen and (max-height: 480px) {
+    .now-bro-sis-wlf .now-bro-sis-word, .now-family-word {
+        padding-top: 1rem;
+    }
+    .now-family-word {
+        bottom: -1rem;
+    }
+    .now-pic-group .now-sofa {
+        height: 9.83rem;
+    }
+    .now-pic-group .now-tele-bg {
+        height: 13.13rem;
+    }
+    .bro-sis-now-pic {
+        height: 23.67rem;
+    }
+    .now-person .now-boy {
+        bottom: -0.5rem;
+    }
+}

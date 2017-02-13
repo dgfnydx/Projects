@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta http-equiv="content/text" type="keywords"  content="企鹅电视" charset="utf-8" />
+    <title>企鹅电视</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common_cxg.css" />
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/animate.css" />
+    <style>
+        .weimi-ctn {
+            position: absolute;
+            left: 22%;
+            top: 2.3rem;
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+        }
+        .weimi-ctn p {
+            display: none;
+            color: #560d0d;
+            font-family: "cxg";
+            font-size: 1rem;
+            line-height: 1.45rem;
+            font-weight: bold;
+        }
+        .weimi-ctn .active {
+            background: url("../images/boy_cxg.png") 50% -0.2rem no-repeat;
+            background-size: contain;
+        }
+        #picweimi {
+            display: block;
+            position: absolute; 
+            left: 21.92%;
+            top: 10.93rem;
+            z-index: 11;    
+            width: 58%;
+            height: 10.88rem;
+        }
+        @media screen and (max-height: 480px) {
+            #picweimi {
+                top: 9rem;
+                height: 8.58rem;
+            }
+            .weimi-ctn {
+                top: 1.5rem;
+            }
+            .weimi-ctn p {
+                font-size: 0.75rem;
+                line-height: 1.05rem;
+            }
+        }
+        @media screen and (min-height: 568px) and (max-height: 736px) {
+            #picweimi {
+                top: 12.5rem;
+                height: 10.08rem;
+            }
+            .weimi-ctn {
+                top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="music-hyq">
+        <audio id="music-hyq4" autoplay="autoplay" loop="loop">
+            <source src="../audio/sound.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+	<div class="wrap-cxg">
+        <div class="card-cxg">
+            <div class="weimi-ctn tlt" data-in-effect="bounceInDown">
+                <p class="active">嘿，哥们儿，</p>
+                <p>都看了一年的球赛不腻呢？！</p>
+                <p>今年过年咱哥几个也换点儿</p>
+                <p>新鲜玩意儿看看吧，</p>
+                <p>别管老婆女朋友，</p>
+                <p>先来看场维密秀！约么？</p>
+            </div>
+            <div class="tv-cxg"></div>
+            <img id="picweimi" src="" alt="" />
+        </div>
+        <div class="ft-cxg">
+            <div class="wechat-cxg">
+                <p>关注企鹅电视 微信公众号 了解更多片源 </p>
+            </div>
+            <a href="###" class="red-cxg">抢观影红包</a>
+        </div>
+        <div class="dgf-red-packet">
+            <div class="cicle three"></div>
+            <div class="cicle two"></div>
+            <div class="cicle one"></div>
+            <div class="redpacket">
+                <div class="logo-ye">
+                    <img src="../images/LOGO_ye.png" alt="">
+                </div>
+                <a href="red-packet-details.html">抢</a>
+            </div>
+        </div>
+	</div>
+
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../src/event.js"></script>
+    <script type="text/javascript" src="../src/touch.js"></script>
+    <script type="text/javascript" src="../js/snow.min.js"></script>
+    <script type="text/javascript" src="../js/common_cxg.js"></script>
+    <script type="text/javascript" src="../js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="../js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="../js/jquery.textillate.js"></script>
+    
+    <script type="text/javascript">
+        // GIF动画
+         Img = new Array("../images/weimi1.png","../images/gangjiong2.png","../images/gangjiong3.png","../images/weimi4.png","../images/gangjiong5.png","../images/gangjiong6.png");
+         var i = 0;
+         function chImg(){
+             picweimi.src = Img[i];
+             i++;
+             if (i>=Img.length) {
+                i = 0 
+             } ;
+             setTimeout("chImg()",300);
+         }chImg(); 
+         // 音乐效果
+         var musicHyq = document.getElementById("music-hyq4");
+         var musicSwitch = true;
+         $(".music-hyq").on("tap",function() {
+             if(musicSwitch) {
+                 $(this).css({
+                     "background" : "url('../images/end_audio.png') 0 0 no-repeat",
+                     "background-size" : "100% 100%"
+                 })
+                 musicHyq.pause();
+                 musicSwitch = false;
+             } else {
+                 $(this).css({
+                     "background" : "url('../images/start_audio.png') 0 0 no-repeat",
+                     "background-size" : "100% 100%"
+                 })
+                 musicHyq.play();
+                 musicSwitch = true;
+             }
+         })
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>基金净值</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="icon" href="" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/common.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../css/zfx-worth1.css" />
+    <script src="../js/zepto.min.js" type="text/javascript"></script>
+    <script src="../js/common.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="zfx-wrap">
+        <header class="head clearfix">
+            <a class="back" href="javascript:history.go(-1)"></a>
+            <h1>基金净值</h1>
+        </header>
+        <section class="zfx-worth1">
+            <div class="zfx-seek">
+                <input type="search" placeholder="输入股票名称/代码添加自选股" />
+                <em></em>
+            </div>
+            <ul class="zfx-designation">
+                <li>103454</li>
+                <li>中油双动力混合</li>
+            </ul>
+            <ul class="zfx-designation">
+                <li>603766</li>
+                <li>德邦优化配置</li>
+            </ul>
+            <ul class="zfx-designation">
+                <li>300313</li>
+                <li>中油双动力混合</li>
+            </ul>
+            <ul class="zfx-designation">
+                <li>103454</li>
+                <li>中油战略新兴产业</li>
+            </ul>
+            <ul class="zfx-designation">
+                <li>600391</li>
+                <li>长盛同鑫行业</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

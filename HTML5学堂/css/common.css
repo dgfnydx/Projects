@@ -1,0 +1,347 @@
+@charset 'utf-8';
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 1170px;
+	border-bottom: 1px solid red;
+}
+.web-title {
+	width: 90%;
+	margin: 0 auto;
+}
+.web-title h1 {
+	float: left;
+	width: 160px;
+	height: 50px;
+	padding: 5px 15px;
+	line-height: 50px;
+}
+.web-title h1 a {
+	display: block;
+	color: #777777;
+}
+.web-title img {
+	float: left;
+	width: 50px;
+}
+.web-title h1 strong {
+	float: left;
+	margin-left: 5px;
+	font-size: 16px;
+}
+.header .nav {
+	float: left;
+}
+.nav a {
+	float: left;
+	width: 86px;
+	height: 60px;
+	line-height: 60px;
+	color: #777777;
+	font-size: 14px;
+	text-align: center;
+}
+.nav .selected {
+	background: #39f;
+	color: #fff;
+}
+.web-title form {
+	float: right;
+	padding: 13px 15px 0 0;
+	font-size: 14px;
+}
+.search-input {
+	overflow: hidden;
+	float: right;
+	width: 177px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.search-input input {
+	float: left;
+	width: 100%;
+	height: 30px;
+	border: 0;
+	line-height: 30px;
+	text-indent: 5px;
+	outline: none;
+	border-radius: 4px;
+}
+.search-input span {
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin-left: -28px;
+	background: white;
+}
+.search-btn {
+	float: right;
+	width: 54px;
+	height: 30px;
+	margin-left: 5px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.main {
+	overflow: hidden;
+	width: 1186px;
+	margin: 0 auto;
+	padding: 80px 0 50px 0;
+}
+.main h3 {
+	height: 37px;
+	padding-left: 20px;
+	border-bottom: 1px solid red;
+	line-height: 37px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.main-body {
+	overflow: hidden;
+	float: left;
+	width: 900px;
+}
+.top-recommend {
+	overflow: hidden;
+	width: 898px;
+	// height: 217px;
+	border: 1px solid red;
+	margin-bottom: 10px;
+	// background: #fff;
+}
+.top-recommend dl {
+    float: left;
+	width: 409px;
+	height: 90px;	
+	padding: 0 20px;
+	box-shadow: 1px 1px 0 0 red;
+}
+.top-recommend dl dt {
+	float: left;
+	width: 88px;
+	height: 88px;
+	padding: 1px;
+}
+.top-recommend dl dt a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+}
+.top-recommend .recom-pic2 {
+	background-position: -89px 180px;
+}
+.top-recommend .recom-pic3 {
+	background-position: 0 93px;
+}
+.top-recommend .recom-pic4 {
+	background-position: -89px 93px;
+}
+.top-recommend dl dd {
+	float: right;
+	width: 300px;
+	height: 78px;
+}
+.top-recommend dl dd a {
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	color: #39f;
+	font-weight: 700;
+}
+.top-recommend dl dd p {
+	overflow: hidden;
+	height: 40px;
+	line-height: 20px;
+	font-size: 12px;
+}
+.course {
+	overflow: hidden;
+    border: 1px solid red;
+    // background: white;
+}
+.course-list {
+	// margin-bottom: -1px;
+	padding: 20px;
+	// border-bottom: 1px solid red;
+	box-shadow: 0 -1px 0 0 red;
+}
+.course-list h2,
+.course-box h2 {
+	overflow: hidden;
+	font-size: 24px;
+	margin-bottom: 15px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-break: keep-all;
+}
+.course-list h2 a,
+.course-box h2 a {
+	color: #777;
+}
+.course-list p,
+.course-box p {
+	min-height: 40px;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+.read-info span {
+	margin-right: 20px;
+	cursor: pointer;
+}
+/*侧边栏*/
+.main-side {		
+	float: right;
+	width: 260px;
+}
+.contact-us {
+	overflow: hidden;
+	width: 258px;
+	// background: white;
+	border: 1px solid red;
+	font-size: 15px;
+}
+.contact-us li {
+	margin-bottom: -1px;
+	border-bottom: 1px solid red;
+}
+.contact-us li a {
+	display: block;
+	height: 45px;
+	padding-left: 40px;
+	
+	line-height: 45px;
+	color: #777;
+}
+/*联系我们背景定位*/
+.contact-us .weibo {
+	background-position: 12px 2px;
+}
+.contact-us .tieba {
+	background-position: 12px -83px;
+}
+.contact-us .qq {
+	background-position: 12px -41px;
+}
+.two-dimension-code {
+	float: right;
+	width: 98px;
+	height: 98px;
+	margin: -140px 5px;
+	border: 1px solid red;
+}
+.expand {
+	overflow: hidden;
+	margin: 10px 0;
+	border: 1px solid red;
+	// background: white;
+}
+.expand a {
+	display: block;
+	height: 44px;
+	margin-bottom: -1px;
+	border-bottom: 1px solid red;
+	line-height: 44px;
+	color: #39f;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+.time {
+	// height: 157px;
+	border: 1px solid red;
+	margin-bottom: 10px;
+	// background: white;
+}
+.time .date {
+	padding: 10px;
+}
+.date-text {
+	height: 100px;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2px #666 inset, 0 0 0 3px white inset;				
+}
+@font-face {
+	font-family: "Quartz Regular";
+	src: local("Quartz Regular"), url("../font/Quartz Regular.TTF") format("truetype");
+}
+.nowtime {
+	float: left;
+	width: 170px;
+	font-family: "Quartz Regular";
+	font-size: 60px;
+	line-height: 100px;
+	text-align: center;
+}
+.week {
+	float: left;
+	width: 45px;
+	padding: 30px 20px 30px 0;
+	line-height: 20px;
+	text-align: center;
+}
+.we {
+	height: 177px;
+	border: 1px solid red;
+}
+.we h3 a {
+	float: right;
+	padding-right: 10px;
+	text-decoration: underline;
+}
+.html-man {
+	padding: 10px;
+}
+.html-man a {
+	float: left;
+	width: 33.33%;
+	height: 24px;
+	line-height: 24px;
+	color: #39f;
+	text-decoration: underline;
+	text-align: center;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	padding-left: 430px;
+	border-top: 1px solid red;
+	// background: white;
+	line-height: 40px;
+} 
+.footer span {
+	float: left;
+}
+.footer b {
+	display: block;
+	float: left;
+	width: 15px;
+	height: 20px;
+	margin: 10px 3px;
+	cursor: pointer;
+}
+.web-white {
+	background: white;
+}
+.web-black {
+	background: black;
+}
+/*边框圆角*/
+.top-recommend, 
+.course,
+.contact-us,
+.expand,
+.time,
+.we {
+	-moz-border-radius: 5px; /*火狐内核*/
+	-webkit-border-radius: 5px; /*谷歌内核*/
+	-ms-border-radius: 5px; /*IE内核*/
+	border-radius: 5px;
+}

@@ -1,0 +1,351 @@
+
+@font-face {
+	font-family: "fzqkbysjw";
+	src: local("fzqkbysjw"), url("../font/fzqkbysjw.TTF") format("truetype");
+}
+html, body, .wrap-loading {
+	height: 100%;
+	background: url("../images/back.png") 0 0 no-repeat;
+	background-size: cover;
+}
+.wrap-hyq {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+/*loading页面 开始*/
+.hyq-tv {
+	padding-top: 11.25rem;
+}
+.hyq-tv .tv-con {
+	width: 33.4%;
+	height: 6.12rem;
+	margin: 0 auto;
+	padding: 1.13rem 9.3% 2.46rem 3.3%;
+	background: url("../images/tv.png") 0 0 no-repeat;
+	background-size: cover;
+}
+.tv-con .img-con {
+	position: relative;
+	/*z-index: -100;*/
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+.img-con img {
+	/*display: none;*/
+	display: block;
+	width: 94%;
+	height: 94%;
+	margin: 0 auto;
+	padding-top: 0.21rem;
+}
+.loading-word {
+	margin-top: 1.58rem;
+	font-size: 1.13rem;
+	text-align: center;
+	line-height: 2.04rem;
+}
+.loading-word p {
+	display: none;
+	margin-bottom: 1.21rem;
+	color: #381100;
+}
+.loading-word p:nth-child(2),
+.loading-word p:nth-child(3) {
+	font-family: "fzqkbysjw";
+	margin-bottom: 0;
+}
+.loading-word .point-one {
+	-webkit-animation: pointone 3s linear infinite;
+}
+.loading-word .point-two {
+	-webkit-animation: pointtwo 3s linear infinite;
+}
+.loading-word .point-three {
+	-webkit-animation: pointthree 3s linear infinite;
+}
+@-webkit-keyframes pointone {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes pointtwo {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes pointthree {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/*loading页面 结束*/
+
+
+/*基友、闺蜜 开始*/
+
+.wrap-brother-hyq,
+.wrap-sister-hyq {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+.brother-past-hyq,
+.brother-now-hyq,
+.sister-past-hyq,
+.sister-now-hyq {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 81%;
+	height: 26.54rem;
+	margin: auto;
+}
+.brother-now-hyq {
+	height: 22.96rem;
+}
+.sister-past-hyq {
+	height: 19rem;
+}
+.sister-now-hyq {
+	height: 25.33rem;
+}
+.brother-past-hyq img {
+	display: none;
+	width: 100%;
+}
+.sister-past-hyq img {
+	display: none;
+	width: 100%;
+}
+.brother-nowpic,
+.sister-nowpic {
+	display: none;
+	width: 100%;
+}
+.brother-word,
+.sister-word {
+	margin-top: 3rem;
+}
+.brother-word p,
+.sister-word p {
+	display: none;
+	/*font-family: "fzqkbysjw";*/
+	color: #fff;
+	font-size: 1.13rem;
+	font-weight: normal;
+	text-align: center;
+	line-height: 1.67rem;
+}
+.wrap-hyq .next-hyq {
+	display: none;
+	position: fixed;
+	bottom: 2rem;
+	right: 10%;
+	z-index: 1111;
+	width: 2.67rem;
+	height: 2.67rem;
+	-webkit-animation: blingHyq 1.2s infinite alternate;
+}
+@-webkit-keyframes biggerHyq {
+	from {
+		-webkit-transform: scale(1) translate(0, 0);
+	}
+	to {
+		-webkit-transform: scale(4) translate(12%, 0);
+	}
+}
+@-webkit-keyframes smallerHyq {
+	from {
+		-webkit-transform: scale(3.5) translate(-41.5%, 7%);
+	}
+	to {
+		-webkit-transform: scale(1) translate(0, 0);
+	}
+}
+@-webkit-keyframes blingHyq {
+	from {
+		opacity: 0.2;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes biggersisHyq {
+	from {
+		-webkit-transform: scale(1) translate(0, 0);
+	}
+	to {
+		-webkit-transform: scale(3.5) translate(10%, 20%);
+	}
+}
+@-webkit-keyframes smallersisHyq {
+	from {
+		-webkit-transform: scale(2.5) translate(-3.5%, 22%);
+	}
+	to {
+		-webkit-transform: scale(1) translate(0, 0);
+	}
+}
+/*基友 闺蜜 结束*/
+
+/*钟摆页*/
+.dgf-wrap-home {
+	display: none;
+	height: 100%;
+	background: url("../images/back.png");
+	background-size: 100% 100%;
+}
+.clock-body {
+	position: relative;
+	width: 24.53%;
+	height: 7.38rem;
+	margin: 0 auto 11.46rem;
+	padding-top: 5.96rem;
+	background: url("../images/clock.png") center bottom no-repeat;
+	background-size: 100%;
+}
+.clock-body .penguin {
+	position: absolute;
+	left: 24%;
+	bottom: -8.4rem;
+	width: 50.96%;
+	height: 8.6rem;
+	background: url("../images/penguin.png");
+	background-size: 100% 100%;
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
+	-ms-transform-origin: top center;
+	-o-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-animation: swings 1.5s linear infinite alternate;
+	-moz-animation: swings 1.5s linear infinite alternate;
+	-ms-animation: swings 1.5s linear infinite alternate;
+	animation: swings 1.5s linear infinite alternate;
+}
+@-webkit-keyframes swings {
+	from {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+@-webkit-keyframes swings {
+	from {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+@-moz-keyframes swings {
+	from {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+@-ms-keyframes swings {
+	from {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+@keyframes swings {
+	from {
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+}
+.pen-text {
+	line-height: 1.88rem;
+	text-align: center;
+	letter-spacing: 0.29rem;
+}
+.pen-text p {
+	display:none;
+	color: #381100;
+	font-family: "fzqkbysjw";
+	font-size: 1.13rem;
+}
+
+/*闺蜜 开始*/
+.sister-past-hyq {
+	/*display: none;*/
+}
+.wrap-brother-hyq {
+	/*display: none;*/
+}
+.sister-now-hyq img {
+	/*display: block;*/
+	/*-webkit-animation: smallersisHyq 5s;*/
+	/*-webkit-transform: scale(2.5) translate(-3.5%, 2%);*/
+}
+.wrap-loading,
+.dgf-wrap-home,
+.wrap-brother-hyq,
+.wrap-sister-hyq,
+.dgf-wrap-home {
+	/*display: none;*/
+}
+
+@media screen and (max-height: 480px) {
+    .clock-body {
+		margin: 0 auto 8.46rem;
+		padding-top: 2.96rem;
+    }
+    .clock-body .penguin {
+		bottom: -7.4rem;
+		height: 7.6rem;
+    }
+    .hyq-tv {
+    	padding-top: 8.25rem;
+    }
+    .loading-word {
+    	font-size: 1.4rem;
+    	line-height: 2.04rem;
+    }
+    .brother-word, .sister-word {
+		margin-top: 3rem;
+    }
+}

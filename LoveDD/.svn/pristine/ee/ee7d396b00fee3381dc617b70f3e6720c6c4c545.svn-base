@@ -1,0 +1,48 @@
+<div class="footer">
+    <div class="f-info">
+        <div class="footer-left">
+            <div class="f-nav clearfix">
+                <strong>
+                    <a href="about.php">关于爱叮叮</a>
+                    <a href="about.php">版权说明</a>
+                    <a href="#">隐私保护</a>
+                    <a href="#">联系我们</a>
+                    <a href="map.php">网站地图</a>
+                </strong>
+            </div>
+            <div class="follow-us">
+                <strong>
+                    <em>关注我们：</em>
+                    <a class="tencent" href=""></a>
+                    <a class="wechat" href=""></a>
+                    <a class="weibo" href=""></a>
+                    <a class="qzone" href=""></a>
+                    <a class="douban" href=""></a>
+                </strong>
+                <span>
+                    <em>友情链接：</em>
+                    <a href="">可米酷</a>
+                    <a href="">可米酷</a>
+                    <a href="">可米酷</a>
+                    <a href="">可米酷</a>
+                    <a href="">更多…</a>
+                </span>
+            </div>
+            <p class="clearfix">@版权归 深圳前海爱叮叮网络技术有限公司 所有    粤ICP备14085207号</p>   
+        </div>
+        <div class="app">
+            <a href="#"></a>
+            <span>
+                <em>立即下载</em>
+                <em>爱叮叮APP</em>
+            </span>
+        </div>
+    </div>
+    <div class="tool-bar">
+        <span class="to-top"></span>
+        <span class="wechar">
+            <b></b>
+        </span>
+        <em>微信</em>
+    </div>
+</div>

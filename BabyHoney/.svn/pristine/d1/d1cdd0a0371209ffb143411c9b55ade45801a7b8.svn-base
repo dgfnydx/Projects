@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>我的工地</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+	<link rel="icon" href="" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/z_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/service_report_details.css" />
+    <script charset="utf-8" src="../js/zepto.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="z-say-wrap">
+		<!-- 全站弹窗 -->
+		<div class="global"></div>
+		<header class="header clearfix">
+			<a href="user_center.html" class="come-back com-left" title="装小蜜"></a>
+			<h1>我的工地</h1>
+			<a class="order com-right" title="个人中心"></a>
+		</header>
+		<section class="z-say-main" id="see">
+			<div class="z-header clearfix">
+				<h2>2015年最适合12星座的装修风格</h2>
+				<div>
+					<img src="../images/demo/hourse.png" alt="">
+					<img src="../images/demo/hourse.png" alt="">
+					<img src="../images/demo/hourse.png" alt="">
+				</div>
+				<p class="time">
+					<strong>2015-04-16 10:43 </strong> 
+					<span><em>219</em>人气</p></span>
+				</p>
+			</div>
+			<dl class="z-says clearfix">
+				<dt>
+					<a href="">
+						<img src="../images/says_03.png" alt="">
+					</a>
+				</dt>
+				<dd>
+					<h3>马雪阳<em>34F</em></h3>
+					<p>初步评测不高于三家装修公司实地选择合适的装修公司工艺评测服务工艺评测服务帮您从源头把关的装修公司选择合适！</p>
+					<span>3小时前<i></i><em class="z-tops">84</em></span>
+					<div class="z-saymess">
+						<ul>
+							<li>
+								<h3>贺纯阳<strong></strong><i></i>回复<strong>马雪阳 :</strong></h3>
+								<p>
+									资质装修公司的初步评测不高于三家装修公司实地艺评测服务帮择合适的装修。
+								</p>
+								<span class="z-say-tim">1小时前<i></i><em>84</em></span>
+
+							</li>
+							<li>
+								<h3>柳飘飘<strong></strong>回复<strong>贺纯阳 :</strong></h3>
+								<p>
+									资质装修公司的初步评测不高于三家装修公司实地艺评测服务帮择合适的装修。
+								</p>
+								<span class="z-say-tim">35分钟前<i></i><em>84</em></span>
+							</li>
+						</ul>
+						<span class="z-more">更多24条回复</span>
+					</div>
+				</dd>
+			</dl>
+		</section>
+		<div class="s-login">
+			<a href="signin.html" title="">登入</a><span>|</span><a href="register.html" title="">注册</a>
+			<span class="z-write">写评论</span>
+		</div>
+	</div>
+	<!-- 评论框 -->
+	<div class="k-write-com clearfix">
+		<textarea name="z-write-coms" placeholder="我要评论" class="z-textarea"></textarea>
+		<i></i>
+		<span class="z-btn-yes">发布</span>
+		<strong>还可以输入<em>500</em>个字符</strong>
+	</div>
+	<script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../js/z-main2.js"></script>
+	<script type="text/javascript" src="../js/touch.js"></script>
+	<script type="text/javascript" src="../js/dgf.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>权威报道</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+	<link rel="icon" href="" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/common.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="../css/report.css" />
+    <script charset="utf-8" src="../js/zepto.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrap">
+		<!-- 全站弹窗 -->
+        <div class="global"></div>
+		<header class="header clearfix">
+			<a href="fap.html" class="come-back com-left" title="装小蜜"></a>
+			<h1>权威报道</h1>
+			<a class="order com-right" title="个人中心"></a>
+		</header>
+		<section class="s-main clearfix">
+			<div class="s-report clearfix">
+				<h2>家装O2O不能言说的口碑之伤</h2>
+				<h3>转自：网易家装</h3>
+				<img src="../images/demo/news_02.jpg" alt="" title="" />
+				<p>装修工程不是现成的产品无论施工队还是装修公司，装修都是在装饰设计和施工过程中形成试想，装修前，装修企业内部的质检（经常误称为监理），怎么可能指出自家预算中的漏洞，帮助消费者签订公平、透明的装修合同呢？装修过程中装修企业内部的质检是自己监督自己，运动员兼作裁判员的监督机制消费者又会获得几层的知情权装修后如果装修企业自己出现重大问题，又怎么可能代理消方监理才能公正客观的处理装修中的问题，才能真正地保障业主的权益。</p>
+				<img src="../images/demo/news_04.jpg" alt="" title="" />
+				<p>管家式监理不同于传统的监理，传统监理只负责工程质量的验收，装小蜜更关注装修的整体方案，除了监理工程质量之外帮助业主审核设计图纸，审核工程预算，跟踪工程进度，装修监理帮助业主审核装修方案和报价，防止高估冒算和中期无限度任意加项加价，使用户支付合理的装修价位提供资金托管及全程咨询服务等，全方位解决业主的装修烦恼。</p>
+				<span><em>原文地址：</em><a href="" title="">http://j.news.163.com/docs/99/2015031817/AL0QQ1G29001Q1G3.html</a></span>
+			</div>
+
+		</section>
+		<footer class="footer">
+			<section class="company-list clearfix">
+				<div class="company-left">
+					<a href="">
+						<img src="../images/bottom_logo.png" alt="">
+					</a>
+				</div>
+				<div class="company-right">
+					<img src="../images/CBDA.png" alt="">
+				</div>
+			</section>
+			<section class="copy">
+				<span>© 2015 ZHUANGXIAOMI.COM</span>
+				<strong>京ICP备13026313号</strong>
+			</section>
+		</footer>
+	</div>
+	<script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../src/touch.js"></script>
+</body>
+</html>

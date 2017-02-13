@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>文案</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="icon" href="" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/dgf_style.css" type="text/css"/>
+    <script charset="utf-8" src="../js/zepto.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="music-hyq">
+		<audio id="music-hyq7" autoplay="autoplay" loop="loop">
+			<source src="../audio/sound.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<div class="wrap-copy">
+		<ul class="copy-write">
+			<li>最好的陪伴是</li>
+			<li>陪你把青春画出热血的颜色</li>
+			<li>陪你把青春填满粉红的痴想</li>
+			<li>陪你把嬉闹留给纯真</li>
+			<li class="diff">陪你用成长收获圆满</li>
+			<li>最好的陪伴</li>
+			<li>是现在还像曾经那样</li>
+			<li>……</li>
+		</ul>
+		<div class="logo">
+			<img src="../images/LOGO.png" alt="">
+		</div>
+		<a href="select.html">
+			<img class="next-hyq" src="../images/goback.png" alt="下一页">
+		</a>
+	</div>
+	<script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../src/event.js"></script>
+	<script type="text/javascript" src="../src/touch.js"></script>
+	<script charset="utf-8" src="../js/dgf_animate.js" type="text/javascript"></script>
+	<script charset="utf-8" src="../src/fx.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		// 音乐效果
+		var musicHyq = document.getElementById("music-hyq7");
+		var musicSwitch = true;
+		$(".music-hyq").on("tap",function() {
+		    if(musicSwitch) {
+		        $(this).css({
+		            "background" : "url('../images/end_audio.png') 0 0 no-repeat",
+		            "background-size" : "100% 100%"
+		        })
+		        musicHyq.pause();
+		        musicSwitch = false;
+		    } else {
+		        $(this).css({
+		            "background" : "url('../images/start_audio.png') 0 0 no-repeat",
+		            "background-size" : "100% 100%"
+		        })
+		        musicHyq.play();
+		        musicSwitch = true;
+		    }
+		})
+	</script>
+</body>
+</html>

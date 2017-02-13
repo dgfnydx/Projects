@@ -1,0 +1,603 @@
+/* 
+* @Author: anchen
+* @Date:   2016-07-12 10:49:13
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-07-18 15:48:24
+*/
+
+/*常见问题*/
+.form input, .form textarea {
+    outline: none;
+}
+.form textarea {
+    resize: none;
+}
+.fapMain .banner img, .situation .banner img {
+    display: block;
+    width: 100%;
+    margin-top: 3.25rem;
+}
+.fapMain ul li {
+    width: 100%;
+    padding: 1.29rem 0;
+    box-shadow: 0 1px 1px #e9e9e9;
+}
+.fapMain ul .list-duty{
+    background: #f8f8f8 url("../images/program_04.png") no-repeat left center;
+    background-size: 23%;
+}
+.fapMain ul .list-distinction{
+    background: url("../images/program_08.png") no-repeat right center;
+    background-size: 23%;
+}
+.fapMain ul .list-duration{
+    background: #f8f8f8 url("../images/program_10.png") no-repeat left center;
+    background-size: 23%;
+}
+.fapMain ul .list-certificate{
+    background: url("../images/program_14.png") no-repeat right center;
+    background-size: 23%;
+}
+.fapMain ul .list-serve{
+    background: #f8f8f8 url("../images/program_16.png") no-repeat left center;
+    background-size: 23%;
+}
+.fapMain ul .list-budget{
+    background: url("../images/program_19.png") no-repeat right center;
+    background-size: 23%;
+}
+.fapMain ul .list-drawing{
+    background: #f8f8f8 url("../images/program_21.png") no-repeat left center;
+    background-size: 23%;
+}
+.fapMain ul .list-charge{
+    background: url("../images/program_23.png") no-repeat right center;
+    background-size: 23%;
+}
+.fapMain ul .list-standard{
+    background: #f8f8f8 url("../images/program_25.png") no-repeat left center;
+    background-size: 23%;
+}
+.fapMain ul .list-way{
+    background: url("../images/program_29.png") no-repeat right center;
+    background-size: 23%;
+}
+.fapMain ul li div {
+    width: 69%;
+}
+.fapMain ul li .left {
+    margin-left: 26%;
+}
+.fapMain ul li .right {
+    margin-left: 5%;
+}
+.fapMain ul li div h3 a{
+    display: block;
+    line-height: 1.8rem;
+    color: #2c2c2c;
+    font-size: 1.08rem;
+}
+.fapMain ul li div p a{
+    overflow: hidden;
+    height: 3.52rem;
+    line-height: 1.17rem;
+    color: #737373;
+    font-size: 0.83rem;
+    text-align: justify;
+}
+/*工地直播详情*/
+.constructMain .banner {
+    position: relative;
+}
+.constructMain .banner .bannerImg {
+    display:block;
+    width: 100%;
+    height: 18.71rem;
+}
+.constructMain .banner .banner-footer {
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    width: 100%;
+    line-height: 3.21rem;
+    background: rgba(0,0,0,0.6);
+}
+.constructMain .banner .banner-footer img {
+    float: left;
+    width: 9%;
+    height: 2.38rem;
+    margin: 0.43rem 3% 0 5%;
+}
+.constructMain .banner .banner-footer div {
+    color: #a4a4a4;
+    font-size: 0.88rem;
+} 
+.constructMain .banner .banner-footer div strong {
+    color: #e5e5e5;
+    font-size: 1rem;
+}
+.constructMain .house {
+    width: 52.2%;
+    margin: 0 auto;
+    line-height: 3.08rem;
+    color: #4d4d4d;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.constructMain p strong {
+    float: right;
+    width: 25%;
+    margin-top: 0.88rem;
+    border-radius: 5px;
+    line-height: 1.30rem;
+    color: white;
+    font-size: 0.88rem;
+    background: #ffa851;
+}
+.constructMain .message {
+    height: 10.96rem;
+    margin-bottom: 0.71rem;
+    box-shadow: 0 -1px #d0d0d0;
+}
+.constructMain .message div {
+    float: left;
+    width: 33.33%;
+    height: 5.46rem;
+    background: url("../images/live_Logo_04.png") no-repeat center 0.79rem;
+    background-size: 26%;
+    box-shadow: 1px 1px #d0d0d0;
+}
+.constructMain .message .area {
+    background: url("../images/live_Logo_10.png") no-repeat center 0.79rem;
+    background-size: 26%;
+}
+.constructMain .message .final {
+    background: url("../images/live_Logo_07.png") no-repeat center 0.79rem;
+    background-size: 26%;
+}
+.constructMain .message .name {
+    background: url("../images/live_Logo_17.png") no-repeat center 0.79rem;
+    background-size: 26%;
+}
+.constructMain .message .deadline {
+    background: url("../images/live_Logo_15.png") no-repeat center 0.79rem;
+    background-size: 26%;
+}
+.constructMain .message .owber {
+    background: url("../images/live_Logo_17.png") no-repeat center 0.79rem;
+    background-size: 26%;
+}
+.constructMain .message div strong {
+    display: block;
+    margin-top: 3.88rem;
+    line-height: 1rem;
+    color: #4d4d4d;
+    font-size: 1rem;
+    text-align: center;
+}
+.constructMain .nav {
+    padding-top: 1.29rem;
+    box-shadow: 0 -1px #d0d0d0, 0 1px #d0d0d0;
+}
+.constructMain .nav .nav-list {
+    width: 92%;
+    margin: 0 auto 0;
+}
+.constructMain .nav div span {
+    float: left;
+    width: 22%;
+    height: 5.40rem;
+    margin-right: 3%;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.constructMain .nav div span a {
+    display: block;
+    width: 81.1%;
+    height: 4.38rem;
+    margin: 0.49rem 0 0 9%;
+    line-height: 4.38rem;
+    text-align: center;
+    color: white;
+    font-size: 0.92rem;
+    border-radius: 50%;
+}
+.constructMain .nav div span:nth-child(1) a {
+    background-color: #ed5491;
+}
+.constructMain .nav div span:nth-child(2) a {
+    background-color: #ff5858;
+}
+.constructMain .nav div span:nth-child(3) a {
+    background-color: #ff7a46;
+}
+.constructMain .nav div span:nth-child(4), .constructMain .nav div span:nth-child(8) {
+    margin-right: 0;
+}
+.constructMain .nav div span:nth-child(8) {
+    margin-bottom: 0.71rem;
+}
+.constructMain .nav div span:nth-child(4) a {
+    background-color: #ffae2e;
+}
+.constructMain .nav div span:nth-child(5) a {
+    background-color: #b6ca4c;
+}
+.constructMain .nav div span:nth-child(6) a {
+    background-color: #6fc242;
+}
+.constructMain .nav div span:nth-child(7) a {
+    background-color: #1cab73;
+}
+.constructMain .nav div span:nth-child(8) a {
+    background: url("../images/colour.png") no-repeat;
+    background-size: 100%;
+    margin-right: 0;
+    line-height: 0;
+}
+.constructMain .nav div span:nth-child(8) a div {
+    float: left;
+    width: 83%;
+    height: 3.67rem;
+    margin: 0.37rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.constructMain .nav div span:nth-child(8) a div em {
+    line-height: 2.4rem;
+}
+.constructMain .nav div span:nth-child(8) a div em {
+    color: #1cab73;
+    font-size: 0.73rem;
+} 
+.constructMain .nav div span:nth-child(8) a div strong {
+    color: #1cab73;
+    font-size: 1rem;
+}
+.constructMain .mess {
+    height: 0.75rem;
+    background-color: #f8f8f8;
+    box-shadow: 0 1px 1px #e9e9e9, 0 -1px 1px #e9e9e9;
+}
+/*弹层*/
+.project-pic {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding-top: 9rem;
+    background: rgba(0, 0, 0, 0.8);
+}
+.swiper-container {
+    width: 100%;
+    height: 19.04rem;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+.project-text {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+.project-text strong {
+    display: block;
+    line-height: 4rem;
+}
+/*工地直播展开*/
+.project {
+    /*overflow: hidden;
+    height: 0;*/
+    display: none;
+}
+.constructMain .project h3, .project-detailed h3, .project-notice h3 {
+    height: 2.67rem;
+    padding-left: 4%;
+    color: white;
+    font-size: 1.08rem;
+    line-height: 2.67rem;
+    background-color: #ff7a46;
+    box-shadow: 0 1px 1px #e9e9e9;
+}
+.constructMain .project .pro-list {
+    padding: 0 0 0.25rem 6.3%;
+    box-shadow: 0 1px 1px #e9e9e9;
+}
+.constructMain .project div strong {
+    display: block;
+    width: 60.5%;
+    margin: 1.17rem 0;
+    color: #4e4e4e;
+    font-size: 1.08rem;
+    text-align: center;
+    line-height: 1.34rem;
+}
+.constructMain .project div strong em, .constructMain .project div strong i  {
+    float: left;
+    width:  8%;
+    height: 1.34rem;
+    background: url("../images/exc_mark.png") no-repeat;
+    background-size: 100%;
+}
+.constructMain .project div strong i {
+    float: right;
+    background: url("../images/jianyi_bg.png") no-repeat;
+    background-size: 100%;
+}
+.constructMain .project div p {
+    float: left;
+    margin-bottom: 1.04rem;
+    color: #4e4e4e;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.constructMain .project div .date {
+    margin-right: 13%;
+}
+.constructMain .project div span {
+    display: inline-block;
+    color: #757575;
+    line-height: 1rem;
+}
+.project .project-detailed h3, .project .project-notice h3{
+    color: #2c2c2c;
+    background-color: white;
+}
+.project .project-detailed ul {
+    float: left;
+    width: 45%;
+    margin-top: 1rem;
+}
+.project .project-detailed .ul-left{
+    margin: 1rem 3% 1.25rem 4%;
+}
+.project .project-detailed ul li {
+    width: 95%;
+    margin-bottom: 0.21rem;
+    padding-left: 5%;
+    color: #757575;
+    font-size: 0.88rem;
+    line-height: 2.17rem;
+    background-color: #f0f0f0;
+}
+.project .project-detailed ul .li-list {
+    width: 100%;
+    padding-left: 0;
+    color: #4e4e4e;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #e6e6e6;
+}
+.project .project-detailed ul li span {
+    float: right;
+    width: 24.1%;
+    height: 1.92rem;
+    margin: 0.12rem;
+}
+.project .project-detailed ul li:nth-child(2) span, .project .project-detailed ul li:nth-child(3) span, .project .project-detailed ul li:nth-child(4) span{
+    background: white url("../images/right.png") no-repeat center center;
+    background-size: 48%;
+} 
+.project .project-detailed ul li:nth-child(5) span {
+    background: white url("../images/exc_mark.png") no-repeat center center;
+    background-size: 48%;
+} 
+.project .project-detailed ul li:nth-child(6) span, .project .project-detailed ul li:nth-child(7) span, .project .project-detailed ul li:nth-child(8) span{
+    background: white url("../images/jianyi_bg.png") no-repeat center center;
+    background-size: 48%;
+}   
+.project .project-detailed .ul-right li:nth-child(5) span{
+    background: white url("../images/right.png") no-repeat center center;
+    background-size: 48%;
+}
+.project .project-detailed .ul-right li:nth-child(6) span{
+    background: white url("../images/exc_mark.png") no-repeat center center;
+    background-size: 48%;
+}   
+.project-notice ol {
+    margin: 1.13rem 0 1.33rem 5%;
+}
+.project-notice ol li {
+    margin-bottom: 0.79rem;
+    color: #757575;
+    line-height: 1rem;
+    font-size: 1rem;
+}
+/*权威报道*/
+/*.situation .sit-content {
+    margin-top: 1.04rem;
+}*/
+.situation .sit-content div {
+    padding: 1rem 4.1% 1rem 3.8%;
+    box-shadow: 0 -1px 1px #e9e9e9;
+}
+.situation .sit-content div h3 a {
+    display: block;
+    margin-bottom: 0.79rem;
+    color: #595959;
+    font-size: 1.25rem;
+    line-height: 1.42rem;
+    background: url("../images/small_Logo_01.jpg") no-repeat right;
+    background-size: 22%;
+}
+.situation .sit-content div dl dt {
+    float: left;
+    width: 33%;
+}
+.situation .sit-content div dl dt a, .situation .sit-content div dl dt a img {
+    display: block;
+    width: 100%;
+}
+.situation .sit-content div dl dd {
+    float: right;
+    width: 64%;
+}
+.situation .sit-content div dl dd p a {
+    display: block;
+    overflow: hidden;
+    height: 3.90rem;
+    margin: 0.33rem 0 0.83rem 0;
+    color: #595959;
+    font-size: 0.75rem;
+    text-align: justify;
+    line-height: 1rem;
+}
+.situation .sit-content div dl dd span, .situation .sit-content div dl dd strong {
+    float: left;
+    color: #797979;
+    font-size: 0.75rem;
+}
+.situation .sit-content div dl dd strong {
+    float: right;
+}
+.situation .sit-content div dl dd strong em {
+    color: #fe7a0f;
+}
+.pulladd {
+    margin-top: 0.33rem;
+    text-align: center;
+    box-shadow: 0 -1px 1px #e9e9e9;
+}
+.pulladd span {
+    display: block;
+    width: 25%;
+    padding-left: 4%;
+    margin: 0 auto;
+    color: #757575;
+    font-size: 0.58rem;
+    line-height: 2rem;
+    background: url("../images/p-icon.png") no-repeat left;
+    background-size: 22%;
+}
+.addmore {
+    display: none;
+    height: 5.92rem;
+    padding-top: 1.29rem;
+    color: #4d4d4d;
+    font-size: 0.88rem;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.addmore .loading {
+    width: 13%;
+    height: 3.33rem;
+    margin: 0 auto 0.54rem;
+    background: url("../images/ui-loading.png") no-repeat;
+    background-size: 100%;
+    -webkit-animation: circumgyrate 1s linear infinite;
+}
+@-webkit-keyframes "circumgyrate" {
+    from{
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+}
+/*权威报道*/
+.jreport form {
+    position: relative;
+    height: 3.17rem;
+    margin-top: 3.25rem;
+    background-color: #f8f8f8;
+    text-align: center;
+    line-height: 3.17rem;
+    box-shadow: 0 1px 1px #e9e9e9;
+}
+.jreport form input {
+    width:  84%;    
+    height: 2.21rem;
+    padding: 0 9% 0 4%;
+    border: none;
+    color: #767676;
+    font-size: 0.88rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 1px #e9e9e9;
+}
+.jreport form a {
+    position: absolute;
+    top: 0.6rem;
+    right: 4.9%;
+    width: 6%;
+    height: 1.8rem;
+    background: url("../images/search.png") no-repeat center;
+    background-size: 100%;
+}
+.jreport>div {
+    padding: 0 3%;
+}
+.report-content {
+    box-shadow: 0 1px 1px #e9e9e9;
+}
+.report-content h3 {
+    margin: 1.04rem 0 0.71rem 0;
+    color: #4d4d4d;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+.report-content h3 span {
+    float: left;
+    width: 4%;
+    height: 1.04rem;
+    margin: 0.08rem 2% 0 0;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.05rem;
+    background-color: #ff7200;
+}
+.report-content .banner, .report-content .banner img {
+    display: block;
+    width: 100%;
+}
+
+.report-content p, .jreport .content-list p {
+    color: #797979;
+    font-size: 0.75rem;
+    line-height: 2.38rem;
+}
+.report-content p span {
+    float: left;
+}
+.report-content p strong, .jreport .content-list p strong {
+    float: right;
+}
+.report-content p strong i, .jreport .content-list p i {
+    color: #ff7200;
+}
+.jreport .content-list {
+    box-shadow: 0 1px 1px #e9e9e9;
+}
+.jreport .content-list h3 a {
+    display: block;
+    width: 100%;
+    color: #4d4d4d;
+    font-size: 1.25rem;
+    line-height: 2.79rem;
+}
+.jreport .content-list a {
+    float: left;
+    width: 32.6%;
+    margin-right: 1%;
+}
+.jreport .content-list img {
+    display: block;
+    width: 100%;
+    height: 8.13rem;
+}
+.jreport .content-list .img-list {
+    margin-right: 0;
+}
+.jreport .content-list p {
+    float: left;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.jreport .addmore {
+    height: 6.05rem;
+    padding-top: 0.83rem;
+}

@@ -1,0 +1,121 @@
+@charset "UTF-8";
+html, body, .zfx-wrap {
+    height: 100%;
+    background: #fff;
+}
+.zfx-main .swiper-container {
+    height: 14rem;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination-bullet {
+    width: 0.41rem;
+    height: 0.41rem;
+}
+.swiper-pagination-bullet-active {
+    background: #464646;
+}
+/*一对多、一对一资管产品*/
+.zfx-product-name {
+    width: 100%;
+}
+.zfx-product {
+    width: 93%;
+    height: 3.25rem;
+    padding-left: 7%;
+    background: #eeeeee;
+    border-bottom: 1px solid #d12626;
+}
+.zfx-product em {
+    float: left;
+    font-size: 1.17rem;
+    line-height: 3.25rem;
+    color: #333333;
+}
+.zfx-product span {
+    float: left;
+    margin: 0 9% 0 5%;
+    font-size: 1.17rem;
+    line-height: 3.25rem;
+    color: #333333;
+}
+.zfx-product strong {
+    float: left;
+    margin: 0 7% 0 8%;
+    font-size: 1.17rem;
+    line-height: 3.25rem;
+    color: #333333;
+}
+.zfx-name {
+    width: 97%;
+    margin: 0 auto;
+}
+.zfx-name li {
+    width: 100%;
+    height: 3.17rem;
+    border-bottom: 1px solid #cccccc;
+}
+.zfx-name li strong {
+    float: left;
+    margin-left: 6%;
+    font-size: 1.17rem;
+    line-height: 3.17rem;
+    color: #666666;
+}
+.zfx-name li span {
+    float: left;
+    margin-left: 8%;
+    font-size: 1.17rem;
+    line-height: 3.17rem;
+    color: #d50000;
+}
+.zfx-name .zfx-name1 strong {
+    margin-left: 4%;
+}
+.zfx-name .zfx-name2 strong {
+    margin: 0 4% 0 3.5%;
+}
+.zfx-name .zfx-name2 em {
+    float: left;
+    margin-left: 8%;
+    font-size: 1.17rem;
+    line-height: 3.17rem;
+    color: #3db608;
+}
+
+/*专题报告*/
+.zfx-content {
+    width: 97%;
+    margin: 0 auto;
+    border-bottom: 1px solid #cccccc;
+}
+.zfx-content h2 {
+    padding: 5.42rem 0 1.25rem 0;
+    font-size: 1.33rem;
+    text-align: center;
+}
+.zfx-content div {
+    padding-bottom: 1.08rem;
+    text-align: center;
+}
+.zfx-content div span, strong, em {
+    font-size: 0.83rem;
+    color: #999999;
+}
+.zfx-content div span {
+    margin-right: 4%;
+}
+.zfx-content div strong {
+    margin-right: 3%;
+}
+.zfx-particulars {
+    width: 91%;
+    margin: 1.67rem auto 0;
+}
+.zfx-particulars p {
+    text-indent: 2em;
+    font-size: 1.17rem;
+    line-height: 2.33rem;
+}

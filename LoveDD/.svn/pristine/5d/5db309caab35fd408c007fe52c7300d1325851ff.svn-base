@@ -1,0 +1,16 @@
+<div class="dgf-make">
+    <div class="make-img">
+        <a href="" title="">
+            <img src="../images/demo/bigpic_1.png" alt="" title="">
+        </a>
+    </div>
+    <div class="make-text">
+        <div class="make-num clearfix">
+            <span>订制时间:</span>
+            <strong>2015-03-01 15:58:58</strong>
+        </div>
+        <div class="make-btn clearfix">
+            <span>删除 |</span><a href="shop_car.php"></a>
+        </div>
+    </div>
+</div>

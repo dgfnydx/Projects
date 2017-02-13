@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>注 册</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+	<link rel="icon" href="" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/gf_style.css" type="text/css"/>
+    <script charset="utf-8" src="../js/zepto.min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header class="head clearfix">
+			<a class="back" href="javascript:history.go(-1)"></a>
+			<h1>注 册</h1>
+			<a href="javascript:void(0)"></a>
+		</header>
+		<section class="main dgf-main">
+			<div class="login-tab clearfix">
+				<span class="bac1"> 游&nbsp 客</span>
+				<span>交易账户</span>
+			</div>
+			<form class="login" action="">
+				<div class="tabs">
+					<div class="log-same log-user">
+						<input type="text" placeholder="请输入用户名">
+					</div>
+					<div class="log-same log-mail">
+						<input type="text" placeholder="请输入邮箱">
+					</div>
+					<div class="log-same log-tel">
+						<input type="text" placeholder="请输入手机号">
+					</div>
+					<div class="log-dif auth">
+						<input type="text" placeholder="验证码">
+						<span>发送验证码</span>
+					</div>
+					<div class="log-same log-pwd">
+						<input type="text" placeholder="设置密码">
+					</div>
+					<div class="log-same log-qpwd">
+						<input type="text" placeholder="确认密码">
+					</div>
+					<div class="log-same log-info">想获取期货相关信息</div>
+				</div>
+				<div class="tabs login-select">
+					<div class="log-same log-count">
+						<input type="text" placeholder="请输入资金账号">
+					</div>
+					<div class="log-same log-user">
+						<input type="text" placeholder="请输入姓名">
+					</div>
+					<div class="log-same log-id">
+						<input type="text" placeholder="请输入身份证">
+					</div>
+					<div class="log-same log-tel">
+						<input type="text" placeholder="请输入手机号">
+					</div>
+					<div class="log-dif auth">
+						<input type="text" placeholder="验证码">
+						<span>发送验证码</span>
+					</div>
+				</div>
+				<label for="" class="enter-btn">登 录</label>
+			</form>
+			<div class="login-cover">
+				<ul>
+					<li>以上信息仅作参考</li>
+					<li>具体内容请以该发售公告</li>
+					<li>招募说明书为准</li>
+				</ul>
+			</div>
+		</section>
+		<footer class="foot clearfix">
+			<a href="../index.php" title="">首 页</a>
+			<a href="fund.html" title="">基 金</a>
+			<a href="date_manage.html" title="">资 管</a>
+			<a href="searchInfor.html" title="">研发资讯</a>
+			<a href="online_server.html" title="">在线客服</a>
+		</footer>
+	</div>
+	<script charset="utf-8" src="../src/touch.js" type="text/javascript"></script>
+	<script charset="utf-8" src="../js/gf.js" type="text/javascript"></script>
+</body>
+</html>

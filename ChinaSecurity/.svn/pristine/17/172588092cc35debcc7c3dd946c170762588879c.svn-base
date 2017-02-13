@@ -1,0 +1,51 @@
+@charset "UTF-8";
+html, body, .zfx-wrap {
+    height: 100%;
+    background: #dbdbdb;
+}
+.zfx-seek {
+    position: relative;
+    width: 97%;
+    height: 2.58rem;
+    margin: 4rem auto 0;
+    background: #fff;
+    border-radius: 3px;
+}
+.zfx-seek input {
+    width: 86%;
+    height: 100%;
+    padding-left: 4%;
+    font-size: 1rem;
+    color: #999999;
+    border: none;
+    outline: none;
+}
+.zfx-seek em {
+    position: absolute;
+    top: 0.46rem;
+    width: 6%;
+    height: 1.67rem;
+    background: url("../images/search_hyq.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zfx-designation {
+    width: 97%;
+    height: 4.17rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #bababa;
+}
+.zfx-designation li:nth-child(1) {
+    float: left;
+    width: 32%;
+    height: 100%;
+    margin-left: 5%;
+    font-size: 1.17rem;
+    line-height: 4.17rem;
+}
+.zfx-designation li:nth-child(2) {
+    float: left;
+    width: 63%;
+    height: 100%;
+    font-size: 1.17rem;
+    line-height: 4.17rem;
+}

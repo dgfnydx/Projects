@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运筹帷幄_HTML5学堂</title>
+	<link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
+	<link rel="stylesheet" href="../css/reset.css" type="text/css">
+	<link rel="stylesheet" href="../css/common.css" type="text/css">
+	<link rel="stylesheet" href="../css/list.css" type="text/css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header skin">
+			<div class="web-title">
+				<h1>
+					<a href="../index.html">
+						<img src="../images/logo.png">
+						<strong>HTML5学堂</strong>
+					</a>
+				</h1>
+				<div class="nav">
+					<a href="journey.html">初步征程</a>
+					<a href="step.html">步步为营</a>
+					<a href="kingo.html">金戈铁马</a>
+					<a href="ten_years.html">十年一剑</a>
+					<a href="battlefield.html">沙场点兵</a>
+					<a class="selected" href="strategist.html">运筹帷幄</a>
+				</div>
+				<form>
+					<div class="search-btn">搜索</div>
+					<div class="search-input">
+						<input type="text">
+						<span></span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="main">
+			<div class="other-side">
+				<ul>
+					<li>
+						<a href="">项目开发经验积累</a>
+					</li>
+					<li>
+						<a href="">职场那些事儿</a>
+					</li>
+					<li>
+						<a href="">程序员的未来</a>
+					</li>
+					<li>
+						<a href="">如何从程序员走向项目经理</a>
+					</li>
+				</ul>
+			</div>
+			<div class="other-body">
+				<div class="select-layout clearfix">
+					<span class="sel-list"></span>
+					<span class="sel-box"></span>
+					<em>切换查看方式：</em>
+				</div>
+				<div class="course list-page">
+					<div class="course-list">
+						<h2>
+							<a href="">而今的HTML5行业状态</a>
+						</h2>
+						<p>【HTML5学堂 - 而今的HTML5行业状态】HTML5行业当前如何？到底是什么决定着薪资？谁决定你要走路了？走下神坛的HTML5。必须要说，这是一碗心灵的毒药，我不想灌什么鸡汤，因为那些东西只能够暂时性的蒙蔽双眼。如果你想要了解真相，不怕被伤害，那请往下看，跟我一起干了这碗心灵毒药。</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">埋头奔波在加班之路时，记得停下来</a>
+						</h2>
+						<p>【HTML5学堂 - 职场那些事儿】加班，似乎已经成为了国人的工作文化，特别在IT行业当中，加班更是成了家常便饭。那么为何会经常出现加班的现象，我们该如何去正确的看待加班，本文将带着大家合理的分析加班以及应对的措施。</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">二八法则</a>
+						</h2>
+						<p>【HTML5学堂 - 职场那些事儿】不管是生活还是工作，每一件事情都存在“二八法则”的现象。在工作中我们该如何利用好“二八法则”来辅助我们更好的完成工作，在生活中，如何利用“二八法则”让自己的生活过的更精彩。</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">戳</a>
+						</h2>
+						<p>【HTML5学堂 - 职场那些事儿】戳。利利带你走进职场第一道门槛。不管是生活还是职场，在与他人接触的第一面，你已经不经意的让对方给你扣上了"戳" ! 。而今天的文章主要是引导大家思考如何扣好这个“戳”。</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">前端开发工程师心里的苦以及他的小船</a>
+						</h2>
+						<p>【HTML5学堂 - 职场那些事儿】前端开发工程师心里的苦以及他的小船。前端开发工程师心里有不少苦，一起来看看心里快要倾覆的小船吧，对于这些苦，我们要如何面对呢?</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">如何在HTML5浪潮中站稳脚跟</a>
+						</h2>
+						<p>【HTML5学堂 - 工具类文件推荐】即时调试工具-weinre的使用方法。在前一篇文章当中，我们借着weinre讲解了NodeJS中的一些简单命令，也讲解了weinre的安装方法，今天我们把weinre的使用“完结”掉。移动端页面的开发过程中，weinre“即时”的调试方式，能够让我们更好更快的解决调试问题，使调试工作变得更加方便。</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">HTML5项目开发备忘录</a>
+						</h2>
+						<p>【HTML5学堂 - 项目开发经验积累】HTML5项目开发备忘录。良好的项目开发，从缜密的分析与计划开始，充分的项目开发准备能够让之后的问题降低到最少，让我们的整体开发效率提升不少。精心准备了关于项目开发的相关备忘，分享给大家啦~！</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+					<div class="course-list">
+						<h2>
+							<a href="">UC浏览器皮肤的那个坑</a>
+						</h2>
+						<p>【HTML5学堂 - 项目经验开发积累】UC浏览器皮肤的那个坑。在之前的一款游戏开发当中，使用小米的UC浏览器查看移动端样式，出现了“不可思议”的现象。明明设置了深红色的文字，硬生生的变成了绿色，让小编大呼“UC简直就是色盲啊~~~”，后来发现UC浏览器的皮肤是这个问题的罪魁祸首。</p>
+						<div class="read-info">
+							<span>作者：
+								<a href="">HTML5学堂</a>
+							</span>
+							<span>阅读量：<em>100</em></span>
+							<span>分享到微博</span>
+						</div>
+					</div>
+				</div>
+				<div class="pages clearfix">
+					<ul>
+						<li>首页</li>
+						<li>上一页</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>下一页</li>
+						<li>末页</li>
+					</ul>
+					<div class="page-num">
+						共
+						<span>4</span>
+						页
+						<span>30</span>
+						条
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer skin">
+			<span>Copyright © 2015 
+				<a href="">HTML5学堂</a>
+				<a href="">闽ICP备15005630号-1</a> 
+				&nbsp&nbsp&nbsp&nbsp黑白任你选：
+			</span>
+			<b class="web-white"></b>
+			<b class="web-black"></b>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

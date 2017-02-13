@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors  ()
+ * @date    2016-07-12
+ * @version $Id$
+ */
+.com-pic {
+	width: 100%;
+	height: 15.42rem;
+}
+.com-pic img {
+	width: 100%;
+	height: 100%;
+}
+.reg-sign {
+	width: 73.59%;
+	margin: 0 auto;
+}
+.reg-sign .tips {
+	display: block;
+	visibility: hidden;
+	height: 2.38rem;
+	padding-left: 7.22%;
+	background: url("../images/error.png") 0 0.5rem no-repeat;
+	background-size: 5.53%;
+	line-height: 2.38rem;
+	font-size: 0.88rem;
+	color: #ff5959;
+}
+.same-width,
+.same-width input,
+.com-num {
+	width: 100%;
+	height: 3.17rem;
+	border-radius: 5px;
+}
+.same-width {
+	margin-bottom: 0.96rem;
+	box-shadow: 0 0 0 1px #c7c7c7;
+}
+.same-width input,
+.com-num input {
+	line-height: 3.17rem;
+	color: #b5b5b5;
+	font-size: 1.17rem;
+	text-indent: 1em;
+	border: 0;
+	outline: none;
+}
+.com-num div {
+	float: left;
+	height: 3.17rem;
+	box-shadow: 0 0 0 1px #c7c7c7;
+	border-radius: 5px;
+}
+.verify-num div {
+	width: 63.69%;
+}
+.verify-num input {
+	width: 100%;
+	border-radius: 5px;
+}
+.com-num span {
+	float: right;
+	height: 3.17rem;
+	line-height: 3.17rem;
+	font-size: 1.17rem;
+	text-align: center;
+}
+.verify-num span {
+	width: 30.79%;
+	background: #b2b2b2;
+}
+.forget span {
+	float: left;
+	height: 2.75rem;
+	padding-left: 6.88%;
+	background: url("../images/goin.png") 0 0.75rem no-repeat;
+	background-size: 20%;
+	line-height: 2.75rem;
+	font-size: 0.88rem;
+	color: #6c6c6c;
+}
+.forget .selected {
+	background: url("../images/dein_Logo_05.png") 0 0.75rem no-repeat;
+	background-size: 20%;
+}
+.forget a {
+	float: right;
+	line-height: 2.75rem;
+	color: #6c6c6c;
+}
+.btn-list {
+	margin-bottom: 2.71rem;
+}
+.btn-list a,
+.btn-list span {
+	width: 46.92%;
+	line-height: 3.17rem;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0 0 0 1px #ffa751;
+}
+.sig-btn a {
+	float: left;
+	color: #ffa751;
+	font-size: 1.42rem;
+
+}
+.btn-list span {
+	float: right;
+	color: white;
+	background: #ffa751;
+	font-size: 1.42rem;
+}
+.line-between {
+	color: #5b5b5b;
+	font-size: 1rem;
+	text-align: center;
+	-webkit-transform: scale(0.88);
+}
+.line-between:before {
+	left: -0.5rem;
+}
+.line-between:after {
+	right: -0.6rem;
+}
+.line-between:after,
+.line-between:before {
+	content: " ";
+	position: absolute;
+	bottom: 0.8rem;
+	width: 26.33%;
+	height: 1px;
+	box-shadow: 0 1px 0 0 #c7c7c7;
+}
+.user-list {
+	padding: 1.04rem 0 2.17rem 5.31%;
+}
+.user-list a {
+	float: left;
+	width: 19.51%;
+	height: 3.63rem;
+	margin-right: 5.31%;
+	border-radius: 50%;
+}
+.user-list .blog {
+	background: url("../images/dein_Logo_09.png") no-repeat;
+	background-size: contain;
+}
+.user-list .qq {
+	background: url("../images/dein_Logo_11.png") no-repeat;
+	background-size: contain;
+}
+.user-list .wechat {
+	background: url("../images/dein_Logo_13.png") no-repeat;
+	background-size: contain;
+}
+.user-list .dou {
+	background: url("../images/dein_Logo_15.png") no-repeat;
+	background-size: contain;
+}
+/*注册*/
+.active-num div {
+	width: 54.78%;
+}
+.active-num input {
+	width: 100%;
+	border-radius: 5px;
+}
+.active-num span {
+	width: 40.34%;
+	border-radius: 5px;
+	background: #ffa751;
+	color: white;
+	box-shadow: 0 0 0 1px #ffa751;
+}
+.protocol span {
+	overflow: hidden;
+	display: block;
+	height: 2.92rem;
+	padding-left: 6.88%;
+	background: url("../images/goin.png") 0 center no-repeat;
+	background-size: 5%;
+	line-height: 2.92rem;
+	font-size: 0.8rem;
+}
+.protocol .select {
+	background: url("../images/dein_Logo_05.png") 0 center no-repeat;
+	background-size: 5%;
+}
+.reg-btn a {
+	float: left;
+	height: 3.17rem;
+	color: #ffa751;
+	font-size: 0.88rem;
+}
+.findpas-flow {
+	padding: 1.88rem 0 0 9.5%;
+	font-size: 1.08rem;
+}
+.find-step {
+	color: #ffa751;
+}
+.step-btn a {
+	display: block;
+	width: 47.35%;
+	height: 3.25rem;
+	margin: 1.42rem auto 0;
+	background: #ffa751;
+	line-height: 3.25rem;
+	color: white;
+	font-size: 1.42rem;
+	text-align: center;
+	border-radius: 5px;
+}

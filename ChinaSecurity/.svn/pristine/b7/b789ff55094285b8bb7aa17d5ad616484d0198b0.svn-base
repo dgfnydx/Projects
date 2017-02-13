@@ -1,0 +1,121 @@
+@charset "UTF-8";
+html, body {
+    height: 100%;
+}
+/*基金导航*/
+.zfx-worth {
+	width: 100%;
+}
+.zfx-nav {
+	position: fixed;
+    width: 100%;
+    height: 3.25rem;
+    padding-top: 3.33rem;
+    background: #b20202;
+}
+.zfx-nav span {
+	float: left;
+	width: 14%;
+	height: 2rem;
+	margin: 0.75rem 0 0 5%;
+	font-size: 1.17rem;
+	text-align: center;
+	color: #fff;
+	line-height: 2rem;
+}
+.zfx-nav1 {
+    box-shadow: 0 0 0 1px #fff;
+    border-radius: 3px;
+}
+.zfx-nav em {
+	float: left;
+	width: 14%;
+	height: 2rem;
+	margin: 0.75rem 0 0 5%;
+	font-size: 1.17rem;
+	text-align: center;
+	color: #fff;
+	line-height: 2rem;
+}
+.zfx-classify {
+	width: 100%;
+	height: 3.33rem;
+	padding-top: 6.67rem;
+	background: #eeeeee;
+	border: 1px solid #dddddd;
+}
+.zfx-classify span, strong, em {
+	float: left;
+	font-size: 1.17rem;
+	line-height: 3.33rem;
+	color: #999999;
+}
+.zfx-classify span {
+	margin: 0 20% 0 5%;
+}
+.zfx-classify strong {
+	margin-right: 11%;
+}
+.zfx-classify em {
+	padding-right: 4%;
+    color: #000;
+	background: url("../zfx-images/zfx_subscript.png") 100% no-repeat;
+	background-size: 0.83rem 0.83rem;
+}
+.zfx-specific {
+	width: 97%;
+	height: 3.67rem;
+	margin: 0 auto;
+	border-bottom: 1px solid #dddddd;
+}
+.zfx-specific li:nth-child(1) {
+	float: left;
+	width: 38%;
+	height: 100%;
+	padding-left: 4%;
+}
+.zfx-specific li:nth-child(1) span:nth-child(1) {
+	display: block;
+	padding-top: 0.58rem;
+	font-size: 1.17rem;
+}
+.zfx-specific li:nth-child(1) span:nth-child(2) {
+	display: block;
+	padding-top: 0.25rem;
+	font-size: 0.83rem;
+	color: #999999;
+}
+.zfx-specific li:nth-child(2) {
+	float: left;
+	width: 30%;
+	height: 100%;
+}
+.zfx-specific li:nth-child(2) span:nth-child(1) {
+	display: block;
+	padding-top: 0.4rem;
+	font-size: 1.5rem;
+	color: #d50000;
+}
+.zfx-specific li:nth-child(2) span:nth-child(2) {
+	display: block;
+	font-size: 0.83rem;
+	color: #999999;
+}
+.zfx-specific li:nth-child(3) em {
+	display: block;
+	width: 24%;
+	height: 2.5rem;
+	margin-top: 0.58rem;
+	font-size: 1.33rem;
+	color: #fff;
+	text-align: center;
+	line-height: 2.5rem;
+	background: #d50000;
+	border-radius: 3px;
+}
+.zfx-all div {
+    display: none;
+}
+.zfx-all .zfx-all1 {
+    display: block;
+}

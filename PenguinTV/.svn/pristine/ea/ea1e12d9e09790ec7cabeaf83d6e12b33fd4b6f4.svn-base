@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta http-equiv="content/text" type="keywords"  content="企鹅电视" charset="utf-8" />
+    <title>企鹅电视</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common_cxg.css" />
+    <link rel="stylesheet" href="../css/animate.css" />
+    <style>
+        .dasheng-ctn {
+            position: absolute;
+            left: 22%;
+            top: 1.3rem;
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+        }
+        .dasheng-ctn p {
+            display: none;
+            color: #560d0d;
+            font-family: "cxg";
+            font-size: 1rem;
+            line-height: 1.45rem;
+            font-weight: bold;
+        }
+        .dasheng-ctn .active {
+            background: url("../images/boy_cxg.png") 42% -0.2rem no-repeat;
+            background-size: contain;
+        }
+        #picdasheng {
+            display: block;
+            position: absolute; 
+            left: 21.92%;
+            top: 10.93rem;
+            z-index: 11;    
+            width: 58%;
+            height: 10.88rem;
+        }
+        @media screen and (max-height: 480px) {
+            #picdasheng {
+                top: 9rem;
+                height: 8.58rem;
+            }
+            .dasheng-ctn {
+                top: 1.5rem;
+            }
+            .dasheng-ctn p {
+                font-size: 0.75rem;
+                line-height: 1.05rem;
+            }
+        }
+        @media screen and (min-height: 568px) and (max-height: 736px) {
+            #picdasheng {
+                top: 12.5rem;
+                height: 10.08rem;
+            }
+            .dasheng-ctn {
+                top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="music-hyq">
+        <audio id="music-hyq6" autoplay="autoplay" loop="loop">
+            <source src="../audio/sound.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="wrap-cxg">
+        <div class="card-cxg">
+            <div class="dasheng-ctn tlt" id="p-ctn" data-in-effect="bounceInDown">
+                <p>喂，臭屁蛋儿，</p>
+                <p class="active">今年春节</p>
+                <p>还想跟我抢遥控器么？</p>
+                <p>我答应你我可以不抢，</p>
+                <p>而且还陪你看动漫，</p>
+                <p>但是，红包记得分我一半哟</p>
+                <p>哈哈哈</p>
+            </div>
+            <div class="tv-cxg"></div>
+            <img id="picdasheng" src="" alt="" />
+        </div>
+        <div class="ft-cxg">
+            <div class="wechat-cxg">
+                <p>关注企鹅电视 微信公众号 了解更多片源 </p>
+            </div>
+            <a href="###" class="red-cxg">抢观影红包</a>
+        </div>
+        <div class="dgf-red-packet">
+            <div class="cicle three"></div>
+            <div class="cicle two"></div>
+            <div class="cicle one"></div>
+            <div class="redpacket">
+                <div class="logo-ye">
+                    <img src="../images/LOGO_ye.png" alt="">
+                </div>
+                <a href="red-packet-details.html">抢</a>
+            </div>
+        </div>
+    </div>   
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/snow.min.js"></script>
+    <script type="text/javascript" src="../js/common_cxg.js"></script>
+    <script type="text/javascript" src="../src/event.js"></script>
+    <script type="text/javascript" src="../src/touch.js"></script>
+    <script type="text/javascript" src="../js/jquery.fittext.js"></script>
+    <script type="text/javascript" src="../js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="../js/jquery.textillate.js"></script>
+    <script type="text/javascript">
+        
+        // GIF动画
+         Img = new Array("../images/dasheng1.png","../images/gangjiong2.png","../images/gangjiong3.png","../images/dasheng4.png","../images/gangjiong5.png","../images/gangjiong6.png");
+         var i = 0;
+         function chImg(){
+             picdasheng.src = Img[i];
+             i++;
+             if (i>=Img.length) {
+                i = 0 
+             } ;
+             setTimeout("chImg()",300);
+         } chImg();
+         // 音乐效果
+         var musicHyq = document.getElementById("music-hyq6");
+         var musicSwitch = true;
+         $(".music-hyq").on("tap",function() {
+             if(musicSwitch) {
+                 $(this).css({
+                     "background" : "url('../images/end_audio.png') 0 0 no-repeat",
+                     "background-size" : "100% 100%"
+                 })
+                 musicHyq.pause();
+                 musicSwitch = false;
+             } else {
+                 $(this).css({
+                     "background" : "url('../images/start_audio.png') 0 0 no-repeat",
+                     "background-size" : "100% 100%"
+                 })
+                 musicHyq.play();
+                 musicSwitch = true;
+             }
+         })
+    </script>
+</body>
+</html>
