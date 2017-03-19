@@ -339,10 +339,6 @@ $(".uselovedd .submit").click(function() {
 // 。。。。。。。。。。。。。丁国富JS结束。。。。。。。。。。。。
 // 。。。。。。。。。。。。。丁国富JS结束。。。。。。。。。。。。
 
-// 。。。。。黄添隆js开始。。。。。。。。。。。。。。。。。。。
-// 。。。。。黄添隆js开始。。。。。。。。。。。。。。。。。。。
-// 。。。。。黄添隆js开始。。。。。。。。。。。。。。。。。。。
-// 。。。。。黄添隆js开始。。。。。。。。。。。。。。。。。。。
 
  //《我的交易》页面
  $(function() {
@@ -617,8 +613,90 @@ $(function() {
     // });
 });
 
-// 《我的购物车》页面
-$(function() {
+// 购物车
+var shop = new Vue({
+    el: "#shop",
+    data: {
+        totalMoney: 0,//总金额
+        totalCount: 0,//已选商品数
+        selectAll: false,
+        goods: [{
+            name: "造梦者",
+            color: "红色",
+            size: "S",
+            count: 1,
+            unitPrice: 88,
+            picture: "../images/demo/index_09.png"
+        },{
+            name: "雪之梦幻",
+            color: "白色",
+            size: "X",
+            count: 1,
+            unitPrice: 108,
+            picture: "../images/demo/det_03.png"
+        },{
+            name: "海之蓝",
+            color: "蓝色",
+            size: "XX",
+            count: 2,
+            unitPrice: 209,
+            picture: "../images/demo/cloth.png"
+        }]
+    },
+    filters: {
+        formatMoney: function(val, type) {
+            return "￥" + val.toFixed(2) + type;
+        }
+    },
+    methods: {
+        changeCount: function(good, type) {
+            if(type > 0) {
+                good.count++;
+            } else {
+                good.count--;
+                if(good.count < 1) {
+                    good.count = 1;
+                }
+            }
+            this.calcMoney()
+        },
+        selGood: function(good) {
+            if(typeof good.htlSelect == "undefined") {
+                // 全局（对象，属性，值）
+                Vue.set(good, "htlSelect", true)
+                // 局部
+                // this.$set(good, "htlSelect", true)
+            } else {
+                good.htlSelect = !good.htlSelect;
+            }
+            this.calcMoney()
+        },
+        selected: function() {
+            this.selectAll = !this.selectAll;
+            var _this = this;
+            this.goods.forEach(function(good, index) {
+               if(typeof good.htlSelect == "undefined") {
+                   _this.$set(good, "htlSelect", _this.selectAll)
+               } else {
+                   good.htlSelect = _this.selectAll;
+               } 
+            })
+            this.calcMoney()
+        },
+        calcMoney: function() {
+            var _this = this;
+            this.totalMoney = 0;
+            this.totalCount = 0;
+            this.goods.forEach(function(good, index) {
+                if(good.htlSelect) {
+                    _this.totalMoney += good.unitPrice*good.count
+                    _this.totalCount += good.count
+                }
+            })
+        }
+    }
+})
+/*$(function() {
     var htlSelc = 0;   //计算商品选择按钮点击的次数
     var htlTc = 0;  //记录点击商品父级的索引值
     // 动态添加商品个数
@@ -783,7 +861,7 @@ $(function() {
         // 页面刷新时改变文本框字体颜色
         $('#htl-jh').css('color', '#d8d8d8');       
     }   
-})
+})*/
     // 黄添隆js结束。。。。。。
     // 黄添隆js结束。。。。。。
     // 黄添隆js结束。。。。。。
@@ -1410,11 +1488,7 @@ $(".production-show-like-xxj").click(function() {
         cli = false;
     }
 });
-//。。。。肖旭疆js结束。。。。。。。。。
-//。。。。肖旭疆js结束。。。。。。。。。
-//。。。。肖旭疆js结束。。。。。。。。。
-//。。。。肖旭疆js结束。。。。。。。。。
-//。。。。肖旭疆js结束。。。。。。。。。
+
 
 
 

@@ -102,6 +102,7 @@
 		?>
    	</div>
     <script charset="utf-8" src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../js/vue-2.2.4.min.js" type="text/javascript"></script>
     <script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/other.js"></script>
     <script type="text/javascript">

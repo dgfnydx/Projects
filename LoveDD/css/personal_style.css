@@ -2129,7 +2129,7 @@ h1.htl-shop-h1 {
 .htl-shopc-sp .htl-shopc-spxz {
 	background: red;
 }
-.htl-shopc-sp span {
+.htlspan {
 	top: 50%;
 	left: 10px;
 	position: absolute;
@@ -2463,7 +2463,7 @@ h1.htl-shop-h1 {
 	float: left;
 	cursor: pointer;
 }
-.htl-shopc-foot-lef b {
+.htlb {
 	width: 11px;
 	height: 11px;
 	margin-right: 18px;
@@ -2520,7 +2520,7 @@ h1.htl-shop-h1 {
 	font-size: 20px;
 }
 /*点击选择按钮，则添加此类名*/
-.htl-shopc-select, .htl-shopc-foot .htl-shopc-all-selects,
+.htlSelect, .htl-shopc-foot .htl-shopc-all-selects,
 .htl-shopc-sp .htl-shopc-spxz {
 	background: url('../images/tick_off.jpg') no-repeat;
 }

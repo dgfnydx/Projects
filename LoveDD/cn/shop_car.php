@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/personal_style.css" type="text/css">
 </head>
 <body>
-   	<div class="wrap">
+   	<div class="wrap" id="shop">
         <?php
             include("head.html");
         ?>
@@ -25,7 +25,7 @@
             <!-- 商品标题 -->
             <div class="htl-shopc-tit clearfix">
                 <div class="htl-shopc-sp clearfix">
-                    <span class=""></span>
+                    <span class="htlspan" v-bind:class="{'htlSelect':selectAll}" v-on:click="selected()"></span>
                     <em>商品</em>
                 </div>
                 <div class="htl-shopc-czxx clearfix">
@@ -36,47 +36,36 @@
                 </div>
             </div>
             <!-- 所有商品内容 -->
-            <div class="htl-shopc-con-all">
+            <div class="htl-shopc-con-all" v-for="good in goods">
                 <div class="htl-shopc-con clearfix">
-                    <div class="htl-shopc-sel"></div>
+                    <div class="htl-shopc-sel" v-bind:class="{'htlSelect':good.htlSelect}" v-on:click="selGood(good)"></div>
                     <dl class="htl-shopc-cons clearfix">
                         <dt>
-                            <a href="" title="">
-                                <img src="../images/demo/index_09.png" alt="">
+                            <a href="" :title="good.name">
+                                <img :src="good.picture" :alt="good.name">
                             </a>
                         </dt>
                         <dd class="clearfix">
                             <div class="htl-shopc-mes">
-                                <div>造梦者</div>
-                                <div>
-                                    <span>颜色 ：</span>
-                                    <em>灰色</em>
-                                </div>
-                                <div>
-                                    <span>尺码 ：</span>
-                                    <em>s</em>
-                                </div>
-                                <div>
-                                    <span>数量 ：</span>
-                                    <em>1件</em>
-                                </div>
+                                <div>{{good.name}}</div>
+                                <div>颜色：{{good.color}}</div>
+                                <div>尺码：{{good.size}}</div>
+                                <div>数量：{{good.count}}</div>
                             </div>
                             <div class="htl-shopc-cons-cz">
                                 <div class="htl-shopc-cons-ad">收藏</div>
                                 <div class="htl-shopc-cons-del">删除</div>
                             </div>
-                            <div class="htl-shopc-cons-sj">
-                                ￥<em>88.00</em>
-                            </div>
+                            <div class="htl-shopc-cons-sj">{{good.unitPrice*good.count | formatMoney("元")}}</div>
                             <div class="htl-shopc-cons-num clearfix">
                                 <div class="htl-shopc-cons-num-btn">
-                                    <span class="htl-shopc-jj">-</span>     
-                                    <input class="htl-shopc-shuz" value="1">
-                                    <span class="htl-shopc-add">+</span>
+                                    <span class="htl-shopc-jj" v-on:click="changeCount(good, -1)">-</span>     
+                                    <input class="htl-shopc-shuz" v-model="good.count">
+                                    <span class="htl-shopc-add" @click="changeCount(good, 1)">+</span>
                                 </div>
                                            
                             </div>
-                            <div class="htl-shopc-cons-dj">￥88.00</div>
+                            <div class="htl-shopc-cons-dj">{{good.unitPrice | formatMoney("元")}}</div>
                         </dd>
                     </dl>
                 </div>    
@@ -238,7 +227,7 @@
             <!-- 页脚 -->
             <div class="htl-shopc-foot clearfix">
                 <div class="htl-shopc-foot-lef clearfix">
-                    <b class="htl-shopc-foot-allsle"></b>
+                    <b class="htl-shopc-foot-allsle htlb" v-bind:class="{'htlSelect':selectAll}" v-on:click="selected()"></b>
                     <span class="htl-shopc-foot-textsel">全选</span>
                     <span class="htl-shopc-fdel">删除</span>
                     <span>加入收藏</span>
@@ -249,16 +238,16 @@
                     <strong>去结账</strong>
                     <span class="htl-shopc-zjbh">
                         <span>总价（不含运费）：</span>
-                        <em>￥0.00</em>
+                        <em>{{totalMoney | formatMoney("元")}}</em>
                     </span>
                    <!--  <span class="htl-shopc-syyh">
                         使用优惠券优惠<em>-￥63.0</em>
                     </span> -->
                     <span class="htl-shopc-spje">
-                        商品金额<em>￥0.0</em>
+                        商品金额<em>{{totalMoney | formatMoney("元")}}</em>
                     </span>
                     <span class="htl-shopc-yx">
-                        已选<em class="htl-shopc-selected">0</em>  件商品
+                        已选<em class="htl-shopc-selected">{{totalCount}}</em>  件商品
                     </span>
                 </div>
             </div>       
@@ -279,6 +268,7 @@
 		?>
    	</div>
     <script charset="utf-8" src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../js/vue-2.2.4.min.js" type="text/javascript"></script>
     <script charset="utf-8" src="../js/common.js" type="text/javascript"></script>
     <script charset="utf-8" src="../js/other.js" type="text/javascript"></script>
 </body>
