@@ -54,7 +54,7 @@
                             </div>
                             <div class="htl-shopc-cons-cz">
                                 <div class="htl-shopc-cons-ad">收藏</div>
-                                <div class="htl-shopc-cons-del">删除</div>
+                                <div class="htl-shopc-cons-del" v-on:click="delconfig(good)">删除</div>
                             </div>
                             <div class="htl-shopc-cons-sj">{{good.unitPrice*good.count | formatMoney("元")}}</div>
                             <div class="htl-shopc-cons-num clearfix">
@@ -89,12 +89,12 @@
                 </div>
             </div> 
             <!-- 优惠券内容 -->
-            <div class="htl-shopc-yhq-con">
+            <div class="htl-shopc-yhq-con" style="display:block">
                 <form action="" method="">
                     <div class="htl-shopc-act-bg">            
                         <div class="htl-shopc-act clearfix">
                             <label for="htl-jh">激活新优惠券：</label>
-                            <input type="text" id="htl-jh" value="请输入优惠券激活码">
+                            <input type="text" id="htl-jh" placeholder="请输入优惠券激活码">
                             <a href="" title="">激活</a>
                         </div>
                     </div>
@@ -229,7 +229,7 @@
                 <div class="htl-shopc-foot-lef clearfix">
                     <b class="htl-shopc-foot-allsle htlb" v-bind:class="{'htlSelect':selectAll}" v-on:click="selected()"></b>
                     <span class="htl-shopc-foot-textsel">全选</span>
-                    <span class="htl-shopc-fdel">删除</span>
+                    <span class="htl-shopc-fdel" v-on:click="delconfig2()">删除</span>
                     <span>加入收藏</span>
                     <span>|</span>
                     <a href="shop.php" title="">继续购物 ></a>
@@ -253,13 +253,13 @@
             </div>       
         </div>
         <!-- 删除商品时，弹窗提示 -->
-        <div class="htl-shopc-del-tc">
+        <div class="htl-shopc-del-tc" v-bind:class="{'maskshow':delFlag}">
             <div class="htl-shopc-tc-con">
                 <p class="htl-shopc-tc-wxts">温馨提示</p>
                 <p class="htl-shopc-tc-text">你确定删除吗？</p>
                 <div class="htl-shopc-tc-xz clearfix">
-                    <span class="htl-shopc-tc-close">关闭</span>
-                    <span class="htl-shopc-tc-true">确定</span>
+                    <span class="htl-shopc-tc-close" v-on:click="delFlag=false">关闭</span>
+                    <span class="htl-shopc-tc-true" v-on:click="delGoods()">确定</span>
                 </div>
             </div>
         </div>

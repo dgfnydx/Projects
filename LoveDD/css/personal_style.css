@@ -2534,6 +2534,9 @@ h1.htl-shop-h1 {
 	height: 100%;
 	background: rgba(0,0,0,0.7);
 }
+.maskshow {
+	display: block;
+}
 .htl-shopc-tc-con {
 	position: fixed;
 	left: 50%;

@@ -620,6 +620,9 @@ var shop = new Vue({
         totalMoney: 0,//总金额
         totalCount: 0,//已选商品数
         selectAll: false,
+        delFlag: false,
+        delgood: "",
+        whichDel: "",
         goods: [{
             name: "造梦者",
             color: "红色",
@@ -693,8 +696,37 @@ var shop = new Vue({
                     _this.totalCount += good.count
                 }
             })
+        },
+        delconfig: function(good) {
+            this.delFlag = true;
+            this.delgood = good;
+            this.whichDel = 1;
+        },
+        delconfig2: function() {
+            this.delFlag = true;
+            var delArr = [];
+            this.goods.forEach(function(good, index) {
+               if(good.htlSelect) {
+                    delArr.push(good)
+               }
+            });
+            return delArr;
+        },
+        delGoods: function() {
+            if(this.whichDel == 1) {
+                var index = this.goods.indexOf(this.delgood);
+                    this.goods.splice(index, 1);
+            } else {
+                var arr = this.delconfig2()
+                for(var i = 0; i < arr.length; i++) {
+                    var index = this.goods.indexOf(arr[i]);
+                        this.goods.splice(index, 1);
+                }
+            }
+            this.delFlag = false;
+            this.calcMoney();//删除商品重新计算金额
         }
-    }
+    } 
 })
 /*$(function() {
     var htlSelc = 0;   //计算商品选择按钮点击的次数
