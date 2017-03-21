@@ -1,6 +1,3 @@
-// 。。。。。。。。。。丁国富JS开始。。。。。。。。
-// 。。。。。。。。。。丁国富JS开始。。。。。。。。
-// 。。。。。。。。。。丁国富JS开始。。。。。。。。
 // 作品上传
 $(function() {
     // 作品、商品上传页面
@@ -604,13 +601,6 @@ $(function() {
             background: '#fafafa'
         });        
     });
-        // 点击我的粉丝按钮功能
-    // $('.personal-common-con-head-fs').click(function() {
-    //     $('.htl-myfansS-main').show().siblings().hide(); 
-    //     $('.htl-myf-abouts').hide().next().show();
-    //     $('.htl-myf-myf').css('color', 'rgb(220, 73, 53)');
-    //     $('.htl-myf-about').css('color', 'rgb(45, 45, 45)');    
-    // });
 });
 
 // 购物车
@@ -618,9 +608,12 @@ var shop = new Vue({
     el: "#shop",
     data: {
         totalMoney: 0,//总金额
+        totalMoneys: 0,//总金额减去优惠券
         totalCount: 0,//已选商品数
         selectAll: false,
         delFlag: false,
+        showuh: false,//显示优惠券列表
+        used: true,//优惠券是否叠加使用
         delgood: "",
         whichDel: "",
         goods: [{
@@ -644,6 +637,25 @@ var shop = new Vue({
             count: 2,
             unitPrice: 209,
             picture: "../images/demo/cloth.png"
+        }],
+        youhuis: [{
+            id: 1,
+            type: "优惠券",
+            description: [200, 50],
+            area: "爱叮叮发货订单",
+            useTime: "2016-09-01至2017-03-29"
+        },{
+            id: 2,
+            type: "代金券",
+            description: [300, 50],
+            area: "爱叮叮发货订单",
+            useTime: "2016-09-01至2017-03-29"
+        },{
+            id: 3,
+            type: "优惠券",
+            description: [500, 200],
+            area: "爱叮叮发货订单",
+            useTime: "2016-09-01至2017-03-29"
         }]
     },
     filters: {
@@ -725,180 +737,27 @@ var shop = new Vue({
             }
             this.delFlag = false;
             this.calcMoney();//删除商品重新计算金额
+        },
+        delyh: function(index) {
+            this.youhuis.splice(index, 1);
+        },
+        useuh: function(man, jian, index) {
+            if(this.totalMoney >= man) {
+                if(this.used) {
+                    this.totalMoneys = jian
+                    this.delyh(index);//使用优惠券后删除优惠券
+                    this.used = false;
+                } else {
+                    alert("优惠券不能叠加使用");
+                }
+            } else {
+                var how = man - this.totalMoney;
+                alert("再买" + how + "元，即可使用");
+            }
+            
         }
     } 
 })
-/*$(function() {
-    var htlSelc = 0;   //计算商品选择按钮点击的次数
-    var htlTc = 0;  //记录点击商品父级的索引值
-    // 动态添加商品个数
-    var htlShops = new XMLHttpRequest();
-    htlShops.open('get', 'ajaxRequestData/shop_car.html', true);
-    htlShops.send(null);
-    htlShops.onload = function() {
-        var htlShopsStr = htlShops.responseText;
-        for(var i = 0; i < 7; i++) {
-            $('.htl-shopc-con-all').append(htlShopsStr);
-        }
-        // 调用导航栏上购物车数字显示函数
-        shoppingNum()
-        // 全选按钮功能
-            //点击商品按钮会全选
-        $('.htl-shopc-sp span').click(function() {
-            if($('.htl-shopc-sp span').hasClass('htl-shopc-spxz')) {
-                $('.htl-shopc-sp span').removeClass('htl-shopc-spxz');
-                $('.htl-shopc-sel').removeClass('htl-shopc-select');
-            } else {
-                $('.htl-shopc-sel').addClass('htl-shopc-select');
-                $('.htl-shopc-sp span').addClass('htl-shopc-spxz');
-            }
-            htlJudge();
-        });
-            // 点击方框和文字都能全选
-        $('.htl-shopc-foot-textsel').click(function() {
-            htlASelectT();
-        })
-        $('.htl-shopc-foot-allsle').click(function() {  
-            htlASelectT();
-        });
-        // 全选按钮的功能函数
-        function htlASelectT() {
-            if($('.htl-shopc-foot-allsle').hasClass('htl-shopc-all-selects')) {
-                $('.htl-shopc-sel').removeClass('htl-shopc-select');
-                $('.htl-shopc-foot-allsle').removeClass('htl-shopc-all-selects');
-            } else{
-                $('.htl-shopc-sel').addClass('htl-shopc-select');
-                $('.htl-shopc-foot-allsle').addClass('htl-shopc-all-selects');
-            }
-            htlJudge();
-        }
-        // 全选后，点击删除按钮，则删除全部商品
-        $('.htl-shopc-fdel').click(function() {
-            if($('.htl-shopc-foot-allsle').hasClass('htl-shopc-all-selects')) {
-                $('.htl-shopc-del-tc').show();
-                $('.htl-shopc-tc-true').click(function() {
-                    $('.htl-shopc-con').remove();
-                    htlJudge();
-                });
-            } else{
-                $('.htl-shopc-del-tc').show();
-                $('.htl-shopc-tc-true').click(function() {
-                $('.htl-shopc-select').parent().remove();
-                    htlJudge();
-                });
-            }
-        });
-
-        // 结算金额的计算
-        $(document).click(function() {
-            var htlZje = 0;
-            var htlspG = $('.htl-shopc-select').size();
-            for(var i = 0; i < htlspG; i++) {
-                htlZje += parseInt($('.htl-shopc-select').eq(i).next().find('.htl-shopc-cons-sj em').html())
-            }
-            $('.htl-shopc-zjbh em').html('￥' + htlZje + ".00");
-            $('.htl-shopc-spje em').html('￥' + htlZje + ".0");
-
-        });
-
-        // 点击按钮选择商品
-        $('.htl-shopc-sel').click(function() {
-            if($(this).hasClass('htl-shopc-select')) {
-                $(this).removeClass('htl-shopc-select');
-            } else {
-                $(this).addClass('htl-shopc-select');
-            }
-            htlJudge();  //每次选择商品，进行判断是否满足全选条件
-        });
-
-        //如果商品选择的个数等于当前页面的所有个数则全选（判断函数）
-        function htlJudge() {
-            //每次调用该函数，则把当前页面有几个商品的个数存入htlLmgs里
-            //每次调用该函数，则把当前页面的商品数存入htlSpgs里
-            var htlSpgs = $('.htl-shopc-con').size();
-            var htlLmgs = $('.htl-shopc-select').size();    
-            if(htlSpgs == htlLmgs && htlLmgs != 0) {
-                $('.htl-shopc-foot-allsle').addClass('htl-shopc-all-selects');
-                $('.htl-shopc-sp span').addClass('htl-shopc-spxz');
-            } else{
-                $('.htl-shopc-foot-allsle').removeClass('htl-shopc-all-selects');
-                $('.htl-shopc-sp span').removeClass('htl-shopc-spxz');
-            }       
-        }
-
-        //删除当前商品功能,弹窗提示
-        $('.htl-shopc-cons-del').click(function() {
-            htlTc = $(this).parents('.htl-shopc-con').index();
-            $('.htl-shopc-del-tc').show();
-            htlJudge(); //没删除一个商品，进行判断是否满足全选
-        });
-        // 弹窗点击关闭按钮，则弹窗消失
-        $('.htl-shopc-tc-close').click(function() {
-            $('.htl-shopc-del-tc').hide();
-        });
-        // 弹窗点击确定按钮，则商品删除
-        $('.htl-shopc-tc-true').click(function() {
-            $('.htl-shopc-con').eq(htlTc).remove();
-            $('.htl-shopc-del-tc').hide();
-            htlJudge()
-        });
-
-        //点击增加或者减少商品个数,且计算出价格
-        $('.htl-shopc-add').click(function() {
-            var htlAdda = $(this).prev().val();
-            htlAdda++;
-            console.log(htlAdda);
-            $(this).parents('.htl-shopc-cons-num').prev().find('em').html(htlAdda * 88);
-            $(this).prev().val(htlAdda)
-        });
-        $('.htl-shopc-jj').click(function() {
-            var htlJja = $(this).next().val();
-            htlJja--;
-            if(htlJja <= 0) {
-                htlJja = 0;
-            }
-            $(this).parents('.htl-shopc-cons-num').prev().find('em').html(htlJja * 88);
-            $(this).next().val(htlJja);
-        });
-        //输入几件商品后，失焦后计算出价格
-        $('.htl-shopc-shuz').blur(function() {
-            $(this).parents('.htl-shopc-cons-num').prev().find('em').html( $(this).val()* 88);
-        });
-
-        //判断已经选择了几个商品
-        $(document).click(function() {
-            $('.htl-shopc-selected').html($('.htl-shopc-select').size());
-        });
-
-        //点击使用优惠券按钮时，所有优惠券显示出来
-        $('.htl-shopc-syyhq').click(function() {
-            $('.htl-shopc-yhq-con').show();
-        });
-
-        //删除商品按钮
-        $('.htl-shopc-del em').click(function() {
-            $(this).parents('tr').remove();
-        });
-
-        // 优惠券收索框的样式
-        // 文本框聚焦则，清空默认的val值
-        $('#htl-jh').focus(function() {
-            $('#htl-jh').val('');
-            $('#htl-jh').css('color', '#2d2d2d');
-        });
-        //文本框失焦，恢复原来的默认值
-        $('#htl-jh').blur(function() {
-            $('#htl-jh').css('color', '#d8d8d8');
-        });
-        // 页面刷新时改变文本框字体颜色
-        $('#htl-jh').css('color', '#d8d8d8');       
-    }   
-})*/
-    // 黄添隆js结束。。。。。。
-    // 黄添隆js结束。。。。。。
-    // 黄添隆js结束。。。。。。
-    // 黄添隆js结束。。。。。。
-
 
 // 作品欣赏切换
 $(".production-caption-xxj span").click(function() {
@@ -923,9 +782,6 @@ $(".production-sify p span").click(function() {
 });
 
 
-// 。。。。。张飞翔js开始。。。。。。。。。。。。。。
-// 。。。。。张飞翔js开始。。。。。。。。。。。。。。
-// 。。。。。张飞翔js开始。。。。。。。。。。。。。。
 
 // 创意商城
 // 创意导航

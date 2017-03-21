@@ -72,9 +72,7 @@
             </div>   
             <!-- 使用优惠券按钮和页码 -->
             <div class="htl-shopc-syym clearfix">
-                <div class="htl-shopc-syyhq">
-                    使用卡优惠券 v
-                </div>
+                <div class="htl-shopc-syyhq" v-on:click="showuh=!showuh">使用卡优惠券 v</div>
                 <div class="htl-page clearfix">
                     <div class="htl-up">
                         <a href="" title=""></a>
@@ -89,7 +87,7 @@
                 </div>
             </div> 
             <!-- 优惠券内容 -->
-            <div class="htl-shopc-yhq-con" style="display:block">
+            <div class="htl-shopc-yhq-con" v-if="showuh" >
                 <form action="" method="">
                     <div class="htl-shopc-act-bg">            
                         <div class="htl-shopc-act clearfix">
@@ -114,109 +112,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
+                            <tr v-for="(youhui, index) in youhuis">
+                                <td class="htl-shopc-yhq">{{youhui.type}}</td>
                                 <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
+                                    满<span>{{youhui.description[0]}}</span>
+                                    减<span>{{youhui.description[1]}}</span> 
                                 </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
+                                <td class="htl-shopc-addd">{{youhui.area}}</td>
+                                <td class="htl-shopc-sjfw">{{youhui.useTime}}</td>
                                 <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
-                                <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
-                                </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
-                                <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
-                                <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
-                                </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
-                                <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
-                                <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
-                                </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
-                                <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
-                                <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
-                                </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
-                                <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
-                                <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
-                                </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
-                                <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="htl-shopc-yhq">优惠券</td>
-                                <td class="htl-shopc-mt">
-                                    满<span>200</span>
-                                    减<span>50</span> 
-                                </td>
-                                <td class="htl-shopc-addd">爱叮叮发货订单</td>
-                                <td class="htl-shopc-sjfw"> 
-                                    015-09-03 10:00 至 2015-09-06 09:59
-                                </td>
-                                <td class="htl-shopc-del">
-                                    <span>使用</span>
-                                    <em></em>
+                                    <span v-on:click="useuh(youhui.description[0], youhui.description[1], index)">使用</span>
+                                    <em v-on:click="delyh(index)"></em>
                                 </td>
                             </tr>
                         </tbody>
@@ -238,7 +144,7 @@
                     <strong>去结账</strong>
                     <span class="htl-shopc-zjbh">
                         <span>总价（不含运费）：</span>
-                        <em>{{totalMoney | formatMoney("元")}}</em>
+                        <em>{{totalMoney - totalMoneys | formatMoney("元")}}</em>
                     </span>
                    <!--  <span class="htl-shopc-syyh">
                         使用优惠券优惠<em>-￥63.0</em>
