@@ -20,7 +20,7 @@
                             <img src="images/logo.jpg" alt="">
                         </a>
                     </div>
-                    <div class="btn-list clearfix">
+                    <div class="btn-list clearfix" id="btn-list">
                         <span class="icon-list">
                             <a class="shop" href="cn/shop_car.php" title="购物车"></a>
                             <a class="letter" href="cn/private_letter.php" title="私信"></a>

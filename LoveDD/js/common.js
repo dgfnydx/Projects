@@ -2,58 +2,87 @@
 // 	window.location.href="http://localhost/wamp/www/loveDD2016.6.12/cn/404.php";
 // };
 
-// 。。。。。。。。。。丁国富JS开始。。。。。。。。
-// 。。。。。。。。。。丁国富JS开始。。。。。。。。
-// 。。。。。。。。。。丁国富JS开始。。。。。。。。
-
 // 导航栏背景颜色切换
-// 获取URL
-var address = window.location.href
-// 将获取的URL分割成字符串数组
-var adrsArr = address.split("/")
-// 获取字符串数组最后一个元素，即为子页面名称
-var sonPage = adrsArr.pop()
-switch (sonPage) {
-	case "index.php":
-		changeClass(0)
-		break;
-	case "production.php":
-		changeClass(1)
-		break;
-	case "individual.php":
-		changeClass(2)
-		break;
-	case "shop.php":
-		changeClass(3)
-		break;
-	case "designer-list.php":
-		changeClass(4)
-		break;
-	case "activity.php":
-		changeClass(5)
-		break;
-	default:
-		// changeClass(0)
-		$(".h-bottom a").removeClass("selected")
-		break;
+function ChangeNav(clickTag, selClass) {
+	this.clickTag = clickTag;//点击的标签
+	this.selClass = selClass;//增删的类名
+	// 获取URL
+	this.address = window.location.href;
+	// 将获取的URL分割成字符串数组
+	this.adrsArr = this.address.split("/");
+	// 获取字符串数组最后一个元素，即为子页面名称
+	this.sonPage = this.adrsArr.pop();
+	this.urls = pages;
+	for(var i = 0; i < this.urls.length; i++) {
+		if(this.sonPage == this.urls[i]) {
+			this.changeClass(i)
+		}
+	}
+	// switch (this.sonPage) {
+	// 	case "index.php":
+	// 	case "":
+	// 		this.changeClass(0)
+	// 		break;
+	// 	case "production.php":
+	// 		this.changeClass(1)
+	// 		break;
+	// 	case "individual.php":
+	// 		this.changeClass(2)
+	// 		break;
+	// 	case "shop.php":
+	// 		this.changeClass(3)
+	// 		break;
+	// 	case "designer-list.php":
+	// 		this.changeClass(4)
+	// 		break;
+	// 	case "activity.php":
+	// 		this.changeClass(5)
+	// 		break;
+	// 	default:
+	// 		// changeClass(0)
+	// 		$(this.clickTag).removeClass(this.selClass)
+	// 		break;
+	// }
 }
-function changeClass(n) {
-	$(".h-bottom a").eq(n).addClass("selected").siblings().removeClass("selected")
+ChangeNav.prototype.changeClass = function(n) {
+	$(this.clickTag).eq(n).addClass(this.selClass).siblings().removeClass(this.selClass)
 }
-//购物车图标
-//鼠标移入效果
+var pages = [
+		"index.php",
+		"production.php",
+		"individual.php",
+		"shop.php",
+		"designer-list.php",
+		"activity.php"
+	]
+new ChangeNav(".h-bottom a", "selected", pages)
 
-$(".btn-list a").mouseover(function() {
-	$(this).stop(true).animate({
-		"marginTop": "-28px"
-	})
-})
-// 鼠标移出效果
-$(".btn-list a").mouseleave(function() {
-	$(this).stop(true).animate({
-		"marginTop": "0px"
-	})
-})
+
+
+var common = {
+	//购物车图标
+	//鼠标移入效果
+	shopAni: function(aniTag) {
+		$(aniTag).mouseover(function() {
+			func(this, "-28px")
+		})
+		$(aniTag).mouseleave(function() {
+			func(this, "0px")
+		})
+		function func(dd, leave) {
+			$(dd).stop(true).animate({
+				"marginTop": leave
+			})
+		}
+	},
+	run: function() {
+		this.shopAni(".btn-list a")
+	}
+	
+}
+common.run()
+
+
 // 购物车商品数量
 function shoppingNum() {
     $(".shop-num").text($('.htl-shopc-con').size())
@@ -148,13 +177,7 @@ function autoScroll() {
 	})
 }
 setInterval(autoScroll,3000);
- // 。。。。。。。。。。丁国富JS结束。。。。。。。。
- // 。。。。。。。。。。丁国富JS结束。。。。。。。。
- // 。。。。。。。。。。丁国富JS结束。。。。。。。。
  
-	// 。。。。。。。。。。陈渊荣JS开始。。。。。。。。
-	// 。。。。。。。。。。陈渊荣JS开始。。。。。。。。
-	// 。。。。。。。。。。陈渊荣JS开始。。。。。。。。
 //首页——资讯分享滚动
 var indexScroll = 0;
 $(".news span").eq(0).click(function(event) {
