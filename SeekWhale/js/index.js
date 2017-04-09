@@ -12,15 +12,30 @@ anchor(".aboutus", ".about", 20)
 anchor(".solve", ".solution", 20)
 anchor(".beaut", ".display", 68)
 anchor(".contact", ".contacts", 60)
+// var timer = null;
+// var clicks = true;
+// function toTop() {
+// 	if(clicks) {
+// 		clearTimeout(timer);
+// 		var about = document.getElementById("about");
+// 		var ab = about.offsetTop
+// 		window.scrollBy(0, 10);
+// 		var top = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+// 		console.log(top)
+// 		timer = setTimeout(toTop, 10);
+// 		if(top >= ab) {
+// 			clearTimeout(timer);
+// 			clicks = false
+// 		}
+// 	}
+// }
+// $(".aboutus").click(function() {
+// 	toTop()
 
-var about = document.getElementById("about");
-var ab = about.offsetTop
-// document.documentElement.scrollTop = 475
-document.body.scrollTop = 500
-window.scrollTo(500,200)
-console.log(ab)
-
+// })
 // function Anchor() {
+// 	this.timer = null;
+// 	this.clicks = true;
 // 	this.btnTag = document.getElementById(tag);
 
 // }
