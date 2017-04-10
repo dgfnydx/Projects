@@ -24,9 +24,6 @@ $pinkc: #4285f4;
 
 }
 .navbar-nav {
-	.download {
-		position: relative;
-	}
 	li {
 		a {
 			width: 102px;
@@ -35,6 +32,7 @@ $pinkc: #4285f4;
 			font-size: 14px;
 			line-height: 60px;
 			text-align: center;
+			transition: background 2s;
 			&:hover,
 			&:focus {
 				background: rgba(66, 133, 244, 0.2);
@@ -44,27 +42,17 @@ $pinkc: #4285f4;
 				border-top: 2px solid $pinkc;
 			}
 		}
-		.twocode {
-			display:none;
-			position: absolute;
-			left: -23px;
-			top: 56px;
-			width: 104px;
-			height: 131px;
-			background: url("../images/code.png");
-		}
 	}
-	.hbtn {
-		width: 70px;
-		height: 30px;
-		margin: 10px 0 0 10px;
-		border: 1px solid $pinkc;
-		line-height: 30px;
-		color: $pinkc;
-		text-align: center;
-		border-radius: 4px;
-		cursor: pointer;
-	}
+}
+.carousel-indicators li {
+	width: 12px;
+	height: 7px;
+	transition: width 1s;
+}
+.carousel-indicators .active {
+	width: 40px;
+	height: 7px;
+	transition: width 1s;
 }
 .section-title {
 	margin-bottom: 45px;
@@ -106,27 +94,28 @@ $pinkc: #4285f4;
 .solu-class {
 	padding: 268px 58px 55px;
 	text-align: center;
-	transition: box-shadow 2s;
+	transition: box-shadow 2s, transform 2s;
 	&:nth-child(1) {
-		background: url("../../images/icon_zhibubaoar_nor.png")  center 85px no-repeat;
+		background: url("../images/icon_zhibubaoar_nor.png")  center 85px no-repeat;
 		&:hover {
-			background: white url("../../images/icon_zhibubaoar_sel.png")  center 85px no-repeat;
+			background: white url("../images/icon_zhibubaoar_sel.png")  center 85px no-repeat;
 		}
 	}
 	&:nth-child(2) {
-		background: url("../../images/icon_appqianru_nor.png")  center 85px no-repeat;
+		background: url("../images/icon_appqianru_nor.png")  center 85px no-repeat;
 		&:hover {
-			background: white url("../../images/icon_qianrushi_sel.png")  center 85px no-repeat;
+			background: white url("../images/icon_qianrushi_sel.png")  center 85px no-repeat;
 		}
 	}
 	&:nth-child(3) {
-		background: url("../../images/icon_dingzhiapp_nor.png")  center 85px no-repeat;
+		background: url("../images/icon_dingzhiapp_nor.png")  center 85px no-repeat;
 		&:hover {
-			background: white url("../../images/icon_dingzhiapp_sel.png")  center 85px no-repeat;
+			background: white url("../images/icon_dingzhiapp_sel.png")  center 85px no-repeat;
 		}
 	}
 	&:hover {
 		box-shadow: 0 0 40px #4285c4;
+		transform:rotateY(360deg);
 	}
 	p {
 		padding-top: 20px;
@@ -144,7 +133,6 @@ $pinkc: #4285f4;
 		width: 100%;
 		/*max-width: 1200px;*/
 		height: 500px;
-		border: 1px solid red;
 		background: black;
 		video {
 			width: 100%;
@@ -180,20 +168,20 @@ $pinkc: #4285f4;
 }
 .contacts {
 	padding: 100px 0;
-	background: url("../../images/bg.jpg");
+	background: url("../images/bg.jpg");
 	background-size: cover;
 	.cont {
 		&:nth-child(1) {
 			padding-left: 90px;
-			background: url("../../images/icon_servicecall.png") 25px center no-repeat;
+			background: url("../images/icon_servicecall.png") 25px center no-repeat;
 		}
 		&:nth-child(2) {
 			padding-left: 75px;
-			background: url("../../images/icon_phone.png") 25px center no-repeat;
+			background: url("../images/icon_phone.png") 25px center no-repeat;
 		}
 		&:nth-child(3) {
 			padding-left: 75px;
-			background: url("../../images/icon_add.png") 25px center no-repeat;
+			background: url("../images/icon_add.png") 25px center no-repeat;
 		}
 
 		span {
@@ -267,21 +255,21 @@ $pinkc: #4285f4;
 			padding: 166px 38px 15px;
 			text-align: center;
 			&:nth-child(1) {
-				background: url("../../images/icon_zhibubaoar_nor.png")  center 25px no-repeat;
+				background: url("../images/icon_zhibubaoar_nor.png")  center 25px no-repeat;
 				&:hover {
-					background: white url("../../images/icon_zhibubaoar_sel.png")  center 25px no-repeat;
+					background: white url("../images/icon_zhibubaoar_sel.png")  center 25px no-repeat;
 				}
 			}
 			&:nth-child(2) {
-				background: url("../../images/icon_appqianru_nor.png")  center 25px no-repeat;
+				background: url("../images/icon_appqianru_nor.png")  center 25px no-repeat;
 				&:hover {
-					background: white url("../../images/icon_qianrushi_sel.png")  center 25px no-repeat;
+					background: white url("../images/icon_qianrushi_sel.png")  center 25px no-repeat;
 				}
 			}
 			&:nth-child(3) {
-				background: url("../../images/icon_dingzhiapp_nor.png")  center 25px no-repeat;
+				background: url("../images/icon_dingzhiapp_nor.png")  center 25px no-repeat;
 				&:hover {
-					background: white url("../../images/icon_dingzhiapp_sel.png")  center 25px no-repeat;
+					background: white url("../images/icon_dingzhiapp_sel.png")  center 25px no-repeat;
 				}
 			}
 		}
@@ -309,17 +297,17 @@ $pinkc: #4285f4;
 		.cont {
 			&:nth-child(1) {
 				padding-left: 60px;
-				background: url("../../images/icon_servicecall.png") 25px center no-repeat;
+				background: url("../images/icon_servicecall.png") 25px center no-repeat;
 				background-size: 7%;
 			}
 			&:nth-child(2) {
 				padding: 10px 0 10px 60px;
-				background: url("../../images/icon_phone.png") 29px center no-repeat;
+				background: url("../images/icon_phone.png") 29px center no-repeat;
 				background-size: 5%;
 			}
 			&:nth-child(3) {
 				padding-left: 60px;
-				background: url("../../images/icon_add.png") 28px center no-repeat;
+				background: url("../images/icon_add.png") 28px center no-repeat;
 				background-size: 5%;
 			}
 			span {
