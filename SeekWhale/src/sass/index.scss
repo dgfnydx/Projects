@@ -86,7 +86,7 @@ $pinkc: #4285f4;
 		text-align: center;
 	}
 }
-.solution {
+/*.solution {
 	padding: 50px 0 190px;
 	background: #f6f9ff;
 }
@@ -115,6 +115,50 @@ $pinkc: #4285f4;
 	&:hover {
 		box-shadow: 0 0 40px #4285c4;
 		transform:rotateY(360deg);
+	}
+	p {
+		padding-top: 20px;
+		line-height: 25px;
+	}
+}*/
+.solution {
+	padding: 50px 0 190px;
+	background: #f6f9ff;
+}
+.solu-class {
+	padding: 0px 58px 55px;
+	text-align: center;
+	border-radius: 5px;
+	transition: box-shadow 2s, transform 2s;
+	.solu {
+		height: 268px;
+		transition: transform 2s;
+	}
+	.icon1 {
+		background: url("../images/icon_zhibubaoar_nor.png")  center 85px no-repeat;
+	}
+	.icon2 {
+		background: url("../images/icon_appqianru_nor.png")  center 85px no-repeat;
+	}
+	.icon3 {
+		background: url("../images/icon_dingzhiapp_nor.png")  center 85px no-repeat;
+	}
+	&:hover {
+		box-shadow: 0 0 60px #4285c4;
+		background: white;
+		transform: translateY(-20px)
+	}
+	&:hover .solu {
+		transform:rotateY(360deg);
+	}
+	&:hover .icon1 {
+		background: white url("../images/icon_zhibubaoar_sel.png")  center 85px no-repeat;
+	}
+	&:hover .icon2 {
+		background: white url("../images/icon_qianrushi_sel.png")  center 85px no-repeat;
+	}
+	&:hover .icon3 {
+		background: white url("../images/icon_dingzhiapp_sel.png")  center 85px no-repeat;
 	}
 	p {
 		padding-top: 20px;
@@ -248,7 +292,7 @@ $pinkc: #4285f4;
 	.about {
 		padding: 10px 0 20px;
 	}
-	.solution {
+	/*.solution {
 		padding: 10px 0;
 		.solu-class {
 			padding: 166px 38px 15px;
@@ -270,6 +314,32 @@ $pinkc: #4285f4;
 				&:hover {
 					background: white url("../images/icon_dingzhiapp_sel.png")  center 25px no-repeat;
 				}
+			}
+		}
+	}*/
+	.solution {
+		padding: 10px 0;
+		.solu-class {
+			.solu {
+				height: 168px;
+			}
+			.icon1 {
+				background: url("../images/icon_zhibubaoar_nor.png")  center 25px no-repeat;
+			}
+			.icon2 {
+				background: url("../images/icon_appqianru_nor.png")  center 25px no-repeat;
+			}
+			.icon3 {
+				background: url("../images/icon_dingzhiapp_nor.png")  center 25px no-repeat;
+			}
+			&:hover .icon1 {
+				background: white url("../images/icon_zhibubaoar_sel.png")  center 25px no-repeat;
+			}
+			&:hover .icon2 {
+				background: white url("../images/icon_qianrushi_sel.png")  center 25px no-repeat;
+			}
+			&:hover .icon3 {
+				background: white url("../images/icon_dingzhiapp_sel.png")  center 25px no-repeat;
 			}
 		}
 	}
