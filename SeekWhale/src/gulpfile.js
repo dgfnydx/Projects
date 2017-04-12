@@ -7,6 +7,7 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	cssmin = require('gulp-clean-css'),
+	rename = require('gulp-rename'),//重命名
 	sourcemaps = require('gulp-sourcemaps'),
 	browserSync = require("browser-sync").create(),
 	argv = require('yargs').argv;
@@ -17,8 +18,10 @@ require('gulp-task-list')(gulp);
 /* build scss files */
 gulp.task('build', function () {
 	gulp.src('sass/**/*.scss')
-		.pipe(sass())
+		.pipe(sass({outputStyle: 'expanded'}))
+		.pipe(gulp.dest('../css'))
 		.pipe(cssmin())
+		.pipe(rename({suffix: ".min"}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('../css'));
 });
@@ -34,11 +37,11 @@ gulp.task('serve', function () {
 	});
 	gulp.watch('sass/**/*.scss', ["build"]);
 	gulp.watch(['../css/*.*',
-			'../images/*.*',
-			'../js/*.*',
-			'../*.html'
-		],
-		function () {
-			browserSync.reload();
-		});
+		'../images/*.*',
+		'../js/*.*',
+		'../*.html'
+	],
+	function () {
+		browserSync.reload();
+	});
 });

@@ -1,8 +1,10 @@
 $a8bg: rgba(0, 0, 0, 0.8);
 $pinkc: #4285f4;
-
 .wrap {
 	.navbar {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
 		border-radius: 0;
 	}
 }
@@ -20,7 +22,6 @@ $pinkc: #4285f4;
 			background: #fff;
 		}
 	}
-
 }
 .navbar-nav {
 	li {
@@ -31,6 +32,9 @@ $pinkc: #4285f4;
 			font-size: 14px;
 			line-height: 60px;
 			text-align: center;
+			-webkit-transition: background 2s;
+			-moz-transition: background 2s;
+			-ms-transition: background 2s;
 			transition: background 2s;
 			&:hover,
 			&:focus {
@@ -46,11 +50,17 @@ $pinkc: #4285f4;
 .carousel-indicators li {
 	width: 12px;
 	height: 7px;
+	-webkit-transition: width 1s;
+	-moz-transition: width 1s;
+	-ms-transition: width 1s;
 	transition: width 1s;
 }
 .carousel-indicators .active {
 	width: 40px;
 	height: 7px;
+	-webkit-transition: width 1s;
+	-moz-transition: width 1s;
+	-ms-transition: width 1s;
 	transition: width 1s;
 }
 .section-title {
@@ -58,6 +68,7 @@ $pinkc: #4285f4;
 	text-align: center;
 	h2 {
 		color: #4285f4;
+		font-family: "Microsoft Yahei";
 		font-size: 48px;
 		font-weight: lighter;
 	}
@@ -126,39 +137,59 @@ $pinkc: #4285f4;
 	background: #f6f9ff;
 }
 .solu-class {
+	overflow: hidden;
 	padding: 0px 58px 55px;
 	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
 	border-radius: 5px;
+	-webkit-transition: box-shadow 2s, transform 2s;
+	-moz-transition: box-shadow 2s, transform 2s;
+	-ms-transition: box-shadow 2s, transform 2s;
 	transition: box-shadow 2s, transform 2s;
 	.solu {
 		height: 268px;
+		-webkit-transition: transform 2s;
+		-moz-transition: transform 2s;
+		-ms-transition: transform 2s;
 		transition: transform 2s;
 	}
 	.icon1 {
-		background: url("../images/icon_zhibubaoar_nor.png")  center 85px no-repeat;
+		background: url("../images/icon_zhibubaoar_nor.png") center 85px no-repeat;
 	}
 	.icon2 {
-		background: url("../images/icon_appqianru_nor.png")  center 85px no-repeat;
+		background: url("../images/icon_appqianru_nor.png") center 85px no-repeat;
 	}
 	.icon3 {
-		background: url("../images/icon_dingzhiapp_nor.png")  center 85px no-repeat;
+		background: url("../images/icon_dingzhiapp_nor.png") center 85px no-repeat;
 	}
 	&:hover {
+		-webkit-box-shadow: 0 0 60px #4285c4;
+		-moz-box-shadow: 0 0 60px #4285c4;
+		-ms-box-shadow: 0 0 60px #4285c4;
 		box-shadow: 0 0 60px #4285c4;
 		background: white;
-		transform: translateY(-20px)
+		-webkit-transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		-ms-transform: translateY(-20px);
+		transform: translateY(-20px);
 	}
 	&:hover .solu {
-		transform:rotateY(360deg);
+		/*transform: rotateY(360deg);*/
+		-webkit-transform: scale(1.2, 1.2);
+		-moz-transform: scale(1.2, 1.2);
+		-ms-transform: scale(1.2, 1.2);
+		transform: scale(1.2, 1.2);
 	}
 	&:hover .icon1 {
-		background: white url("../images/icon_zhibubaoar_sel.png")  center 85px no-repeat;
+		background: url("../images/icon_zhibubaoar_sel.png") center 85px no-repeat;
 	}
 	&:hover .icon2 {
-		background: white url("../images/icon_qianrushi_sel.png")  center 85px no-repeat;
+		background: url("../images/icon_qianrushi_sel.png") center 85px no-repeat;
 	}
 	&:hover .icon3 {
-		background: white url("../images/icon_dingzhiapp_sel.png")  center 85px no-repeat;
+		background: url("../images/icon_dingzhiapp_sel.png") center 85px no-repeat;
 	}
 	p {
 		padding-top: 20px;
@@ -168,13 +199,8 @@ $pinkc: #4285f4;
 .display {
 	position: relative;
 	height: 413px;
-	/*padding-bottom: 250px;*/
 	.video {
-		/*position: absolute;
-		top: 163px;
-		left: 0;*/
 		width: 100%;
-		/*max-width: 1200px;*/
 		height: 500px;
 		background: black;
 		video {
@@ -187,17 +213,55 @@ $pinkc: #4285f4;
 	padding: 298px 0 95px;
 	background: #ecf3fe;
 	a {
+		position: relative;
+		z-index: 1;
 		display: block;
 		width: 200px;
 		height: 56px;
 		margin: 0 auto;
-		background: #4285f4;
+		border: 1px solid #4285f4;
 		line-height: 56px;
-		color: white;
+		color: #4285f4;
 		text-align: center;
 		text-decoration: none;
 		font-size: 18px;
 		border-radius: 28px;
+		-webkit-transition: color 2s;
+		-moz-transition: color 2s;
+		-ms-transition: color 2s;
+		transition: color 2s;
+		&:after {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			content: "";
+			width: 200px;
+			height: 56px;
+			background: #4285f4;
+			border-radius: 28px;
+			-webkit-transition: transform 2s;
+			-moz-transition: transform 2s;
+			-ms-transition: transform 2s;
+			transition: transform 2s;
+			-webkit-transform: rotateY(90deg);
+			-moz-transform: rotateY(90deg);
+			-ms-transform: rotateY(90deg);
+			transform: rotateY(90deg);
+		}
+		&:hover {
+			color: white;
+			&:after {
+				-webkit-transition: transform 2s;
+				-moz-transition: transform 2s;
+				-ms-transition: transform 2s;
+				transition: transform 2s;
+				-webkit-transform: rotateY(0deg);
+				-moz-transform: rotateY(0deg);
+				-ms-transform: rotateY(0deg);
+				transform: rotateY(0deg);
+			}
+		}
 	}
 }
 .partner {
@@ -247,6 +311,9 @@ $pinkc: #4285f4;
 		text-align: center;
 		a {
 			color: white;
+			&:hover {
+				color: #4285f4;
+			}
 		}
 	}
 	p {
@@ -398,8 +465,17 @@ $pinkc: #4285f4;
 		}
 	}
 }
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
 	.container {
 		width: 1200px;
 	}
+	.carousel {
+		.item {
+			height: 100%;
+			img {
+				height: 100%;
+			}
+		}
+	}
+
 }

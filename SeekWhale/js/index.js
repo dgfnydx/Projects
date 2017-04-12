@@ -1,17 +1,35 @@
-// banner轮播
-$("#myCarousel").carousel('cycle');
-
-function anchor(btnTag, boxTag, n) {
-	$(btnTag).click(function() {
-	    $("body,html").animate({
-	        'scrollTop': $(boxTag).offset().top - n
-	    }, '1000');
-	});
+var main = {
+	// banner轮播
+	cycle: function() {
+		$("#myCarousel").carousel('cycle');
+	},
+	anchor: function(btnTag, boxTag, n) {
+		$(btnTag).click(function() {
+		    $("body,html").animate({
+		        'scrollTop': $(boxTag).offset().top - n
+		    }, '1000');
+		});
+	},
+	hideNav: function() {
+		$(".wrap, .navbar-nav li").click(function() {
+			$("#navbar").removeClass("in")
+		})
+	},
+	start: function() {
+		this.cycle()
+		this.hideNav()
+		this.anchor(".aboutus", ".about", 20)
+		this.anchor(".solve", ".solution", 20)
+		this.anchor(".beaut", ".display", 68)
+		this.anchor(".contact", ".contacts", 60)
+	}
 }
-anchor(".aboutus", ".about", 20)
-anchor(".solve", ".solution", 20)
-anchor(".beaut", ".display", 68)
-anchor(".contact", ".contacts", 60)
+main.start()
+
+
+
+
+
 // var timer = null;
 // var clicks = true;
 // function toTop() {
