@@ -24,6 +24,10 @@
   background: #fff;
 }
 
+.container > .navbar-header {
+  margin-left: 16px;
+}
+
 .navbar-nav li a {
   width: 102px;
   height: 90px;
@@ -370,6 +374,9 @@
   }
   .wrap .header .navbar-brand {
     margin: 12px 0 0 18px;
+  }
+  .container > .navbar-header {
+    margin-left: 0;
   }
   .navbar-nav li a {
     width: 100%;

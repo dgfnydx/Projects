@@ -1,7 +1,10 @@
 var main = {
 	// banner轮播
 	cycle: function() {
-		$("#myCarousel").carousel('cycle');
+		$("#myCarousel").carousel({
+			pause: "none"//鼠标悬停不停止轮播
+		});
+		$("#myCarousel1").carousel('cycle');
 	},
 	anchor: function(btnTag, boxTag, n) {
 		$(btnTag).click(function() {
