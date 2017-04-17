@@ -87,20 +87,6 @@
                         <h2>OUR SOLUTION</h2>
                         <h3>解决方案</h3>
                     </div>
-                   <!--  <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4 solu-class">
-                            <h3>支付宝AR</h3>
-                            <p>于“支付宝AR扫一扫功能”<br/>解决客户的AR营销需求，共享“支付宝全球4.5亿实名用户”，解决APP推广艰难、流量不足等产品痛点</p>
-                        </div> 
-                        <div class="col-xs-12 col-sm-4 col-md-4 solu-class">
-                            <h3>APP嵌入式开发</h3>
-                            <p>根据客户需求，<br/>在客户原有app平台的基础上增加AR功能模块，为客户原有APP平台进行相关战略布局带去AR营销助力。</p>
-                        </div> 
-                        <div class="col-xs-12 col-sm-4 col-md-4 solu-class">
-                            <h3>定制APP</h3>
-                            <p>根据客户的需求，<br/>为客户量身定制的AR解决方案，适用于企业的营销活动，品牌推广传播，产品介绍（新品发布）的应用场景。</p>
-                        </div> 
-                    </div> -->
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-4 solu-class">
                             <div class="solu icon1"></div>
@@ -127,7 +113,10 @@
                         <h3>精彩案例</h3>
                     </div>
                     <div class="video">
-                        <video src="images/natural.mp4" controls="controls"></video>
+                        <video id="video" src="images/natural.mp4" controls="controls" poster="images/demo/video_banner.png"></video>
+                        <div class="video-banner" id="vbbtn">
+                            <span id="pbtn"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,147 +131,143 @@
                         <h2>OUR PARTNER</h2>
                         <h3>合作伙伴</h3>
                     </div>
-                    <!-- <div class="row">
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/jinfu.jpg" alt="蚂蚁金服" title="蚂蚁金服">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/alipay.jpg" alt="支付宝" title="支付宝">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/koubei.jpg" alt="口碑" title="口碑">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/wania.jpg" alt="万佳国际酒店" title="万佳国际酒店">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/place.jpg" alt="世贸天阶" title="世贸天阶">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/yintai.jpg" alt="银泰百货" title="银泰百货">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/yanyu.jpg" alt="宴遇" title="宴遇">
-                            </a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3">
-                            <a href="javascript:void(0)">
-                                <img src="images/demo/yuedinghui.jpg" alt="悦鼎会" title="悦鼎会">
-                            </a>
-                        </div>
-                    </div> -->
                     <div id="myCarousel1" class="carousel slide">
                         <div class="carousel-inner">
                             <div class="item active" data-ride="carousel" >
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/jinfu.jpg" alt="蚂蚁金服" title="蚂蚁金服">
+                                            <img src="images/demo/partner/partner1.png" alt="蚂蚁金服" title="蚂蚁金服">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/alipay.jpg" alt="支付宝" title="支付宝">
+                                            <img src="images/demo/partner/partner2.png" alt="支付宝" title="支付宝">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/koubei.jpg" alt="口碑" title="口碑">
+                                            <img src="images/demo/partner/partner3.png" alt="口碑" title="口碑">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/wania.jpg" alt="万佳国际酒店" title="万佳国际酒店">
+                                            <img src="images/demo/partner/partner4.png" alt="飞猪" title="飞猪">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/partner5.png" alt="蚂蚁特工" title="蚂蚁特工">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/partner6.png" alt="unity" title="unity">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/place.jpg" alt="世贸天阶" title="世贸天阶">
+                                            <img src="images/demo/partner/partner7.png" alt="vuforia" title="vuforia">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/yintai.jpg" alt="银泰百货" title="银泰百货">
+                                            <img src="images/demo/partner/partner8.png" alt="世贸天阶" title="世贸天阶">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/yanyu.jpg" alt="宴遇" title="宴遇">
+                                            <img src="images/demo/partner/partner9.png" alt="银泰百货" title="银泰百货">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/yuedinghui.jpg" alt="悦鼎会" title="悦鼎会">
+                                            <img src="images/demo/partner/partner10.png" alt="外婆家" title="外婆家">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/partner11.png" alt="万佳国际酒店" title="万佳国际酒店">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/partner12.png" alt="宴遇" title="宴遇">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="item" data-ride="carousel" >
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/jinfu.jpg" alt="蚂蚁金服" title="蚂蚁金服">
+                                            <img src="images/demo/partner/partner13.png" alt="悦鼎会" title="悦鼎会">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/alipay.jpg" alt="支付宝" title="支付宝">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/koubei.jpg" alt="口碑" title="口碑">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/wania.jpg" alt="万佳国际酒店" title="万佳国际酒店">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/place.jpg" alt="世贸天阶" title="世贸天阶">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/yintai.jpg" alt="银泰百货" title="银泰百货">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/yanyu.jpg" alt="宴遇" title="宴遇">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
-                                    <div class="col-xs-6 col-sm-3 col-md-3">
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
                                         <a href="javascript:void(0)">
-                                            <img src="images/demo/yuedinghui.jpg" alt="悦鼎会" title="悦鼎会">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-2 col-md-2">
+                                        <a href="javascript:void(0)">
+                                            <img src="images/demo/partner/white_07.png" alt="" title="">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control left" href="#myCarousel1" data-slide="prev">&lsaquo;</a>
-                        <a class="carousel-control right" href="#myCarousel1" data-slide="next">&rsaquo;</a>
+                        <a class="carousel-control left" href="#myCarousel1" data-slide="prev"></a>
+                        <a class="carousel-control right" href="#myCarousel1" data-slide="next"></a>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,15 @@
 var main = {
+	video: document.getElementById("video"),
+	playBtn: document.getElementById("pbtn"),
+	vbbtn: document.getElementById("vbbtn"),
 	// banner轮播
 	cycle: function() {
 		$("#myCarousel").carousel({
 			pause: "none"//鼠标悬停不停止轮播
 		});
-		$("#myCarousel1").carousel('cycle');
+		$("#myCarousel1").carousel('pause');
 	},
+	// 导航栏锚点
 	anchor: function(btnTag, boxTag, n) {
 		$(btnTag).click(function() {
 		    $("body,html").animate({
@@ -13,18 +17,27 @@ var main = {
 		    }, '1000');
 		});
 	},
+	// 移动端隐藏导航
 	hideNav: function() {
 		$(".wrap, .navbar-nav li").click(function() {
 			$("#navbar").removeClass("in")
 		})
 	},
+	videoPlay: function() {
+		var _this = this;
+		this.playBtn.onclick = function() {
+			_this.video.play()
+			_this.vbbtn.style.display = "none";
+		}
+	},
 	start: function() {
-		this.cycle()
-		this.hideNav()
-		this.anchor(".aboutus", ".about", 20)
-		this.anchor(".solve", ".solution", 20)
-		this.anchor(".beaut", ".display", 68)
-		this.anchor(".contact", ".contacts", 60)
+		this.cycle();
+		this.hideNav();
+		this.anchor(".aboutus", ".about", 20);
+		this.anchor(".solve", ".solution", 20);
+		this.anchor(".beaut", ".display", 68);
+		this.anchor(".contact", ".contacts", 60);
+		this.videoPlay();
 	}
 }
 main.start()
