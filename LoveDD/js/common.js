@@ -115,34 +115,45 @@ $(".shop, .shop-num, .shop-list").mouseover(function() {
 $(".shop, .shop-num, .shop-list").mouseleave(function() {
 	$(".shop-list").css({"display": "none"})
 })
-// 显示隐藏gototop模块
-function disblok() {
-	var top = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
-	if(top >= 150) {
-		$(".tool-bar").css({"display": "block"})
-	} else {
-		$(".tool-bar").css({"display": "none"})
+
+
+// 返回顶部
+// 浮窗仅有返回顶部按钮时，cblock传null
+function ToTop(block, scrolltop, cblock) {
+	var _this = this;
+	this.tops = null;
+	this.timer = null;
+	this.block = $(block);
+	this.clickblock = cblock == null ? this.block : $(cblock);
+	this.scrolltop = scrolltop;
+	window.onscroll = function() {
+		_this.displayBlock()
+	};
+	this.clickblock.click(function() {
+		_this.goToTop()
+	})
+}
+ToTop.prototype = {
+	topLeave: function() {//获取滚动条位置
+		this.tops = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+	},
+	displayBlock: function() {//浮窗显示隐藏
+		this.topLeave()
+		this.tops >= this.scrolltop ? this.block.show() : this.block.hide()
+	},
+	goToTop: function() {//返回顶部
+		var _this = this
+		var timer = setInterval(function() {
+			_this.topLeave()
+			window.scrollBy(0, -100);
+			if(_this.tops == 0) {
+				clearInterval(timer)
+			}
+		}, 10)
 	}
 }
-// 函数调用
-$(window).scroll(function() {
-	disblok();
-})
-// 回到顶部
-var timer = null;
-function toTop() {
-	var top = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
-	clearTimeout(timer);
-	window.scrollBy(0, -100);
-	timer = setTimeout(toTop, 10);
-	if(top == 0) {
-		clearTimeout(timer);
-	}
-}
-// 函数调用
-$(".tool-bar .to-top").click(function() {
-	toTop()
-})
+new ToTop(".tool-bar", 150, ".tool-bar .to-top")
+// new ToTop(".tool-bar", 150, null)
 
 // 内容不足以撑开的页面，自动获取高度设置最小高度，常量262位头部和脚部高度和
 $(window).load(function() {
