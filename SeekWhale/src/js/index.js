@@ -45,7 +45,6 @@ main.start()
 
 
 
-
 // var timer = null;
 // var clicks = true;
 // function toTop() {
