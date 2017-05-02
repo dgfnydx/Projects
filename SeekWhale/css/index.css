@@ -379,6 +379,30 @@
   opacity: 1;
 }
 
+#pbtn {
+  visibility: visible;
+  -webkit-animation: flash 5s 1s infinite;
+  animation: flash 5s 1s infinite;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.3;
+  }
+}
+
 @media screen and (max-width: 758px) {
   .wrap {
     padding-top: 50px;
@@ -452,8 +476,8 @@
   .display .video .video-banner span {
     width: 50px;
     height: 50px;
-    margin: 28% auto 0;
-    background: url("../../images/btn_play.png");
+    margin: 25% auto 0;
+    background: url("../images/btn_play.png");
     background-size: cover;
   }
   .show {
@@ -464,6 +488,10 @@
     height: 38px;
     line-height: 38px;
     font-size: 12px;
+  }
+  .show a:after {
+    width: 100px;
+    height: 38px;
   }
   .partner {
     padding: 10px 0 20px;

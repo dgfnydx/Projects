@@ -335,6 +335,29 @@ $pinkc: #4285f4;
 	background-size: 38%;
 	opacity: 1
 }
+// 视频播放按钮动画
+#pbtn {
+	visibility: visible;
+    -webkit-animation: flash 5s 1s infinite;
+    animation: flash 5s 1s infinite;
+}
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.3;
+  }
+}
 
 @media screen and  (max-width: 758px) {
 	.wrap {
@@ -410,8 +433,8 @@ $pinkc: #4285f4;
 				span {
 					width: 50px;
 					height: 50px;
-					margin: 28% auto 0;
-					background: url("../../images/btn_play.png");
+					margin: 25% auto 0;
+					background: url("../images/btn_play.png");
 					background-size: cover;
 				}
 			}
@@ -424,6 +447,10 @@ $pinkc: #4285f4;
 			height: 38px;
 			line-height: 38px;
 			font-size: 12px;
+			&:after {
+				width: 100px;
+				height: 38px;
+			}
 		}
 	}
 	.partner {
