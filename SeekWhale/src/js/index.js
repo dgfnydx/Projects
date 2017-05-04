@@ -17,12 +17,6 @@ var main = {
 		    }, '1000');
 		});
 	},
-	// 移动端隐藏导航
-	hideNav: function() {
-		$(".wrap, .navbar-nav li").click(function() {
-			$("#navbar").removeClass("in")
-		})
-	},
 	videoPlay: function() {
 		var _this = this;
 		this.playBtn.onclick = function() {
@@ -32,7 +26,7 @@ var main = {
 	},
 	start: function() {
 		this.cycle();
-		this.hideNav();
+		
 		this.anchor(".aboutus", ".about", 20);
 		this.anchor(".solve", ".solution", 20);
 		this.anchor(".beaut", ".display", 68);

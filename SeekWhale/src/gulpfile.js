@@ -52,7 +52,7 @@ gulp.task('serve', function () {
 	gulp.watch(['../css/*.*',
 		'../images/*.*',
 		'../js/*.*',
-		'../*.html'
+		'../**/*.html'
 	],
 	function () {
 		browserSync.reload();

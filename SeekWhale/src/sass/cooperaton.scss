@@ -1,0 +1,40 @@
+/*
+* @Author: dgfnydx
+* @Date:   2017-05-04 18:03:05
+* @Last Modified by:   dgfnydx
+* @Last Modified time: 2017-05-04 19:53:59
+*/
+.part1 {
+	position: relative;
+	img {
+		width: 100%;
+	}
+	.ptext {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 11% 0 4% 0;
+		text-align: center;
+		h1 {
+			color: #4285f4;
+			font-size: 88px;
+		}
+		.text {
+			padding: 55px 0 490px 0;
+			line-height: 35px;
+			color: #8d9399;
+			font-size: 18px;
+		}
+		.container {
+			text-align: right;
+		}
+		h2 {
+			font-size: 36px；
+		}
+	}
+	
+}
+@media screen and (min-width: 1600px) and (max-width: 2500px) {
+
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*
+* @Author: dgfnydx
+* @Date:   2017-05-04 18:03:05
+* @Last Modified by:   dgfnydx
+* @Last Modified time: 2017-05-04 19:53:59
+*/
+.part1 {
+  position: relative;
+}
+
+.part1 img {
+  width: 100%;
+}
+
+.part1 .ptext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 11% 0 4% 0;
+  text-align: center;
+}
+
+.part1 .ptext h1 {
+  color: #4285f4;
+  font-size: 88px;
+}
+
+.part1 .ptext .text {
+  padding: 55px 0 490px 0;
+  line-height: 35px;
+  color: #8d9399;
+  font-size: 18px;
+}
+
+.part1 .ptext .container {
+  text-align: right;
+}
+
+.part1 .ptext h2 {
+  font-size: 36px；;
+}
