@@ -31,12 +31,17 @@ var main = {
 		this.anchor(".solve", ".solution", 20);
 		this.anchor(".beaut", ".display", 68);
 		this.anchor(".contact", ".contacts", 60);
-		this.videoPlay();
+		// this.videoPlay();
 	}
 }
 main.start()
 
-
+$(".shows, #pbtn").click(function() {
+	$(".mask").show()
+})
+$(".mask button").click(function() {
+	$(".mask").hide()
+})
 
 
 

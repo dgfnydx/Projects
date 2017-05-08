@@ -508,3 +508,36 @@ $pinkc: #4285f4;
 	}
 
 }
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+   .tips {
+	    width: 280px;
+	    height: 150px;
+	    margin: 25% auto 0;
+	    padding-top: 5px;
+	    background: rgba(0, 0, 0, 0.8);
+	    text-align: center;
+	    border-radius: 5px;
+	    button {
+	    	width: 80px;
+		    height: 40px;
+		    border-radius: 5px;
+		    outline: none;
+	   }
+	   h3 {
+	        color: #4285f4;
+	   }
+		p {
+			color: white;
+		}
+
+	}
+
+}

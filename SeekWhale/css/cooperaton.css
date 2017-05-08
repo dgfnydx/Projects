@@ -3,8 +3,27 @@
 * @Author: dgfnydx
 * @Date:   2017-05-04 18:03:05
 * @Last Modified by:   dgfnydx
-* @Last Modified time: 2017-05-04 19:53:59
+* @Last Modified time: 2017-05-08 17:43:56
 */
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
 .part1 {
   position: relative;
 }
@@ -28,16 +47,456 @@
 }
 
 .part1 .ptext .text {
-  padding: 55px 0 490px 0;
+  padding: 55px 0 0 0;
   line-height: 35px;
   color: #8d9399;
   font-size: 18px;
 }
 
-.part1 .ptext .container {
+.part1 .business {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  width: 100%;
+  color: #0e1c33;
   text-align: right;
 }
 
-.part1 .ptext h2 {
+h2 {
+  margin-bottom: 25px;
+  color: #4285f4;
   font-size: 36px；;
+}
+
+.icon-lis {
+  padding: 65px 0;
+}
+
+.icon-lis li {
+  float: left;
+  width: 20%;
+}
+
+.icon-lis li i {
+  display: block;
+  width: 102px;
+  height: 102px;
+  margin: 0 auto;
+}
+
+.icon-lis li:nth-child(1) i {
+  background: url("../images/icon_setting.png") no-repeat;
+}
+
+.icon-lis li:nth-child(2) i {
+  background: url("../images/icon_editor.png") no-repeat;
+}
+
+.icon-lis li:nth-child(3) i {
+  background: url("../images/icon_link.png") no-repeat;
+}
+
+.icon-lis li:nth-child(4) i {
+  background: url("../images/icon_share.png") no-repeat;
+}
+
+.icon-lis li:nth-child(5) i {
+  background: url("../images/icon_hardware.png") no-repeat;
+}
+
+.icon-lis li span {
+  display: block;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.creater {
+  padding: 130px 0 150px 0;
+}
+
+.intro {
+  position: relative;
+  width: 65%;
+  padding: 5% 2% 0 0;
+}
+
+.intro .decorate {
+  position: absolute;
+  top: 30px;
+  right: -100px;
+  width: 276px;
+  height: 354px;
+  background: url("../images/chendi.png");
+}
+
+.intro-img {
+  width: 35%;
+}
+
+.intro-img img {
+  width: 100%;
+}
+
+.data {
+  width: 40%;
+  padding-left: 10%;
+}
+
+.datas {
+  display: none;
+}
+
+.trend {
+  width: 60%;
+  padding-left: 10%;
+}
+
+.scene-wrap {
+  padding: 180px 0 30px 0;
+}
+
+.scene dl {
+  width: 50%;
+  text-align: center;
+}
+
+.scene dl i {
+  display: block;
+  width: 38px;
+  height: 4px;
+  margin: 40px auto;
+  background: #4285f4;
+}
+
+.scene dd {
+  padding-top: 30px;
+}
+
+.scene dt img {
+  width: 100%;
+}
+
+.scene h3 {
+  color: #4285f4;
+  font-size: 24px;
+}
+
+.scene h4 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.scene .lmodule {
+  padding-top: 140px;
+}
+
+.part2 {
+  padding-top: 270px;
+  background: url("../images/imge.png");
+  background-size: cover;
+}
+
+.part2 h2 {
+  text-align: center;
+}
+
+.part2 .llist {
+  position: relative;
+  width: 50%;
+}
+
+.part2 .llist .num {
+  position: absolute;
+  top: 0;
+  right: -24px;
+  color: white;
+  font-size: 24px;
+}
+
+.part2 .llist .num li {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 44px;
+  background: #9dc3ff;
+  line-height: 50px;
+  border: 1px solid #9dc3ff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.part2 .llist .num li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: url("../images/cycbg.png") no-repeat;
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.part2 .llist .num li:hover:after {
+  opacity: 0;
+  transform: rotateZ(90deg);
+  transition: 1s;
+}
+
+.part2 .rlist {
+  width: 50%;
+}
+
+.part2 .module span, .part2 .module em {
+  display: block;
+  float: left;
+  height: 50px;
+}
+
+.part2 .module span {
+  width: 70%;
+  line-height: 50px;
+}
+
+.part2 .module em {
+  width: 30%;
+}
+
+.part2 .module .lline {
+  background: url("../images/line.png") 0 center no-repeat;
+}
+
+.part2 .module .rline {
+  background: url("../images/line.png") right center no-repeat;
+}
+
+.part2 .module li {
+  margin-bottom: 44px;
+}
+
+.part2 .lmodule {
+  border-right: 3px solid #3883fe;
+  text-align: right;
+}
+
+.part2 .lmodule strong {
+  padding-right: 20px;
+  border-right: 1px solid #3883fe;
+}
+
+.part2 .rmodule strong {
+  padding-left: 20px;
+  border-left: 1px solid #3883fe;
+}
+
+@media screen and (max-width: 758px) {
+  h2 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+  }
+  .part1 .ptext {
+    padding: 0;
+  }
+  .part1 .ptext h1 {
+    font-size: 22px;
+  }
+  .part1 .ptext .text {
+    padding-top: 0;
+    line-height: 15px;
+    font-size: 11px;
+  }
+  .part1 .business {
+    bottom: -85px;
+  }
+  .part1 .business p {
+    font-size: 12px;
+  }
+  .icon-lis {
+    padding: 100px 0 0 0;
+  }
+  .icon-lis li i {
+    width: 50px;
+    height: 50px;
+  }
+  .icon-lis li:nth-child(1) i {
+    background: url("../images/icon_setting.png") no-repeat;
+    background-size: contain;
+  }
+  .icon-lis li:nth-child(2) i {
+    background: url("../images/icon_editor.png") no-repeat;
+    background-size: contain;
+  }
+  .icon-lis li:nth-child(3) i {
+    background: url("../images/icon_link.png") no-repeat;
+    background-size: contain;
+  }
+  .icon-lis li:nth-child(4) i {
+    background: url("../images/icon_share.png") no-repeat;
+    background-size: contain;
+  }
+  .icon-lis li:nth-child(5) i {
+    background: url("../images/icon_hardware.png") no-repeat;
+    background-size: contain;
+  }
+  .icon-lis li span {
+    padding-top: 5px;
+    font-size: 12px;
+  }
+  .creater {
+    padding: 20px 15px;
+  }
+  .creater .intro {
+    width: 100%;
+  }
+  .creater .intro .decorate {
+    display: none;
+  }
+  .creater .intro p {
+    font-size: 12px;
+  }
+  .creater .intro-img {
+    width: 100%;
+  }
+  .data {
+    display: none;
+  }
+  .datas {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .trend {
+    width: 100%;
+    padding: 0;
+    font-size: 12px;
+  }
+  .scene-wrap {
+    padding: 20px 15px;
+  }
+  .scene-wrap .scene dl {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .scene-wrap .scene dl i {
+    margin: 5px auto;
+  }
+  .scene-wrap .scene .lmodule {
+    padding: 0;
+  }
+  .scene-wrap .scene dd {
+    padding: 15px 0;
+    font-size: 12px;
+  }
+  .scene-wrap .scene dd h3 {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  .scene-wrap .scene dd h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .scene-wrap .scene dd ul {
+    font-size: 12px;
+  }
+  .scene-wrap .scene dt {
+    padding: 10px;
+  }
+  .part2 {
+    padding: 20px 0 40px 0;
+  }
+  .part2 .llist .num {
+    right: -15px;
+  }
+  .part2 .llist .num li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  .part2 .llist .num li:after {
+    width: 30px;
+    height: 30px;
+    background: url("../images/cycbg.png") no-repeat;
+    background-size: contain;
+  }
+  .part2 .module li {
+    margin-bottom: 10px;
+  }
+  .part2 .module span {
+    height: 30px;
+    line-height: 15px;
+    font-size: 12px;
+  }
+  .part2 .module span strong {
+    border: none;
+    padding: 0;
+  }
+  .part2 .module em {
+    height: 30px;
+  }
+  .part2 .lmodule {
+    border-right: 1px solid #3883fe;
+  }
+  .part2 .lmodule span {
+    padding-right: 10px;
+  }
+  .part2 .rmodule span {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  .scene-wrap .scene dd {
+    padding: 29px 0;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .scene-wrap .scene dd {
+    padding: 39px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .part1 .ptext h1 {
+    font-size: 44px;
+  }
+  .part1 .ptext .text {
+    padding-top: 5px;
+    line-height: 28px;
+  }
+  .part1 .business {
+    bottom: -6px;
+  }
+  .creater {
+    padding: 15px 0 80px 0;
+  }
+  .creater .decorate {
+    display: none;
+  }
+  .creater .intro {
+    padding: 0 2% 0 0;
+  }
+  .scene-wrap {
+    padding: 60px 0;
+  }
+  .scene .lmodule {
+    padding-top: 60px;
+  }
+  .scene dd {
+    padding-top: 0;
+  }
+  .scene dd i {
+    margin: 15px auto 30px;
+  }
+  .scene h3 {
+    margin-top: 0;
+  }
+  .scene h4 {
+    margin-bottom: 8px;
+  }
+  .part2 {
+    padding-top: 0;
+  }
 }
