@@ -173,6 +173,7 @@ $pinkc: #4285f4;
 .display {
 	position: relative;
 	height: 413px;
+	padding-top: 60px;
 	.video {
 		position: relative;
 		width: 100%;
@@ -202,7 +203,7 @@ $pinkc: #4285f4;
 	}
 }
 .show {
-	padding: 298px 0 95px;
+	padding: 358px 0 95px;
 	background: #ecf3fe;
 	a {
 		position: relative;
@@ -368,6 +369,22 @@ $pinkc: #4285f4;
 			}
 		}
 	}
+	.carousel-indicators li {
+		width: 3px;
+		height: 3px;
+		-webkit-transition: width 1s;
+		-moz-transition: width 1s;
+		-ms-transition: width 1s;
+		transition: width 1s;
+	}
+	.carousel-indicators .active {
+		width: 9px;
+		height: 3px;
+		-webkit-transition: width 1s;
+		-moz-transition: width 1s;
+		-ms-transition: width 1s;
+		transition: width 1s;
+	}
 	.container>.navbar-header {
 		margin-left: 0;
 	}
@@ -397,6 +414,9 @@ $pinkc: #4285f4;
 	} 
 	.about {
 		padding: 10px 0 20px;
+		p {
+			text-align: left;
+		}
 	}
 	.solution {
 		padding: 10px 0;
@@ -426,6 +446,7 @@ $pinkc: #4285f4;
 	}
 	.display {
 		height: auto;
+		padding-top: 0;
 		.video {
 			height: 200px;
 			.video-banner {
