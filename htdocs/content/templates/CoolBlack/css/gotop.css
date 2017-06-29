@@ -1,0 +1,35 @@
+#backtoTop{z-index: 5000;background-color:#eee;border-radius:100%;bottom:10%;height:48px;position:fixed;right:-100px;width:48px;transition:0.5s;-webkit-transition:0.5s}
+#backtoTop.button--show{right:10px}
+.per{font-size:16px;height:48px;line-height:48px;position:absolute;text-align:center;top:0;width:48px;color:#555;cursor:pointer}
+.per:before{font-family:iconfont,fatesinger;content:attr(data-percent)}
+.per:hover:before{font-family:"微软雅黑";content:"顶";font-size:20px}
+.post-title a:hover{
+color: #bbb;
+}
+/**prettyprint**/
+.prettyprint,
+pre.prettyprint {background-color: rgba(0, 0, 0, 0.7);border: 1px solid #272822;overflow: auto;padding: 8px;font-size:13px;font-family: 'Microsoft Yahei',"\5FAE\8F6F\96C5\9ED1";
+border-radius: 5px;}
+.prettyprint.linenums,
+pre.prettyprint.linenums {-webkit-box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;-moz-box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;box-shadow: inset 40px 0 0 #39382E, inset 41px 0 0 #464741;}
+.prettyprint.linenums ol,pre.prettyprint.linenums ol {margin: 0 0 0 33px;}
+.prettyprint.linenums ol li,
+pre.prettyprint.linenums ol li {margin:0;padding-left: 12px;color: #bebec5;line-height: 23px;margin-left: 0;list-style: decimal;}
+.prettyprint .com { color: #93a1a1; }
+.prettyprint .lit { color: #AE81FF; }
+.prettyprint .pun,
+.prettyprint .opn, 
+.prettyprint .clo { color: #F8F8F2; }
+.prettyprint .fun { color: #dc322f; }
+.prettyprint .str, 
+.prettyprint .atv { color: #E6DB74; }
+.prettyprint .kwd, 
+.prettyprint .tag { color: #F92659; }
+.prettyprint .typ, 
+.prettyprint .atn, 
+.prettyprint .dec, 
+.prettyprint .var { color: #A6E22E; }
+.prettyprint .pln { color: #66D9EF; }
+
+
+

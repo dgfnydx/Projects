@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <script charset="utf-8" src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+   	<div id="wrap">
+       <input type="text" id="J_input"/> 
+   	</div>
+    <script>
+        // $(function() {
+        //     var input = $('#J_input');
+        //     function getNum(){
+        //         return input.val().length;
+        //     }
+        //     function render(){
+        //         var num = getNum();
+        //         if ($('#J_input_count').length == 0) {
+        //             input.after('<span id="J_input_count"></span>');
+        //         };
+
+        //         $('#J_input_count').html(num+'个字');
+        //     }
+        //     input.on('keyup',function(){
+        //         render();
+        //     });
+        //     render();
+
+
+        // })
+
+        var textCount = {
+          input:null,
+          init:function(config){
+            this.input = $(config.id);
+            this.bind();
+            //这边范围对应的对象，可以实现链式调用
+            return this;
+          },
+          bind:function(){
+            var self = this;
+            this.input.on('keyup',function(){
+              self.render();
+            });
+          },
+          getNum:function(){
+            return this.input.val().length;
+          },
+          //渲染元素
+          render:function(){
+            var num = this.getNum();
+
+            if ($('#J_input_count').length == 0) {
+              this.input.after('<span id="J_input_count"></span>');
+            };
+
+            $('#J_input_count').html(num+'个字');
+          }
+        }
+        $(function() {
+          //在domready后调用
+            textCount.init({
+              id:'#J_input'
+           })
+            textCount.render();
+        })
+        
+    </script>
+</body>
+</html>

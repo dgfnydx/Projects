@@ -1,0 +1,45 @@
+V1.2 Update
+Bugfix
+1、博文正文正则匹配函数语法错误
+2、自动截图功能对png格式的图片裁剪错误的问题修复并增强自动裁剪图片的功能
+3、【文章中插入的图片均强制标准居中】最大限度的自适应博文中的图片
+对博文中p标签嵌套的a和img标签进行可选正则匹配取消，默认进行替换
+	例如博文中如下标签：
+	<p style="xx"><a target=_blank href="http://xxx.cn/726f1436512023.jpg" title="点击查看原图"><img src="http://xxx.cn/726f1436512023.jpg" title="点击查看原图" alt="刘若英.jpg" width="1200" height="800" border="0"></a></p>
+	将被替换成：
+	<div class="article_image"><img src="http://xxx.cn/726f1436512023.jpg" title="点击查看原图" alt="刘若英.jpg"></div>
+	===
+	包括如下变形：
+	<p style="xx"><img src="http://xxx.cn/726f1436512023.jpg" title="点击查看原图" alt="刘若英.jpg" width="1200" height="800" border="0"></p>
+	也会被替换成：
+	<div class="article_image"><img src="http://xxx.cn/726f1436512023.jpg" title="点击查看原图" alt="刘若英.jpg"></div>
+
+
+Add
+1、启用模板插件，方便后台快速设置个性选项
+2、模板设置中可以自定义自己的微博地址、logo图片
+3、自定义文章附图裁剪位置，自定义文章附图是否每隔12小时自动强制更新（当更新文章以及文章中图片后可以启用）
+3、添加随机默认文章附图的功能，自定义的220px*150px大小的随机文章附图上传至./content/templates/J2/images/randoms/目录下即可，图片名不得为中文！
+
+
+==============================================================================================
+V1.1 20150610 Release Update
+BugFix
+1、修复导航栏下拉菜单背景色问题
+2、修复文章页面tag标签属性，阻止搜索引擎抓取文章页tag----文章页tag太多会被搜索引擎惩罚性降权
+3、修复文章评论页评论者url超链接属性，阻止搜索引擎抓取（博主回复评论中的url允许）----防止垃圾评论、外链的一种处理方式
+4、完善侧边栏下拉固定容器的相关css样式，自定义侧边栏容器css样式为widget_custom、侧边栏下拉固定容器css样式为widget_custom_fixed
+5、修复验证码点击切换（若后台开启相应验证码功能的话）
+
+Add
+1、评论框表情工具栏
+2、提交评论利用ajax无刷新
+3、微语前台页面添加发布微语模块，博主用户发布微语时无需进入后台操作
+4、添加用户中心并添加qq、微博、微信外部登录，首次登录并设置后，此后评论文章时直接登录输入评论内容即可[付费功能暂不推送至github]
+
+
+Catag
+1、commet post url /index.php?action=addcom {http302=>success,200=>error}
+2、Twiter post url /admin/twitter.php?action=post {http302=>success,200=>error}
+#jQuery ajax 302 http status do not Capture
+==============================================================================================

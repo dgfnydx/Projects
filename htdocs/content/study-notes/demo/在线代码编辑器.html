@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../plug-in/codemirror/codemirror.css">
+<script src="../plug-in/codemirror/codemirror.js"></script>
+<script src="../plug-in/codemirror/clike.js"></script>
+
+<!--引入css文件，用以支持主题-->
+<link rel="stylesheet" href="../plug-in/codemirror/eclipse.css">
+
+<!--引入js，绑定Vim-->
+<link rel="stylesheet" href="../plug-in/codemirror/dialog.css">
+<script src="../plug-in/codemirror/vim.js"></script>
+<script src="../plug-in/codemirror/searchcursor.js"></script>
+<!--改善vim输入命令时的样式-->
+<script src="../plug-in/codemirror/dialog.js"></script>
+
+<!--支持代码折叠-->
+<link rel="stylesheet" href="../plug-in/codemirror/foldgutter.css"/>
+<script src="../plug-in/codemirror/foldcode.js"></script>
+<script src="../plug-in/codemirror/foldgutter.js"></script>
+<script src="../plug-in/codemirror/brace-fold.js"></script>
+<script src="../plug-in/codemirror/comment-fold.js"></script>
+
+<!--全屏模式-->
+<link rel="stylesheet" href="../plug-in/codemirror/fullscreen.css">
+<script src="../plug-in/codemirror/fullscreen.js"></script>
+
+<!--括号匹配-->
+<script src="../plug-in/codemirror/matchbrackets.js"></script>
+
+<!--自动补全-->
+<link rel="stylesheet" href="../plug-in/codemirror/show-hint.css">
+<script src="../plug-in/codemirror/show-hint.js"></script>
+<script src="../plug-in/codemirror/anyword-hint.js"></script>
+
+<head>
+<title>CodeMirror Test</title>
+</head>
+
+<body>
+<textarea id="code"></textarea>
+</body>
+<script type="text/javascript">
+    var editor=CodeMirror.fromTextArea(document.getElementById("code"),{
+        //Java高亮显示
+        mode:"text/x-java",
+        //显示行号
+        lineNumbers:true,
+        //设置主题
+        theme:"eclipse",
+        //绑定Vim
+        keyMap:"vim",
+        //代码折叠
+        lineWrapping:true,
+        foldGutter: true,
+        gutters:["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        //全屏模式
+        fullScreen:true,
+        //括号匹配
+        matchBrackets:true,
+        // 智能提示 
+        extraKeys:{"Ctrl-Space":"autocomplete"}//ctrl-space唤起智能提示          
+        // 参考相关技术文档https://zhuanlan.zhihu.com/p/22163474
+});
+</script>
+</html>

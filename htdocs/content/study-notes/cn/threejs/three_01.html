@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js学习笔记</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 标签图表 -->
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- 重置文件 -->
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css">
+    <!-- 模板2样式 -->
+    <link rel="stylesheet" href="../../css/template2.css" type="text/css">
+    <!-- 示例代码高亮样式 -->
+    <link rel="stylesheet" href="../../plug-in/syntaxhighlighter/css/shCoreMidnight.css" type="text/css">
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+   	<div class="wrap">
+		<div class="main">
+			<!-- 章 -->
+			<div class="section">
+				<h2 class="h2-title">Three.js学习笔记（一）</h2>
+				<div class="study-content">
+					<div class="notes n-dcom">
+						<div class="notes-content">
+							<div class="knowledge-point">
+								<h4 class="h4-title">概述</h4>
+								<div class="paragraph">
+									<p class="indent">Three.js是一款webGL框架，webGL可以让我们在canvas上实现3D效果</p>
+								</div>
+								<!-- <ol class="h4-ol">
+									<li>Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。 </li>
+									<li>Vue.js 支持所有兼容 ECMAScript 5 的浏览器。</li>
+								</ol> -->
+							</div>
+						</div>
+					</div>
+					<!-- <div class="demos n-dcom">
+						<div class="demos-content">
+							<div class="knowledge-point">没有示例</div>
+						</div>
+					</div> -->
+					<div class="notes n-dcom">
+						<div class="notes-content">
+							<div class="knowledge-point">
+								<h4 class="h4-title">立体模型构建</h4>
+								<div class="paragraph">
+									<p class="nindent">Three.js立体模型构建需要五个步骤</p>
+								</div>
+								<ol class="h4-ol">
+									<li>设置渲染器renderer</li>
+									<li>设置相机camera</li>
+									<li>设置光源lignt</li>
+									<li>设置场景scene</li>
+									<li>设置物体object</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div class="notes n-dcom">
+						<div class="notes-content">
+							<div class="knowledge-point">
+								<h4 class="h4-title">第一步 渲染器设置</h4>
+								<div class="paragraph">
+									<p class="nindent">三维空间里的物体映射到二维平面的过程被称为三维渲染。 一般来说我们都把进行渲染操作的软件叫做渲染器。 具体来说要进行下面这些处理。</p>
+								</div>
+								<ol class="h4-ol">
+									<li>声明全局变量（对象）；</li>
+									<li>获取画布容器的宽高；</li>
+									<li>生成渲染器对象（属性：抗锯齿效果为设置有效；</li>
+									<li>设定渲染器的高宽（和画布框大小一致；</li>
+									<li>追加canvas元素到画布容器中；</li>
+									<li>设置渲染器的清除色(clearColor)。</li>
+								</ol>
+								<div class="code-type">代码示例:</div>
+								<pre name="code" class="brush:js">
+							    	var myCanvas = document.getElementById("mycanvas");
+							    	// 渲染器
+							    	var renderer,//声明全局变量（对象）
+								    	mycanvasW,
+								    	mycanvasH;
+							    	function initRender() {
+						    			mycanvasW = myCanvas.clientWidth;//获取画布容器宽
+						    			mycanvasH = myCanvas.clientHeight;//获取画布容器高
+						    			renderer = new THREE.WebGLRenderer({
+						    				antialias: true
+						    			});//生成渲染器对象（属性：抗锯齿效果为设置有效）
+						    			renderer.setSize(mycanvasW, mycanvasH);//设置渲染器的高宽（和画布框大小一致）
+						    			myCanvas.appendChild(renderer.domElement);追加canvas元素到画布容器mycanvas中；
+						    			renderer.setClearColor(0xfffffff, 1.0);//设置渲染器的清除色
+							    	}
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="notes n-dcom">
+						<div class="notes-content">
+							<div class="knowledge-point">
+								<h4 class="h4-title">第二步设置相机</h4>
+								<div class="paragraph">
+									<p class="nindent">Three.js中有透视相机和正投影相机，设置步骤如下：</p>
+								</div>
+								<ol class="h4-ol">
+									<li>声明全局变量（对象）；</li>
+									<li>设置透视投影的相机；</li>
+									<li>设置相机的位置坐标；</li>
+									<li>设置相机的上为z轴方向；</li>
+									<li>设置视野的中心坐标。</li>
+								</ol>
+								<div class="code-type">代码示例:</div>
+								<pre name="code" class="brush:js">
+									// 相机
+								    var camera;
+									function initCamera() {
+										camera = new THREE.PerspectiveCamera( 45,mycanvasW/mycanvasH, 1, 100000 );
+								        camera.position.y = 10;//设置相机的位置坐标；
+										camera.position.z = 10;
+										camera.up.z = 1;//设置相机的上为z轴方向;
+										camera.lookAt( {x:0, y:0, z:0 } );//设置视野的中心坐标
+								    }
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+   	</div>
+   
+    <script charset="utf-8" src="../../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/common.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/js/shCore.js"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/js/shBrushXml.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/js/shBrushJScript.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/shAutoloader.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/three/three.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	 	SyntaxHighlighter.autoloader(
+			['js','jscript','javascript','../../plug-in/syntaxhighlighter/js/shBrushJScript.js'],
+			['css','../../plug-in/syntaxhighlighter/js/shBrushCss.js'],
+			['xml','html','../../plug-in/syntaxhighlighter/js/shBrushXml.js']
+		); 
+		SyntaxHighlighter.defaults['toolbar'] = false;//是否显示工具栏
+		SyntaxHighlighter.defaults['tab-size'] = 4;//自定义tab宽度
+		SyntaxHighlighter.defaults['html-script'] = false;//混合高亮HTML和js
+		SyntaxHighlighter.defaults['gutter'] = true;//是否显示行号
+		SyntaxHighlighter.defaults['collapse'] = false;//是否折叠代码
+		// SyntaxHighlighter.defaults['highlight'] = 1;//标记重要的行
+		SyntaxHighlighter.all();//这里的‘code’ 为上面放置代码的容器 
+    	
+    </script>
+</body>
+</html>

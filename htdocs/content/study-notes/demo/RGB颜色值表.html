@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RGB颜色值</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../css/reset.css" type="text/css"> -->
+    <style type="text/css">
+       
+    </style>
+</head>
+<body>
+   	<div id="wrap">
+        <table border="0" width="100%" cellpadding="0" style="border-collapse: collapse" height="300">
+            <tr>
+                <td>
+                    <script language="JavaScript" type = "text/javascript">
+                        clr=new Array('00','20','40','60','80','a0','c0','ff');
+                        for (i=0;i<8;i++) { 
+                            document.write("<center><table border=1 cellpadding=8>");
+                            for (j=0;j<8;j++) {
+                                document.write("<tr>");
+                                for (k=0;k<8;k++) {
+                                    document.write('<td style="color: #'+clr[7-i]+clr[7-j]+clr[7-k]+'" bgcolor="#'+clr[i]+clr[j]+clr[k]+'">');
+                                    document.write("#" + clr[i]+clr[j]+clr[k]+' </td>'); 
+                                }
+                                    document.write("</tr>"); 
+                            }
+                                document.write("</table></center><br>"); 
+                        }
+                        
+                        wrap.addEventListener("click", function(e) {
+                            if(e.target && e.target.nodeName == "TD") {
+                                if (document.body.createTextRange) {
+                                    var range = document.body.createTextRange();
+                                    range.moveToElementText(e.target);
+                                    range.select();
+                                } else if (window.getSelection) {
+                                    var selection = window.getSelection();
+                                    var range = document.createRange();
+                                    range.selectNodeContents(e.target);
+                                    selection.removeAllRanges();
+                                    selection.addRange(range);
+                                } else {
+                                    alert("复制失败！");
+                                }
+                                document.execCommand("Copy");
+                            }
+                        })
+                    </script>
+                </td>
+            </tr>
+        </table>
+   	</div>
+    <script>
+    
+    </script>
+</body>
+</html>

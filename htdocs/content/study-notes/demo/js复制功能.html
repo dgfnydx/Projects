@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="css/reset.css" type="text/css"> -->
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+   	<div class="wrap">
+		<textarea cols="20" rows="10" id="biao1">用户定义的代码区域</textarea>
+		<input type="button" onClick="copyUrl2()" value="点击复制代码" />
+		<div id="aa">我是div，点击我可以选中内容</div>
+   	</div>
+    <script charset="utf-8" src="" type="text/javascript"></script>
+    <script type="text/javascript">
+        function copyUrl2() {
+	        var Url2=document.getElementById("biao1");
+	        Url2.select(); // 选择对象
+	        document.execCommand("Copy"); // 执行浏览器复制命令
+	        alert("已复制好，可贴粘。");
+        }
+
+        var Url2=document.getElementById("biao1");
+        Url2.onclick = function() {
+        	Url2.select(); // 选择对象
+        	document.execCommand("Copy"); // 执行浏览器复制命令
+        	alert("已复制好，可贴粘。");
+        }
+
+
+        var cc = document.getElementById("aa")
+        cc.onclick = function() {
+        	// var text=this;
+			if (document.body.createTextRange) {
+			        var range = document.body.createTextRange();
+			        range.moveToElementText(this);
+			        range.select();
+			    } else if (window.getSelection) {
+			        var selection = window.getSelection();
+			        var range = document.createRange();
+			        range.selectNodeContents(this);
+			        selection.removeAllRanges();
+			        selection.addRange(range);
+			     
+			    } else {
+			        alert("none");
+			    }
+        }
+    </script>
+</body>
+</html>

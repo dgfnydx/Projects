@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>判断浏览器及PC or 移动端</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../css/reset.css" type="text/css"> -->
+    <style type="text/css">
+        .img {
+            width: 200px;
+        }
+        .img img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   	<div id="wrap">
+        
+   	</div>
+    <script>
+    // 判断浏览器
+    // match() 方法可在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。
+    // 该方法类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+    // replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
+        // function getBrowserInfo(){
+        //     var Info = {};
+        //     var str = window.navigator.userAgent.toLowerCase();
+        //     var bReg =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+        //     var infoArr = str.match(bReg);
+        //     Info.browser = infoArr[1].replace(/version/, "safari");
+        //     Info.ver = infoArr[2];
+        //     console.log(window.navigator.webkitPersistentStorage)
+        //     document.write(infoArr)
+        //     return Info;
+        // }
+        // var BomInfo = getBrowserInfo();
+        
+        // document.write(BomInfo.browser)
+        // document.write("</br>")
+        // document.write(BomInfo.ver)
+
+        // function browerType() {
+        //    var sUserAgent = navigator.userAgent.toLowerCase(); //浏览器的用户代理设置为小写，再进行匹配
+        //    var isIpad = sUserAgent.match(/ipad/i) == "ipad"; //或者利用indexOf方法来匹配
+        //    var isIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        //    var isMidp = sUserAgent.match(/midp/i) == "midp"; //移动信息设备描述MIDP是一套Java应用编程接口，多适用于塞班系统
+        //    var isUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4"; //CVS标签
+        //    var isUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        //    var isAndroid = sUserAgent.match(/android/i) == "android";
+        //    var isCe = sUserAgent.match(/windows ce/i) == "windows ce";
+        //    var isWM = sUserAgent.match(/windows mobil/i) == "windows mobil";
+        //    if (isIpad || isIphoneOs || isMidp || isUc7 || isUc || isAndroid || isCe || isWM) {
+        //         document.write("移动设备")
+        //      // alert('该设备为移动设备'); // 做某些事情
+        //    } else {
+        //         document.write("PC")
+        //      // alert('该设备为PC设备'); // 做某些事情
+        //    }
+        // }
+        // browerType();
+        
+        // 上面的精简版
+        function termType() {
+          var str = window.navigator.userAgent.toLowerCase();
+          var bReg = /(iphone os|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobil)/g;
+          var termInfo = str.match(bReg);
+          if(termInfo == null) {
+            document.write("PC")
+          } else {
+            document.write("移动端")
+          }
+          
+        } termType()
+
+    </script>
+</body>
+</html>

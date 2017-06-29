@@ -1,0 +1,257 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>demo2函数为对象的方法</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+			.load {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100px;
+				height: 30px;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="load" id="load">loading...</div>
+		<script src="../../js/jquery-1.11.3.min.js"></script>
+		<script src="../../js/three/three.js"></script>
+		<script src="../../js/three/controls/OrbitControls.js"></script>
+		<script src="../../js/three/loader/MTLLoader.js"></script>
+		<script src="../../js/three/loader/OBJLoader.js"></script>
+		<!-- <script src="../../js/loader/FBXLoader.js"></script> -->
+		<script>
+			window.onload = function() {
+				$(".load").hide()
+			}
+			var module = {
+				scene: null,
+				camera: null,
+				renderer: null,
+				geometry: null,
+				material: null,
+				cube: null,
+				gridHelper: null,
+				light: null,
+				controls: null,
+				sun: null,
+				sx: null,
+				mx: null,
+				jx: null,
+				hx: null,
+				star: null,
+				starht: null,
+				arr: [],
+				arrh: [],
+				// 场景
+				initScene: function() {
+					this.scene = new THREE.Scene();
+				},
+				// 相机
+				initCamera: function() {
+					// 透视相机
+					this.camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 1, 10000 );
+					// 设置相机的坐标
+					// this.camera.position.y = 5;
+					// this.camera.position.z = 5;
+					this.camera.position.set(5, 5, 5)
+				},
+				// 渲染器
+				initRenderer: function() {
+					this.renderer = new THREE.WebGLRenderer({antialias : true});
+					this.renderer.setSize( window.innerWidth, window.innerHeight );
+					this.renderer.setClearColor(0xffffff, 1);//(原色，透明度)
+					document.body.appendChild( this.renderer.domElement );
+				},
+				// 物体
+				initCube: function() {
+					this.geometry = new THREE.BoxGeometry( 500, 500, 500, 2, 2, 2 );//(width, height, dept, widthSegments, heightSegments, depthSegments)
+					var crateTexture = new THREE.TextureLoader().load("../../images/three/bg.jpg"); 
+					this.material = new THREE.MeshBasicMaterial({//基本材质
+						// color: 0xff0000,
+						map: crateTexture,
+						side: THREE.DoubleSide,
+						wireframe : false//wireframe线模式渲染
+					});
+					// this.material = new THREE.MeshNormalMaterial({此材质根据物体表面法向量计算颜色
+					// 	wireframe : false//wireframe线模式渲染
+					// });
+					this.cube = new THREE.Mesh( this.geometry, this.material );
+					this.scene.add( this.cube );
+				},
+				initStar: function() {
+					var _this = this
+					var picArr = {
+						sun: "../../images/demo/jingtian1.jpg",
+						sx: "../../images/demo/jingtian2.jpg",
+						mx: "../../images/demo/liruotong1.jpg",
+						jx: "../../images/demo/liruotong3.jpg",
+						hx: "../../images/demo/liruotong5.jpg"
+					}
+					function stars(r, picLoad, x, y, z) {
+						var sphere = new THREE.SphereGeometry(r, 100, 100);
+						var starTexture = new THREE.TextureLoader().load(picLoad);
+						var sunt = new THREE.MeshBasicMaterial({
+							map: starTexture,
+							side: THREE.DoubleSide,
+						});
+						    _this.star = new THREE.Mesh(sphere, sunt)
+							_this.star.position.set(x, y, z);
+							_this.arr.push(_this.star)
+							_this.scene.add(_this.star)
+
+						
+					}
+					function cyc(nr, wr, picLoad, x, y, z) {
+						var starh = new THREE.CylinderGeometry(nr, wr, 0, 100, 100, true);
+						var starhTexture = new THREE.TextureLoader().load(picLoad);
+						var sunt = new THREE.MeshBasicMaterial({
+							map: starhTexture,
+							side: THREE.DoubleSide,
+						});
+						_this.starht = new THREE.Mesh(starh, sunt)
+						_this.starht.position.set(x, y, z);
+						_this.arrh.push(_this.starht)
+						_this.scene.add(_this.starht)
+					}
+					stars(0.5, picArr.sun, 0, 0, 0)
+					stars(0.05, picArr.sx, 1, 0, 0)
+					stars(0.1, picArr.mx, 1.25, 0, 0)
+					stars(0.2, picArr.jx, 2, 0, 0)
+					stars(0.15, picArr.hx, 1.65, 0, 0)
+					cyc(0.06, 0.08, picArr.hx, 1, 0, 0)
+					cyc(0.12, 0.15, picArr.hx, 1.25, 0, 0)
+					cyc(0.17, 0.20, picArr.hx, 1.65, 0, 0)
+				},
+
+				initModel: function() {
+					var _this = this;
+					var mtlLoader = new THREE.MTLLoader();
+						mtlLoader.setPath("../../model/Spiderman/");
+						mtlLoader.load("Spiderman.mtl", function(materials) {
+							materials.preload();
+							var objLoader = new THREE.OBJLoader();
+							objLoader.setMaterials(materials);
+							objLoader.setPath("../../model/Spiderman/");
+							objLoader.load("Spiderman.obj", function ( object ) {
+								var objs = object.children[0];
+								    objs.geometry.computeBoundingBox();
+								var maxX = objs.geometry.boundingBox.max.x,
+								    minX = objs.geometry.boundingBox.min.x,
+								    maxY = objs.geometry.boundingBox.max.y,
+								    minY = objs.geometry.boundingBox.min.y,
+								    maxZ = objs.geometry.boundingBox.max.z,
+								    minZ = objs.geometry.boundingBox.min.z,
+								    maxDis = Math.sqrt((maxX - minX) * (maxX - minX) + (maxY - minY) * (maxY - minY) + (maxZ - minZ) * (maxZ - minZ)) / 2,
+								    scale = (1.5 / maxDis).toFixed(2);
+								    objs.scale.multiplyScalar(scale);
+								    objs.rotation.y = 90 * Math.PI / 180;
+			                    // object.scale.x = num;
+			                    // object.scale.y = num;
+			                    // object.scale.z = num;
+			                    // object.rotation.x = Math.PI / 180 * -90;
+			                    _this.scene.add( objs );
+							});
+
+						});
+				},
+				autoroatation: function() {
+					this.arr[0].rotation.y += 0.01;
+					this.arr[1].rotation.y += 0.09;
+					this.arr[2].rotation.y += 0.03;
+					this.arr[3].rotation.y += 0.08;
+					this.arr[4].rotation.y += 0.05;
+					this.arrh[0].rotation.x = 2;
+					this.arr[1].rotation.x = 2;
+					this.arrh[1].rotation.x = 2.25;
+					this.arr[2].rotation.x = 2.25;
+					this.arrh[2].rotation.x = 5.75;
+					this.arr[4].rotation.x = 5.75;
+					this.mx += 0.05
+					this.sx += 0.015
+					this.jx += 0.02
+					this.hx += 0.025
+					this.arr[1].position.set(1 * Math.sin(this.mx), 0, 1 * Math.cos(this.mx))
+					this.arrh[0].position.set(1 * Math.sin(this.mx), 0, 1 * Math.cos(this.mx))
+					this.arr[2].position.set(1.25 * Math.sin(this.sx), 0, 1.25 * Math.cos(this.sx))
+					this.arrh[1].position.set(1.25 * Math.sin(this.sx), 0, 1.25 * Math.cos(this.sx))
+					this.arr[3].position.set(2 * Math.sin(this.jx), 0, 2 * Math.cos(this.jx))
+					this.arr[4].position.set(1.65 * Math.sin(this.hx), 0, 1.65 * Math.cos(this.hx))
+					this.arrh[2].position.set(1.65 * Math.sin(this.hx), 0, 1.65 * Math.cos(this.hx))
+					
+				},
+				// 网格
+				initGrid: function() {
+					this.gridHelper = new THREE.GridHelper(2, 50, 0xff00ff, 0x808080);
+					this.scene.add(this.gridHelper);
+				},
+				// 光线
+				initLight: function() {
+					this.light = new THREE.AmbientLight(0xffffff);
+	                this.light.position.set(0, 0, 1);
+	                this.scene.add(this.light);
+				},
+				// 控制器
+				initCtr: function() {
+					this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+					this.controls.dampingFactor = 0.25;
+				},
+				start: function() {
+					this.initScene();
+					this.initCamera();
+					this.initRenderer();	
+					this.initCube();
+					this.initStar();
+					// this.initModel()	
+					this.initLight();
+					this.initCtr();
+					// this.initGrid();
+				}
+			}
+			module.start()
+
+			
+			function initModel() {
+				// 材质
+				// var loader = new THREE.OBJLoader();
+				// 	loader.load("models/obj/car/Porsche_911_GT2.obj", function(object) {
+				// 		scene.add(object)
+				// 	})
+				var num = 0.005
+				var mtlLoader = new THREE.MTLLoader();
+					mtlLoader.setPath("models/obj/NYPD/");
+					mtlLoader.load("car.mtl", function(materials) {
+						materials.preload();
+						var objLoader = new THREE.OBJLoader();
+						objLoader.setMaterials(materials);
+						objLoader.setPath("models/obj/NYPD/");
+						objLoader.load("car.obj", function ( object ) {
+		                    object.scale.x = num;
+		                    object.scale.y = num;
+		                    object.scale.z = num;
+		                    // object.rotation.x = Math.PI / 180 * -90;
+		                    scene.add( object );
+						});
+
+					});
+
+				 // var loader = new THREE.FBXLoader();
+				 // 	 loader.load(aa, function(object) {
+					// 	scene.add(object)
+					// })
+			}
+			
+            // 帧循环
+			function animation () {
+				module.autoroatation()
+				requestAnimationFrame( animation );
+				module.renderer.render(module.scene, module.camera);
+			};
+			animation ()
+			console.log(module.arr)
+		</script>
+	</body>
+</html>

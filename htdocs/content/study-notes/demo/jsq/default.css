@@ -1,0 +1,134 @@
+body 
+    {
+         margin:0px;
+         font:Arial, Helvetica, sans-serif; 
+         font-size:13px; 
+         letter-spacing:0px;
+         line-height:25px;
+         background-color:#fff;
+         background-image:url(text.txt); /* for IE6 */   
+         background-attachment:fixed;
+         margin-bottom:20px;padding-bottom:20px;
+    }
+    
+A:link 
+    {
+         text-decoration:none;
+         color:#000000;
+         font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+         font-size:13px; 
+    }
+    
+A:hover 
+    {
+         text-decoration:none;
+         color:#000000;
+         font:Arial, Helvetica, sans-serif; 
+         font-size:13px; 
+    }
+    
+A:active 
+    {
+         text-decoration:none;
+         color:#000000;
+         font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+         font-size:13px; 
+    }
+    
+A:visited 
+    {
+         text-decoration:none;
+         color:#000000;
+         font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+         font-size:13px; 
+    }
+    
+TextArea
+    {
+		border: 1px solid #b0c4de;
+		width:630px;
+    }
+    
+.Web_Text
+    {
+        border-color:#b0c4de;
+		border-width:1px;
+		border-style:solid;
+		width:700px
+    }
+    
+.html_text
+    {
+		border-color:#b0c4de;
+		border-width:1px;
+		border-style:solid;
+		background-color:#fff; 
+    }
+    
+.Text
+    {
+         border-bottom-style:inset; 
+         border-bottom-width:1px; 
+         border-top-style:none; 
+         border-left-style:none; 
+         border-right-style:none; 
+         border-color:#999;
+         height:20px;
+         background-color:#fff; 
+    }
+    
+.Button
+    {
+		 border: 1px solid #78979c;
+         font-size:13px;
+         background-image  : url('/program/include/image/button_bg.png');
+         text-align:center;
+         vertical-align:middle;
+         height:24px;
+         width:auto;
+         padding-left:3px;
+         padding-right:3px;
+         vertical-align:middle;
+    }
+    
+.DropDownList
+    {
+		border-bottom-style:inset; 
+		border-bottom-width:1px; 
+		border-top-style:none; 
+		border-left-style:none; 
+		border-right-style:none;  
+		border-color:#999; 
+		border-collapse:separate
+    }
+    
+img
+    {
+        border:0px;
+    }
+.regext1
+    {
+        color: #FF0000;
+    }
+.regext2
+    {
+        font-size: 12px;
+        color: #999999;
+    } 
+/*表格div样式*/
+.div_1{width:700px; height:auto; background-color:#fff; display:block}
+.div_2{width:100%; height:auto;  border:1px solid #bababe; border-top-width:0px; display:block; text-align:left; padding-top:2px;padding-bottom:2px;padding-left:10px; padding-right:10px; width:680px}
+.div_3{width:auto; height:auto; margin:0px auto; padding:0px; border:0px; border-style:none; text-align:left}
+.V_Text{ background-color:#fff; border-bottom-style:inset; border-bottom-width:1px; border-top-style:none; border-left-style:none; border-right-style:none; width:98%; border-color:Black}
+.V_DropDownList{ border-bottom-style:inset; border-bottom-width:1px; border-top-style:none; border-left-style:none; border-right-style:none; width:98%; border-color:Black; border-collapse:separate}
+.V_CheckBoxList{ vertical-align:middle; width:98%}
+
+
+
+.P_Text{ background-color:#fff; border-bottom-style:inset; border-bottom-width:1px; border-top-style:none; border-left-style:none; border-right-style:none; width:98%; border-color:Black}
+.P_DropDownList{ border-bottom-style:inset; border-bottom-width:1px; border-top-style:none; border-left-style:none; border-right-style:none; width:98%; border-color:Black; border-collapse:separate}
+.P_CheckBoxList{ vertical-align:middle; width:98%}
+.D_DropDownList{ border-bottom-style:inset; border-bottom-width:1px; border-top-style:none; border-left-style:none; border-right-style:none; width:auto; border-color:Black; border-collapse:separate}
+
+.BottomNav { background-color:#9ce2ff; z-index:999;left:0px; position:fixed; width:100%; bottom:28px;}
+.BottomNav .div_2 {border-width:0px}

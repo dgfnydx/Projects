@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>射线——选中场景中的物体</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../../css/template2.css" type="text/css">
+    <link rel="stylesheet" href="../../css/Vuejs-01.css" type="text/css">
+    <link rel="stylesheet" href="../../plug-in/syntaxhighlighter/css/shCoreMidnight.css" type="text/css">
+    <style type="text/css">
+        #model, #model1 {
+        	width: 100%;
+        	height: 600px;
+        }
+    </style>
+</head>
+<body>
+   	<div class="wrap">
+		<div class="main">
+			<!-- 章 -->
+			<div class="section">
+				<h2 class="h2-title">射线——选中场景中的物体</h2>
+				<div class="study-content">
+					<div class="notes n-dcom">
+						<div class="notes-content">
+							<div class="knowledge-point">
+								<h4 class="h4-title">射线——选中场景中的物体</h4>
+								<div class="code-type">HTML代码:</div>
+								<pre name="code" class="brush:xml">
+									&ltdiv id="model">&lt/div>
+								</pre>
+								<div class="code-type">JS代码:</div>
+								<pre id="code" name="code" class="brush:js">
+									function Module(wrapId) {
+										var _this = this;
+										this.scene = null;
+										this.camera = null;
+										this.renderer = null;
+										this.geometry = null;
+										this.material = null;
+										this.cube = null;
+										this.gridHelper = null;
+										this.light = null;
+										this.controls = null;
+										this.transControl = null;
+										this.objsarr = [];
+										this.container = document.getElementById(wrapId);//容器
+										this.container.onclick = function() {
+											_this.getSize(event, _this)
+										}
+									}
+									Module.prototype = {
+										// 场景
+										initScene: function() {
+											this.scene = new THREE.Scene();
+										},
+										// 相机
+										initCamera: function() {
+											// 透视相机
+											this.camera = new THREE.PerspectiveCamera( 45, this.container.offsetWidth / this.container.offsetHeight, 1, 10000 );
+											// 设置相机的坐标
+											// this.camera.position.y = 5;
+											// this.camera.position.z = 5;
+											this.camera.position.set(0, 5, 5)
+										},
+										// 渲染器
+										initRenderer: function() {
+											this.renderer = new THREE.WebGLRenderer({antialias : true});
+											this.renderer.setSize( this.container.offsetWidth, this.container.offsetHeight );
+											this.renderer.setClearColor(0xffffff, 1);//(原色，透明度)
+											this.container.appendChild( this.renderer.domElement );
+										},
+										// 网格
+										initGrid: function() {
+											this.gridHelper = new THREE.GridHelper(2, 50, 0xff00ff, 0x808080);
+											this.scene.add(this.gridHelper);
+										},
+										// 光线
+										initLight: function() {
+											this.light = new THREE.AmbientLight(0xffffff);
+							                this.light.position.set(0, 0, 1);
+							                this.scene.add(this.light);
+										},
+										// 控制器
+										initCtr: function() {
+											this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+											this.controls.dampingFactor = 0.25;
+											//移动 缩放 旋转控制器
+											this.transControl = new THREE.TransformControls( this.camera, this.renderer.domElement );
+											this.transControl.size = 0.5;//尺寸
+											this.scene.add(this.transControl);
+										},
+										// 射线
+										radial: function() {
+											this.raycaster = new THREE.Raycaster();  
+											this.mouse = new THREE.Vector2(); 
+										},
+										getSize: function(event, module) {
+											event.preventDefault();
+											var clientX = event.clientX - module.container.offsetLeft
+											var clientY = event.clientY - module.container.offsetTop + document.body.scrollTop
+											// module.mouse.x = (clientX / module.container.offsetWidth) * 2 - 1;  
+							    //             module.mouse.y = -(clientY / module.container.offsetHeight) * 2 + 1;  
+
+							    			module.mouse.x = (clientX / module.renderer.domElement.clientWidth) * 2 - 1;  
+							                module.mouse.y = -(clientY / module.renderer.domElement.clientHeight) * 2 + 1;
+							                module.raycaster.setFromCamera(module.mouse, module.camera);
+											var intersects = module.raycaster.intersectObjects(module.objsarr);
+											if(intersects.length > 0) {
+												var INTERSECTED = intersects[0].object
+												module.transControl.attach(INTERSECTED)
+											} else {
+												module.transControl.detach(INTERSECTED)
+											}
+										},
+										// 物体
+										initCube: function() {
+											for(var i = 0; i < 10; i++) {
+												this.geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5,2,2,2 );//(width, height, dept, widthSegments, heightSegments, depthSegments)
+												var crateTexture = new THREE.TextureLoader().load("../../images/demo/jingtian2.jpg"); 
+												this.material = new THREE.MeshBasicMaterial({//基本材质
+													// color: 0xff0000,
+													map: crateTexture,
+													wireframe : false//wireframe线模式渲染
+												});
+												// this.material = new THREE.MeshNormalMaterial({//此材质根据物体表面法向量计算颜色
+												// 	wireframe: false//wireframe线模式渲染
+												// });
+												this.cube = new THREE.Mesh( this.geometry, this.material );
+												this.cube.position.x = Math.random() *4 - 2
+												this.cube.position.y = Math.random() *1.5
+												this.cube.position.z = Math.random() *4 - 2
+												this.scene.add( this.cube );
+												this.objsarr.push(this.cube)
+											}
+											
+										},
+										start: function() {
+											this.initScene();
+											this.initCamera();
+											this.initRenderer();	
+											this.initCube();
+											// initModel()	
+											this.initLight();
+											this.initCtr();
+											this.initGrid();
+											this.radial();
+										}
+									}
+									var models = new Module("model")
+									models.start()
+									// 动画
+									function animation () {
+										requestAnimationFrame( animation );
+										models.renderer.render(models.scene, models.camera);
+									};
+									animation ()
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="demos n-dcom">
+						<div class="demos-content">
+							<div class="knowledge-point">
+								<h4 class="h4-title">demo：</h4>
+								<div id="model"></div>
+								<div id="model1"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+   	</div>
+   
+    <script charset="utf-8" src="../../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/common.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/js/shCore.js"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/js/shBrushXml.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/js/shBrushJScript.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../plug-in/syntaxhighlighter/shAutoloader.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/three/three.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/three/controls/OrbitControls.js" type="text/javascript"></script>
+    <script charset="utf-8" src="../../js/three/controls/TransformControls.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	 	SyntaxHighlighter.autoloader(
+			['js','jscript','javascript','../../plug-in/syntaxhighlighter/js/shBrushJScript.js'],
+			['css','../../plug-in/syntaxhighlighter/js/shBrushCss.js'],
+			['xml','html','../../plug-in/syntaxhighlighter/js/shBrushXml.js']
+		); 
+		SyntaxHighlighter.defaults['toolbar'] = false;//是否显示工具栏
+		SyntaxHighlighter.defaults['tab-size'] = 4;//自定义tab宽度
+		SyntaxHighlighter.defaults['html-script'] = false;//混合高亮HTML和js
+		SyntaxHighlighter.defaults['gutter'] = true;//是否显示行号
+		//SyntaxHighlighter.defaults['highlight'] = 1;//标记重要的行
+		SyntaxHighlighter.all();//这里的‘code’ 为上面放置代码的容器 
+    	
+  //   	var module = {
+		// 	scene: null,
+		// 	camera: null,
+		// 	renderer: null,
+		// 	geometry: null,
+		// 	material: null,
+		// 	cube: null,
+		// 	gridHelper: null,
+		// 	light: null,
+		// 	controls: null,
+		// 	container: document.getElementById("model"),//容器
+		// 	// 场景
+		// 	initScene: function() {
+		// 		this.scene = new THREE.Scene();
+		// 	},
+		// 	// 相机
+		// 	initCamera: function() {
+		// 		// 透视相机
+		// 		this.camera = new THREE.PerspectiveCamera( 45, this.container.offsetWidth/this.container.offsetHeight, 1, 10000 );
+		// 		// 设置相机的坐标
+		// 		// this.camera.position.y = 5;
+		// 		// this.camera.position.z = 5;
+		// 		this.camera.position.set(5, 5, 0)
+		// 	},
+		// 	// 渲染器
+		// 	initRenderer: function() {
+		// 		this.renderer = new THREE.WebGLRenderer({antialias : true});
+		// 		this.renderer.setSize( this.container.offsetWidth, this.container.offsetHeight );
+		// 		this.renderer.setClearColor(0xffffff, 1);//(原色，透明度)
+		// 		this.container.appendChild( this.renderer.domElement );
+		// 	},
+		// 	// 物体
+		// 	initCube: function() {
+		// 		this.geometry = new THREE.BoxGeometry( 0.3, 0.3, 0.3,2,2,2 );//(width, height, dept, widthSegments, heightSegments, depthSegments)
+		// 		// var crateTexture = new THREE.ImageUtils.loadTexture("../../images/demo/jingtian2.jpg"); //new THREE.ImageUtils.loadTexture弃用
+		// 		var crateTexture = new THREE.TextureLoader().load("../../images/demo/jingtian2.jpg"); 
+		// 		this.material = new THREE.MeshBasicMaterial({//基本材质
+		// 			// color: 0xff0000,
+		// 			map: crateTexture,
+		// 			wireframe : false//wireframe线模式渲染
+		// 		});
+		// 		// this.material = new THREE.MeshNormalMaterial({此材质根据物体表面法向量计算颜色
+		// 		// 	wireframe : false//wireframe线模式渲染
+		// 		// });
+		// 		this.cube = new THREE.Mesh( this.geometry, this.material );
+		// 		this.scene.add( this.cube );
+		// 	},
+		// 	// 网格
+		// 	initGrid: function() {
+		// 		this.gridHelper = new THREE.GridHelper(2, 50, 0xff00ff, 0x808080);
+		// 		this.scene.add(this.gridHelper);
+		// 	},
+		// 	// 光线
+		// 	initLight: function() {
+		// 		this.light = new THREE.AmbientLight(0xffffff);
+  //               this.light.position.set(0, 0, 1);
+  //               this.scene.add(this.light);
+		// 	},
+		// 	// 控制器
+		// 	initCtr: function() {
+		// 		this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+		// 		this.controls.dampingFactor = 0.25;
+		// 	},
+		// 	start: function() {
+		// 		this.initScene();
+		// 		this.initCamera();
+		// 		this.initRenderer();	
+		// 		this.initCube();
+		// 		// initModel()	
+		// 		this.initLight();
+		// 		this.initCtr();
+		// 		// this.initGrid();
+		// 	}
+		// }
+		// module.start()
+		// // 动画
+		// function animation () {
+		// 	requestAnimationFrame( animation );
+		// 	module.renderer.render(module.scene, module.camera);
+		// };
+		// animation ()
+
+		function Module(wrapId) {
+			var _this = this;
+			this.scene = null;
+			this.camera = null;
+			this.renderer = null;
+			this.geometry = null;
+			this.material = null;
+			this.cube = null;
+			this.gridHelper = null;
+			this.light = null;
+			this.controls = null;
+			this.transControl = null;
+			this.objsarr = [];
+			this.container = document.getElementById(wrapId);//容器
+			this.container.onclick = function() {
+				_this.getSize(event, _this)
+			}
+		}
+		Module.prototype = {
+			// 场景
+			initScene: function() {
+				this.scene = new THREE.Scene();
+			},
+			// 相机
+			initCamera: function() {
+				// 透视相机
+				this.camera = new THREE.PerspectiveCamera( 45, this.container.offsetWidth / this.container.offsetHeight, 1, 10000 );
+				// 设置相机的坐标
+				// this.camera.position.y = 5;
+				// this.camera.position.z = 5;
+				this.camera.position.set(0, 5, 5)
+			},
+			// 渲染器
+			initRenderer: function() {
+				this.renderer = new THREE.WebGLRenderer({antialias : true});
+				this.renderer.setSize( this.container.offsetWidth, this.container.offsetHeight );
+				this.renderer.setClearColor(0xffffff, 1);//(原色，透明度)
+				this.container.appendChild( this.renderer.domElement );
+			},
+			// 网格
+			initGrid: function() {
+				this.gridHelper = new THREE.GridHelper(2, 50, 0xff00ff, 0x808080);
+				this.scene.add(this.gridHelper);
+			},
+			// 光线
+			initLight: function() {
+				this.light = new THREE.AmbientLight(0xffffff);
+                this.light.position.set(0, 0, 1);
+                this.scene.add(this.light);
+			},
+			// 控制器
+			initCtr: function() {
+				this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+				this.controls.dampingFactor = 0.25;
+				//移动 缩放 旋转控制器
+				this.transControl = new THREE.TransformControls( this.camera, this.renderer.domElement );
+				this.transControl.size = 0.5;//尺寸
+				this.scene.add(this.transControl);
+			},
+			// 射线
+			radial: function() {
+				this.raycaster = new THREE.Raycaster();  
+				this.mouse = new THREE.Vector2(); 
+			},
+			getSize: function(event, module) {
+				event.preventDefault();
+				var clientX = event.clientX - module.container.offsetLeft
+				var clientY = event.clientY - module.container.offsetTop + document.body.scrollTop
+				// module.mouse.x = (clientX / module.container.offsetWidth) * 2 - 1;  
+    //             module.mouse.y = -(clientY / module.container.offsetHeight) * 2 + 1;  
+
+    			module.mouse.x = (clientX / module.renderer.domElement.clientWidth) * 2 - 1;  
+                module.mouse.y = -(clientY / module.renderer.domElement.clientHeight) * 2 + 1;
+                module.raycaster.setFromCamera(module.mouse, module.camera);
+				var intersects = module.raycaster.intersectObjects(module.objsarr);
+				if(intersects.length > 0) {
+					var INTERSECTED = intersects[0].object
+					module.transControl.attach(INTERSECTED)
+				} else {
+					module.transControl.detach(INTERSECTED)
+				}
+			},
+			// 物体
+			initCube: function() {
+				for(var i = 0; i < 10; i++) {
+					this.geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5, 2, 2, 2 );//(width, height, dept, widthSegments, heightSegments, depthSegments)
+					var crateTexture = new THREE.TextureLoader().load("../../images/demo/jingtian2.jpg"); 
+					this.material = new THREE.MeshBasicMaterial({//基本材质
+						// color: 0xff0000,
+						map: crateTexture,
+						wireframe : false//wireframe线模式渲染
+					});
+					// this.material = new THREE.MeshNormalMaterial({//此材质根据物体表面法向量计算颜色
+					// 	wireframe: false//wireframe线模式渲染
+					// });
+					this.cube = new THREE.Mesh( this.geometry, this.material );
+					this.cube.position.x = Math.random() *4 - 2
+					this.cube.position.y = Math.random() *1.5
+					this.cube.position.z = Math.random() *4 - 2
+					this.scene.add( this.cube );
+					this.objsarr.push(this.cube)
+				}
+				
+			},
+			start: function() {
+				this.initScene();
+				this.initCamera();
+				this.initRenderer();	
+				this.initCube();
+				// initModel()	
+				this.initLight();
+				this.initCtr();
+				this.initGrid();
+				this.radial();
+			}
+		}
+		var models = new Module("model")
+		models.start()
+		// 动画
+		function animation () {
+			requestAnimationFrame( animation );
+			models.renderer.render(models.scene, models.camera);
+		};
+		animation ()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <title>
+            HTML代码格式化工具
+        </title>
+        <link href = "jsq/default.css" type = "text/css" rel = "Stylesheet" />
+        <script language="javascript" type="text/javascript" src="jsq/base.js">
+        </script>
+        <script language="javascript" type="text/javascript" src="jsq/jsformat.js">
+        </script>
+        <script language="javascript" type="text/javascript" src="jsq/jsformat2.js">
+        </script>
+        <script language="javascript" type="text/javascript" src="jsq/htmlformat.js">
+        </script>
+        <script type="text/javascript">
+            function do_js_beautify() {
+                document.getElementById('beautify').disabled = true;
+                js_source = document.getElementById('content').value.replace(/^\s+/, '');
+                _tabsize = document.getElementById('tabsize').value;
+                tabchar = ' ';
+                if (_tabsize == 1) {
+                    tabchar = '\t';
+                }
+                if (js_source && js_source.charAt(0) === '<') {
+                    document.getElementById('content').value = style_html(js_source, _tabsize, tabchar, 80).toLowerCase();
+                } else {
+                    document.getElementById('content').value = js_beautify(js_source, _tabsize, tabchar).toLowerCase(); 
+                }
+                document.getElementById('beautify').disabled = false;
+                return false;
+            }
+            function pack_js(base64) {
+                var input = document.getElementById('content').value;
+                var packer = new Packer;
+                if (base64) {
+                    var output = packer.pack(input, 1, 0);
+                } else {
+                    var output = packer.pack(input, 0, 0);
+                }
+                document.getElementById('content').value = output;
+            }
+            function copy() {
+                var Result = document.getElementById('content').value;
+                if (document.getElementById('content').value != '') {
+                    window.clipboardData.setData("Text", Result);
+                    document.getElementById('content').select();
+                    window.alert('已复制成功！');
+                }
+            }
+            function Empty() {
+                document.getElementById('content').value = '';
+                document.getElementById('content').select();
+            }
+            function GetFocus() {
+                document.getElementById('content').focus();
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div align="center" style="color:#006AAD;font-size:16px;font-weight:bold;">
+            JavaScript/HTML格式化
+        </div>
+        <div align="center" style="padding-top:10px;">
+            <textarea id="content" name="content" style="width:850px;height:300px; overflow:visible;" cols="20" rows="30"></textarea>
+            <script type="text/javascript">
+                setTimeout("GetFocus();", 10);
+            </script>
+        </div>
+        <div align="center" style="padding:7px 0px 0px 6px;">
+            <select name="tabsize" id="tabsize">
+                <option value="1">
+                    制表符缩进
+                </option>
+                <option value="2">
+                    2个空格缩进
+                </option>
+                <option value="4" selected="selected">
+                    4个空格缩进
+                </option>
+                <option value="8">
+                    8个空格缩进
+                </option>
+            </select>
+            <input class="button" type="button" value="格式化" onclick="return do_js_beautify()" id="beautify" />
+            <input class="button" type="button" value="普通压缩" onclick="pack_js(0)" />
+            <input class="button" type="button" value="加密压缩" onclick="pack_js(1)"/>
+            <input class="button" type="button" value="复制" onclick="copy();" />
+            <input class="button" type="button" value="清空结果" onclick="Empty();" />
+        </div>
+    </body>
+
+</html>

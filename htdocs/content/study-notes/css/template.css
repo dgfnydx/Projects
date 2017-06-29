@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors  (DGF)
+ * @date    2016-11-27
+ * @version $Id$
+*/
+/*宽度变量*/
+/*高度变量*/
+/*margin类*/
+/*padding类*/
+/*边框变量*/
+/*$fourBorder: 1px solid red;*/
+/*颜色变量*/
+/*全局边框颜色*/
+/*字体大小*/
+.main {
+  width: 90%;
+  margin: 0 auto;
+  /*border: $fourBorder;*/
+  border: 1px solid red;
+}
+
+.h2-title {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid red;
+  font-size: 24px;
+  text-align: center;
+}
+
+.h3-title {
+  padding: 10px;
+  /*padding: 5px 0;*/
+  background: rgba(151, 153, 255, 0.2);
+  font-size: 18px;
+  text-align: center;
+}
+
+.h4-title {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.study-content {
+  padding: 10px 0;
+}
+
+.articl {
+  margin-bottom: 10px;
+}
+
+.notes-content,
+.title-style,
+.demos-content {
+  padding: 10px;
+}
+
+.n-dcom {
+  float: left;
+  width: 46%;
+  margin: 0 2%;
+  background: rgba(51, 153, 255, 0.3);
+  border-radius: 5px;
+}
+
+.knowledge-point {
+  padding: 10px;
+  background: rgba(151, 153, 255, 0.2);
+  border-radius: 5px;
+}
+
+.h4-ol li {
+  margin-bottom: 8px;
+  list-style: decimal inside;
+}
+
+.h4-ul {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.h4-ul li {
+  height: 20px;
+  line-height: 20px;
+}
+
+.h4-ul li:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.demos-content {
+  height: 100%;
+}
+
+.paragraph .indent {
+  margin-bottom: 5px;
+  text-indent: 2em;
+}
+
+.paragraph .nindent {
+  margin-bottom: 5px;
+}
+
+.code-type {
+  padding: 5px 0;
+  color: blue;
+}
+
+@media screen and (max-width: 770px) {
+  .wrap {
+    font-size: 1rem;
+  }
+  .h2-title {
+    font-size: 1.5rem;
+  }
+  .h4-title {
+    font-size: 1.3rem;
+  }
+  .notes-type {
+    display: none;
+  }
+  .n-dcom {
+    width: 96%;
+  }
+  .h4-ul li {
+    height: 1.67rem;
+    line-height: 1.67rem;
+  }
+}
