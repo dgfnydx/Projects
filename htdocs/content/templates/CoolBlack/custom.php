@@ -46,4 +46,5 @@ function timeago($unixtime,$isfixtimezone=false) {
         }
     };
 }
+echo 4;
 ?>
