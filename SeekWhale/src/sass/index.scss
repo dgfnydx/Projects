@@ -265,6 +265,28 @@ $pinkc: #4285f4;
 	img {
 		width: 100%;
 	}
+	.fang {
+		-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+		-ms-transition: transform 1s;
+		transition: transform 1s;
+
+		-webkit-transform: scale(1.1, 1.1);
+		-moz-transform: scale(1.1, 1.1);
+		-ms-transform: scale(1.1, 1.1);
+		transform: scale(1.1, 1.1);
+	}
+	.suo {
+		-webkit-transition: transform 1s;
+		-moz-transition: transform 1s;
+		-ms-transition: transform 1s;
+		transition: transform 1s;
+
+		-webkit-transform: scale(1, 1);
+		-moz-transform: scale(1, 1);
+		-ms-transform: scale(1, 1);
+		transform: scale(1, 1);
+	}
 }
 .contacts {
 	padding: 100px 0;

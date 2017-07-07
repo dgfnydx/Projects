@@ -24,9 +24,22 @@ var main = {
 			_this.vbbtn.style.display = "none";
 		}
 	},
+	cooperate: function() {
+		$(".row .col-xs-6").hover(function(){
+			var index = $(this).index() - 0;
+			var n = index + 1
+			$(".row img").eq(index).attr("src", "images/demo/partner/partner" + n + "-1.png")
+			$(".row img").eq(index).removeClass("suo").addClass("fang")
+		},function(){
+			var index = $(this).index() - 0;
+			var n = index + 1
+		    $(".row img").eq(index).attr("src", "images/demo/partner/partner" + n + ".png")
+		    $(".row img").eq(index).removeClass("fang").addClass("suo")
+		});
+	},
 	start: function() {
 		this.cycle();
-		
+		this.cooperate();
 		this.anchor(".aboutus", ".about", 20);
 		this.anchor(".solve", ".solution", 20);
 		this.anchor(".beaut", ".display", 68);
