@@ -4,10 +4,10 @@ var main = {
 	vbbtn: document.getElementById("vbbtn"),
 	// banner轮播
 	cycle: function() {
-		$("#myCarousel").carousel({
+		$("#myCarousel, #myCarousel1").carousel({
 			pause: "none"//鼠标悬停不停止轮播
 		});
-		$("#myCarousel1").carousel('pause');
+		// $("#myCarousel1").carousel('pause');
 	},
 	// 导航栏锚点
 	anchor: function(btnTag, boxTag, n) {
@@ -51,9 +51,11 @@ main.start()
 
 $(".shows, #pbtn").click(function() {
 	$(".mask").show()
+	$('body').css({"overflow":'hidden' });
 })
 $(".mask button").click(function() {
 	$(".mask").hide()
+	$('body').css({"overflow":'auto' });
 })
 
 
