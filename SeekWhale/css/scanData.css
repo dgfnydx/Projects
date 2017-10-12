@@ -1,0 +1,44 @@
+.title {
+    padding: 40px 0 0 0;
+    text-align: center;
+}
+#main {
+    display: none;
+}
+h1 {
+    margin-top: 15px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 14px;
+}
+h3 {
+    margin-top: 10px;
+    color: #999999;
+}
+.content {
+    display: none;
+    position: absolute;
+    top: 158px;
+    width: 350px;
+    margin-top: 50px;
+	text-align: center;
+}
+.scan-people {
+    color: #0a3091;
+    font-size: 30px;
+    font-weight: bold;
+}
+.scan-acount {
+    color: #999999;
+    font-size: 16px;
+}
+.loading {
+    display: none;
+    position: absolute;
+    width: 178px;
+    height: 88px;
+    background: url("../images/loading.gif")
+}
