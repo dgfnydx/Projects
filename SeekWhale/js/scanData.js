@@ -115,7 +115,10 @@ function mapFun(maxNum, datas, colorArr, actionColor) {
                roam: false,
                label: {
                    normal: {
-                       show: true
+                       show: true,
+                       textStyle: {
+	                       color: "black"
+                       }
                    },
                    emphasis: {
                        show: true

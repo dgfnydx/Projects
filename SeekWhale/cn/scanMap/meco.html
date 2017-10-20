@@ -6,23 +6,26 @@
     <link rel="icon" href="../../images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/reset.css" type="text/css">
     <link rel="stylesheet" href="../../css/scanData.css" type="text/css">
+    <style type="text/css">
+    	.scan-people {
+	    	color: #cd062d;
+    	}
+    </style>
 </head>
 <body>
    	<div class="wrap">
 	   	<div class="title">
-		   	<h1>香飘飘AR应用互动数据分布统计</h1>
-		   	<!-- <h1>AR互动数据统计系统</h1> -->
-		   	<h2>本数据由厦门蚂蚁特工网络科技有限公司提供</h2>
-			<!-- <h3>2017年8月18日00:00——2017年8月18日24:00</h3> -->
+		   	<h1>香飘飘AR应用全国互动分布数据统计</h1>
+<!-- 		   	<h2>本数据由厦门蚂蚁特工网络科技有限公司提供</h2> -->
 	   	</div>
 	   	<div class="content">
 		   	<div class="scan-people">
-			   	扫描人数：
+			   	参与人数：
 			   	<span></span>
 			   	人
 		   	</div>
 		   	<div class="scan-acount">
-			   	扫描次数：
+			   	互动次数：
 			   	<span></span>
 			   	次
 		   	</div>
@@ -35,11 +38,11 @@
     <script charset="utf-8" src="../../plugin/echarts.min.js" type="text/javascript"></script>
     <script charset="utf-8" src="../../js/scanData.js" type="text/javascript"></script>
     <script>
-    	var dataUrl = "../../testData/scanData.txt"
-    	var scanTotals = "../Other/2017/July/alipayarscanedcount/scan_count_by_sign.php?name=walch"
-    	var colorArr = ['#15338b','#459ee2','#8cdbf1','#d6e6ed','#fff']
-    	var actionColor = "yellow"
-    	count(dataUrl, 1, colorArr, actionColor);
+    	var dataUrl = "../../Other/2017/October/analysisdetails/getprovincetotal.php"
+    	var scanTotals = "../../Other/2017/July/alipayarscanedcount/scan_count_by_sign.php?name=xiangpiaopiao"
+    	var colorArr = ['#4c040e','#800927','#cd062d','#e04569','#ffe8f0']
+    	var actionColor = "#b6a5c5"
+    	count(dataUrl, 3, colorArr, actionColor);
     	scanAcount(scanTotals);
     </script>
 </body>
