@@ -291,28 +291,18 @@ $pinkc: #4285f4;
 	}
 }
 .contacts {
-	padding: 100px 0;
+	padding: 60px 0 60px;
 	background: url("../images/bg.jpg");
+	color: white;	
 	background-size: cover;
 	.cont {
-		&:nth-child(1) {
-			padding-left: 90px;
-			background: url("../images/icon_servicecall.png") 25px center no-repeat;
-		}
-		&:nth-child(2) {
-			padding-left: 75px;
-			background: url("../images/icon_phone.png") 25px center no-repeat;
-		}
 		&:nth-child(3) {
-			padding-left: 75px;
-			background: url("../images/icon_add.png") 25px center no-repeat;
+			text-align: right;
+			
 		}
-
-		span {
-			display: block;
-			height: 25px;
-			color: white;
-		}
+	}
+	.company {
+		margin: 40px 0 10;
 	}
 }
 .copyright {
@@ -504,26 +494,17 @@ $pinkc: #4285f4;
 	.contacts {
 		padding: 20px 0;
 		.cont {
-			&:nth-child(1) {
-				padding-left: 60px;
-				background: url("../images/icon_servicecall.png") 25px center no-repeat;
-				background-size: 7%;
-			}
-			&:nth-child(2) {
-				padding: 10px 0 10px 60px;
-				background: url("../images/icon_phone.png") 29px center no-repeat;
-				background-size: 5%;
-			}
+			font-size: 12px;
 			&:nth-child(3) {
-				padding-left: 60px;
-				background: url("../images/icon_add.png") 28px center no-repeat;
-				background-size: 5%;
+				text-align: left;
 			}
 			span {
 				height: 15px;
 				font-size: 12px;
 			}
-
+		}
+		.company {
+			margin: 0 0 10px;
 		}
 	}
 	.copyright {
