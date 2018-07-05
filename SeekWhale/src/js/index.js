@@ -4,7 +4,7 @@ var main = {
 	vbbtn: document.getElementById("vbbtn"),
 	// banner轮播
 	cycle: function() {
-		$("#myCarousel, #myCarousel1").carousel({
+		$("#myCarousel").carousel({
 			pause: "none"//鼠标悬停不停止轮播
 		});
 		// $("#myCarousel1").carousel('pause');
@@ -28,12 +28,12 @@ var main = {
 		$(".row .col-xs-6").hover(function(){
 			var index = $(this).index() - 0;
 			var n = index + 1
-			$(".row img").eq(index).attr("src", "images/demo/partner/partner" + n + "-1.png")
+			$(".row img").eq(index).attr("src", "images/icon/cai/mjc" + n + ".png")
 			$(".row img").eq(index).removeClass("suo").addClass("fang")
 		},function(){
 			var index = $(this).index() - 0;
 			var n = index + 1
-		    $(".row img").eq(index).attr("src", "images/demo/partner/partner" + n + ".png")
+		    $(".row img").eq(index).attr("src", "images/icon/hui/mjh" + n + ".png")
 		    $(".row img").eq(index).removeClass("fang").addClass("suo")
 		});
 	},

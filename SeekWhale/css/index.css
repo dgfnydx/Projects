@@ -10,9 +10,7 @@
 }
 
 .header .navbar-brand {
-  width: 108px;
-  height: 30px;
-  margin: 28px 0 0 18px;
+  margin: 20px 0 0 18px;
   padding: 0;
 }
 
@@ -140,7 +138,7 @@
 }
 
 .solu-class .icon1 {
-  background: url("../images/icon_zhibubaoar_nor.png") center 85px no-repeat;
+  background: url("../images/icon_baiduar_nor.png") center 85px no-repeat;
 }
 
 .solu-class .icon2 {
@@ -172,7 +170,7 @@
 }
 
 .solu-class:hover .icon1 {
-  background: url("../images/icon_zhibubaoar_sel.png") center 85px no-repeat;
+  background: url("../images/icon_baiduar_sel.png") center 85px no-repeat;
 }
 
 .solu-class:hover .icon2 {
@@ -318,18 +316,58 @@
 }
 
 .contacts {
-  padding: 60px 0 60px;
+  padding: 10px 0 60px;
   background: url("../images/bg.jpg");
   color: white;
   background-size: cover;
 }
 
-.contacts .cont:nth-child(3) {
-  text-align: right;
+.contacts .cont {
+  margin: 10px 0;
+}
+
+.contacts .cont:nth-child(1) {
+  margin: 40px 0 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  border-bottom: #5a5a5a 1px solid;
+}
+
+.contacts .code {
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.contacts .code-text {
+  text-align: center;
 }
 
 .contacts .company {
-  margin: 40px 0 10;
+  margin: 40px 0 10px;
+  font-size: 18px;
+  padding-bottom: 5px;
+  border-bottom: #5a5a5a 1px solid;
+}
+
+.contacts .icon a {
+  display: block;
+  width: 37px;
+  height: 37px;
+  border: #5a5a5a 1px solid;
+  border-radius: 50%;
+}
+
+.contacts .icon li {
+  float: left;
+  margin-right: 20px;
+}
+
+.contacts .icon li:nth-child(1) a {
+  background: url("../images/weibo.png") center no-repeat;
+}
+
+.contacts .icon li:nth-child(2) a {
+  background: url("../images/xiong.png") center no-repeat;
 }
 
 .copyright {
@@ -418,6 +456,10 @@
   }
   .wrap .header .navbar-brand {
     margin: 12px 0 0 18px;
+    height: 38px;
+  }
+  .wrap .header .navbar-brand img {
+    width: 70px;
   }
   .carousel-indicators li {
     width: 3px;
@@ -475,7 +517,7 @@
     height: 168px;
   }
   .solution .solu-class .icon1 {
-    background: url("../images/icon_zhibubaoar_nor.png") center 25px no-repeat;
+    background: url("../images/icon_baiduar_nor.png") center 25px no-repeat;
   }
   .solution .solu-class .icon2 {
     background: url("../images/icon_appqianru_nor.png") center 25px no-repeat;
@@ -484,7 +526,7 @@
     background: url("../images/icon_dingzhiapp_nor.png") center 25px no-repeat;
   }
   .solution .solu-class:hover .icon1 {
-    background: white url("../images/icon_zhibubaoar_sel.png") center 25px no-repeat;
+    background: white url("../images/icon_baiduar_sel.png") center 25px no-repeat;
   }
   .solution .solu-class:hover .icon2 {
     background: white url("../images/icon_qianrushi_sel.png") center 25px no-repeat;
@@ -534,6 +576,9 @@
   }
   .contacts .company {
     margin: 0 0 10px;
+  }
+  .contacts .code {
+    margin: 0;
   }
   .copyright {
     padding: 20px 0 15px;

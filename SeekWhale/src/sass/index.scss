@@ -11,9 +11,9 @@ $pinkc: #4285f4;
 .header {
 	background: $a8bg;
 	.navbar-brand {
-		width: 108px;
-		height: 30px;
-		margin: 28px 0 0 18px;
+		// width: 108px;
+		// height: 30px;
+		margin: 20px 0 0 18px;
 		padding: 0;
 	}
 	button {
@@ -130,7 +130,7 @@ $pinkc: #4285f4;
 		transform: scale(0.8, 0.8);
 	}
 	.icon1 {
-		background: url("../images/icon_zhibubaoar_nor.png") center 85px no-repeat;
+		background: url("../images/icon_baiduar_nor.png") center 85px no-repeat;
 	}
 	.icon2 {
 		background: url("../images/icon_appqianru_nor.png") center 85px no-repeat;
@@ -157,7 +157,7 @@ $pinkc: #4285f4;
 		transform: scale(1, 1);
 	}
 	&:hover .icon1 {
-		background: url("../images/icon_zhibubaoar_sel.png") center 85px no-repeat;
+		background: url("../images/icon_baiduar_sel.png") center 85px no-repeat;
 	}
 	&:hover .icon2 {
 		background: url("../images/icon_qianrushi_sel.png") center 85px no-repeat;
@@ -291,18 +291,50 @@ $pinkc: #4285f4;
 	}
 }
 .contacts {
-	padding: 60px 0 60px;
+	padding: 10px 0 60px;
 	background: url("../images/bg.jpg");
 	color: white;	
 	background-size: cover;
 	.cont {
-		&:nth-child(3) {
-			text-align: right;
-			
+		margin: 10px 0;
+		&:nth-child(1) {
+			margin: 40px 0 10px;
+			padding-bottom: 5px;
+			font-size: 18px;
+			border-bottom: #5a5a5a 1px solid;
 		}
 	}
+	.code {
+		margin: 40px 0 20px;
+		text-align: center;
+	}
+	.code-text {
+		text-align: center;
+	}
 	.company {
-		margin: 40px 0 10;
+		margin: 40px 0 10px;
+		font-size: 18px;
+		padding-bottom: 5px;
+		border-bottom: #5a5a5a 1px solid;
+	}
+	.icon {
+		a {
+			display: block;
+			width: 37px;
+			height: 37px;
+			border: #5a5a5a 1px solid;
+			border-radius: 50%;
+		}
+		li {
+			float: left;
+			margin-right: 20px;
+			&:nth-child(1) a {
+				background: url("../images/weibo.png") center no-repeat;
+			}
+			&:nth-child(2) a {
+				background: url("../images/xiong.png") center no-repeat;
+			}
+		}
 	}
 }
 .copyright {
@@ -380,6 +412,10 @@ $pinkc: #4285f4;
 		.header {
 			.navbar-brand {
 				margin: 12px 0 0 18px;
+				height: 38px;
+				img {
+					width: 70px;
+				}
 			}
 		}
 	}
@@ -439,7 +475,7 @@ $pinkc: #4285f4;
 				height: 168px;
 			}
 			.icon1 {
-				background: url("../images/icon_zhibubaoar_nor.png")  center 25px no-repeat;
+				background: url("../images/icon_baiduar_nor.png")  center 25px no-repeat;
 			}
 			.icon2 {
 				background: url("../images/icon_appqianru_nor.png")  center 25px no-repeat;
@@ -448,7 +484,7 @@ $pinkc: #4285f4;
 				background: url("../images/icon_dingzhiapp_nor.png")  center 25px no-repeat;
 			}
 			&:hover .icon1 {
-				background: white url("../images/icon_zhibubaoar_sel.png")  center 25px no-repeat;
+				background: white url("../images/icon_baiduar_sel.png")  center 25px no-repeat;
 			}
 			&:hover .icon2 {
 				background: white url("../images/icon_qianrushi_sel.png")  center 25px no-repeat;
@@ -505,6 +541,9 @@ $pinkc: #4285f4;
 		}
 		.company {
 			margin: 0 0 10px;
+		}
+		.code {
+			margin: 0;
 		}
 	}
 	.copyright {
