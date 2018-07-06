@@ -115,14 +115,6 @@
   overflow: hidden;
   padding: 0px 58px 55px;
   text-align: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-transition: box-shadow 2s, transform 2s;
-  -moz-transition: box-shadow 2s, transform 2s;
-  -ms-transition: box-shadow 2s, transform 2s;
-  transition: box-shadow 2s, transform 2s;
 }
 
 .solu-class .solu {
@@ -149,7 +141,20 @@
   background: url("../images/icon_dingzhiapp_nor.png") center 85px no-repeat;
 }
 
-.solu-class:hover {
+.solu-class .solu-con {
+  height: 560px;
+  padding: 0px 58px 55px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: box-shadow 2s, transform 2s;
+  -moz-transition: box-shadow 2s, transform 2s;
+  -ms-transition: box-shadow 2s, transform 2s;
+  transition: box-shadow 2s, transform 2s;
+}
+
+.solu-class .solu-con:hover {
   -webkit-box-shadow: 0 0 30px rgba(66, 133, 244, 0.3);
   -moz-box-shadow: 0 0 30px rgba(66, 133, 244, 0.3);
   -ms-box-shadow: 0 0 30px rgba(66, 133, 244, 0.3);
@@ -161,7 +166,7 @@
   transform: translateY(-20px);
 }
 
-.solu-class:hover .solu {
+.solu-class .solu-con:hover .solu {
   /*transform: rotateY(360deg);*/
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
@@ -169,19 +174,19 @@
   transform: scale(1, 1);
 }
 
-.solu-class:hover .icon1 {
+.solu-class .solu-con:hover .icon1 {
   background: url("../images/icon_baiduar_sel.png") center 85px no-repeat;
 }
 
-.solu-class:hover .icon2 {
+.solu-class .solu-con:hover .icon2 {
   background: url("../images/icon_qianrushi_sel.png") center 85px no-repeat;
 }
 
-.solu-class:hover .icon3 {
+.solu-class .solu-con:hover .icon3 {
   background: url("../images/icon_dingzhiapp_sel.png") center 85px no-repeat;
 }
 
-.solu-class p {
+.solu-class .solu-con p {
   padding-top: 20px;
   line-height: 25px;
 }
@@ -513,6 +518,9 @@
   .solution {
     padding: 10px 0;
   }
+  .solution .solu-class {
+    padding: 0 20px 30px;
+  }
   .solution .solu-class .solu {
     height: 168px;
   }
@@ -533,6 +541,10 @@
   }
   .solution .solu-class:hover .icon3 {
     background: white url("../images/icon_dingzhiapp_sel.png") center 25px no-repeat;
+  }
+  .solution .solu-class .solu-con {
+    padding: 0;
+    height: 100%;
   }
   .display {
     height: auto;

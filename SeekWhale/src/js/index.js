@@ -58,7 +58,11 @@ $(".mask button").click(function() {
 	$('body').css({"overflow":'auto' });
 })
 
-
+if($(window).width() < 768) {
+	for(var i = 0; i < 16; i++) {
+		$(".row img").eq(i).attr("src", "images/icon/cai/mjc" + (i + 1) + ".png")
+	}
+}
 
 // var timer = null;
 // var clicks = true;
